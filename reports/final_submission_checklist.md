@@ -1,6 +1,10 @@
 # Final Submission Checklist
 
 - [ ] Repository selected and justified.
+- [ ] Repository size verified: approximately 10,000+ source lines.
+- [ ] Repository size verified: at least 70 source-code files.
+- [ ] Repository size report completed.
+- [ ] Agent instruction architecture completed.
 - [ ] Bug selected and reproduced.
 - [ ] Graphify artifacts generated.
 - [ ] Obsidian vault completed.
@@ -11,4 +15,3 @@
 - [ ] Token efficiency report completed.
 - [ ] Original extension completed.
 - [ ] README completed.
-

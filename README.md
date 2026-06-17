@@ -16,18 +16,19 @@ The final submission must prove that graph-guided investigation is more focused 
 
 Selected repository: TBD
 
-Recommended first candidate: `martinpeck/broken-python`
+Minimum repository scale:
 
-Reason for recommendation:
+- Approximately 10,000+ lines of meaningful code.
+- At least 70 source-code files.
+- The code may come from our own repository or another approved repository.
+- The repository must be large enough to make reverse engineering, graph navigation, modular architecture, and agent-guided context selection meaningful.
 
-- Small enough for a complete, polished investigation.
-- Suitable for a clear bug reproduction and fix.
-- Lower setup risk than large real-world bug corpora.
+Selection strategy:
 
-Backup candidates:
-
-- `andela/buggy-python`
-- `soarsmu/BugsInPy`
+- Choose a substantial codebase, then select one focused bug, subsystem, or failure path inside it.
+- Do not shrink the repository below the assignment scale just to make the bug easier.
+- Do keep the investigation focused after Graphify identifies the relevant subgraph.
+- Prefer a repository with modular structure, tests, classes/functions, and enough dependencies between components to justify Graphify and Obsidian.
 
 ## Selected Bug
 
@@ -73,17 +74,36 @@ config/
 notebooks/
 ```
 
+## Updated Repository-Scale Requirement
+
+The selected target repository must be substantial:
+
+- Approximately 10,000+ meaningful source lines.
+- At least 70 source-code files.
+- Public, team-owned, or otherwise instructor-approved.
+
+The repository-size evidence will be documented in `reports/repository_size_report.md`.
+
+## Agent Instruction Architecture
+
+Before implementing the agent workflow, the project defines explicit agent instructions in:
+
+- `docs/PRD_agent_instruction_architecture.md`
+
+This document specifies agent roles, allowed inputs/outputs, graph-first context rules, evidence format, and modular architecture constraints for agent-generated code.
+
 ## Planned Workflow
 
 1. Select repository and bug.
 2. Generate Graphify artifacts.
 3. Build Obsidian vault with `index.md` and `hot.md`.
 4. Reverse-engineer the architecture.
-5. Build a graph-guided LangGraph agent workflow.
-6. Reproduce and fix the bug.
-7. Compare naive vs graph-guided token efficiency.
-8. Add an original extension.
-9. Package the final submission.
+5. Define detailed agent instructions for modular architecture and code generation.
+6. Build a graph-guided LangGraph agent workflow.
+7. Reproduce and fix the bug.
+8. Compare naive vs graph-guided token efficiency.
+9. Add an original extension.
+10. Package the final submission.
 
 ## Setup
 
@@ -106,10 +126,11 @@ uv run ruff check .
 ## Artifact Index
 
 - Planning docs: `docs/`
+- Agent instruction architecture: `docs/PRD_agent_instruction_architecture.md`
 - Obsidian vault: `obsidian/`
 - Reports: `reports/`
+- Repository size report: `reports/repository_size_report.md`
 - Graphify outputs: `artifacts/graphify/`
 - Diagrams: `artifacts/diagrams/`
 - Logs: `artifacts/logs/`
 - Token measurements: `artifacts/token_measurements/`
-

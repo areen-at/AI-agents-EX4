@@ -86,23 +86,30 @@ The project must answer:
 
 ## 5. Repository Selection Requirements
 
-### 5.1 Candidate Repositories
+### 5.1 Repository Scale Requirement
 
-The assignment recommends:
+The selected codebase must be significant enough to make graph-based reverse engineering necessary and valuable.
 
-- `soarsmu/BugsInPy`: realistic Python bugs, but potentially complex environment setup.
-- `martinpeck/broken-python`: smaller Python debugging examples.
-- `andela/buggy-python`: buggy Python scripts suitable for simpler investigation.
+Minimum expected scale:
+
+- Approximately 10,000+ lines of meaningful source code.
+- At least 70 source-code files.
+- The repository may be an existing public repository, a team-owned repository, or another repository approved by the instructor.
+- The codebase must contain enough structure to support architectural analysis, OOP/module diagrams, graph navigation, and agent-guided context narrowing.
+
+Small debugging exercise repositories such as tiny broken-script collections are not sufficient for the main submission unless they are only used as supplementary demonstrations.
 
 ### 5.2 Selection Criteria
 
 The selected repository must:
 
 - Be unfamiliar to the team.
-- Be small or medium enough to complete within assignment time.
+- Meet the 10,000+ lines / 70+ source-code files scale expectation.
+- Contain meaningful modular architecture or enough complexity to reverse-engineer.
 - Contain at least one bug that can be investigated, explained, fixed, and tested.
 - Have enough structure to support graph analysis.
 - Allow meaningful before/after documentation.
+- Allow the team to choose a focused bug-critical subgraph after the full repository is mapped.
 
 ### 5.3 Required Documentation
 
@@ -111,7 +118,26 @@ The final `README.md` must explain:
 - Which repository was selected.
 - Why it was selected.
 - Why it fits EX04 goals.
+- How it satisfies the 10,000+ lines / 70+ source-code files requirement, including evidence from a file/LOC count.
 - What bug or defect was chosen for detailed investigation.
+
+### 5.4 Repository Size Evidence
+
+The final submission shall include a repository-size evidence section.
+
+Required measurements:
+
+- Total source-code files counted.
+- Total source lines counted.
+- File types included in the count.
+- File types excluded from the count.
+- Command or script used for the count.
+
+Acceptance criteria:
+
+- The measured codebase has at least 70 source-code files.
+- The measured codebase has approximately 10,000+ meaningful lines of code.
+- Generated files, virtual environments, dependency folders, and cache files are excluded from the count.
 
 ## 6. Functional Requirements
 
@@ -251,6 +277,31 @@ Acceptance criteria:
 - Workflow is documented in README and `reports/agent_workflow_report.md`.
 - The workflow shows steps and context-narrowing strategy.
 - The agent is not just a single prompt over the whole repository.
+
+### FR-6A: Agent Instruction Architecture
+
+The project shall define detailed, explicit instructions for the AI agents before code generation or code modification begins.
+
+The instruction architecture must specify:
+
+- Agent roles.
+- Agent responsibilities.
+- Allowed inputs.
+- Allowed outputs.
+- Required evidence format.
+- When each agent may read raw code.
+- When each agent must use Graphify and Obsidian first.
+- How agents should preserve modular architecture.
+- How agents should avoid broad context loading.
+- How agents should propose changes without breaking module boundaries.
+- How agents should document reasoning, rejected hypotheses, and verification.
+
+Acceptance criteria:
+
+- Agent instructions exist in `docs/PRD_agent_instruction_architecture.md` or an equivalent document.
+- The agent workflow report explains how these instructions shaped the implementation.
+- The final agent prompts or role definitions reflect the documented instructions.
+- The fix and generated code respect modular architecture constraints.
 
 ### FR-7: Bug Identification and Root Cause
 
@@ -414,6 +465,8 @@ Project code should follow professional standards:
 - Tests for changed behavior.
 - No hardcoded secrets.
 - Config files where appropriate.
+- Agent-generated code must follow the same modular architecture rules as human-written code.
+- Agents must be instructed to prefer small modules, explicit boundaries, and documented interfaces.
 
 ### NFR-6: Tooling
 
@@ -632,8 +685,9 @@ Exit criteria:
 
 | Risk | Impact | Mitigation |
 |---|---:|---|
-| Selected repository too large | High | Choose one small/medium bug and limit scope |
-| BugsInPy setup is difficult | High | Use `broken-python` or `buggy-python` if environment blocks progress |
+| Selected repository is large enough but too broad to inspect naively | High | Run Graphify over the full repository, then limit manual/agent investigation to a focused bug-critical subgraph |
+| Repository does not meet 10,000+ LOC / 70+ files | High | Select a different meaningful repository or add instructor-approved repository evidence |
+| Environment setup is difficult | High | Separate graph/static analysis from runtime reproduction, then choose a bug path with manageable verification |
 | Graphify output incomplete | Medium | Document limitations and supplement with manual graph notes |
 | Agent becomes too complex | Medium | Use a small LangGraph workflow with clear stages |
 | Token counts are hard to measure exactly | Medium | Use transparent estimation and count file/text units as secondary metrics |
@@ -657,4 +711,3 @@ Exit criteria:
 - [ ] Original extension completed.
 - [ ] README completed.
 - [ ] Final artifact links verified.
-

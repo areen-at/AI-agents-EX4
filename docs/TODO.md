@@ -78,28 +78,44 @@
 
 ### 0.3 Candidate Repository Review
 
-- [ ] Open `soarsmu/BugsInPy`.
-- [ ] Review BugsInPy setup difficulty.
-- [ ] Review BugsInPy available bugs.
-- [ ] Estimate BugsInPy environment cost.
-- [ ] Open `martinpeck/broken-python`.
-- [ ] Review broken-python repository size.
-- [ ] Review broken-python bug examples.
-- [ ] Estimate whether broken-python has enough structure for diagrams.
-- [ ] Open `andela/buggy-python`.
-- [ ] Review buggy-python repository size.
-- [ ] Review buggy-python bug examples.
-- [ ] Estimate whether buggy-python has enough structure for diagrams.
+- [ ] Identify candidate repositories with approximately 10,000+ source lines.
+- [ ] Identify candidate repositories with at least 70 source-code files.
+- [ ] Include team-owned repositories as valid candidates.
+- [ ] Include public repositories as valid candidates.
+- [ ] Exclude tiny broken-script repositories as main submission candidates.
+- [ ] Exclude toy repositories that cannot support architecture analysis.
+- [ ] Review candidate repository modularity.
+- [ ] Review candidate repository testability.
+- [ ] Review candidate repository dependency complexity.
+- [ ] Review candidate repository class/function structure.
+- [ ] Review candidate repository suitability for Graphify.
+- [ ] Review candidate repository suitability for Obsidian navigation.
+- [ ] Review candidate repository suitability for agent-guided debugging.
+- [ ] Review whether the repository has at least one focused bug path.
+- [ ] Review whether the repository has enough architecture for block diagrams.
+- [ ] Review whether the repository has enough OOP/module structure for diagrams.
 - [ ] Record candidate repository pros and cons.
 - [ ] Compare candidates against assignment requirements.
 - [ ] Compare candidates against available time.
 - [ ] Compare candidates against environment complexity.
 - [ ] Compare candidates against diagram potential.
 - [ ] Compare candidates against testability.
+- [ ] Count source-code files for top candidate.
+- [ ] Count meaningful source lines for top candidate.
+- [ ] Save source-count command.
+- [ ] Save source-count output.
+- [ ] Exclude generated files from count.
+- [ ] Exclude dependencies from count.
+- [ ] Exclude virtual environments from count.
+- [ ] Exclude cache folders from count.
 - [ ] Choose the final repository.
 - [ ] Document the selected repository in README.
 - [ ] Document rejected alternatives in README or report.
 - [ ] Explain why selected repository fits EX04.
+- [ ] Explain how selected repository satisfies 10,000+ LOC.
+- [ ] Explain how selected repository satisfies 70+ source-code files.
+- [ ] Create `reports/repository_size_report.md`.
+- [ ] Link repository size report from README.
 - [ ] Explain expected bug investigation scope.
 
 ### 0.4 Bug Candidate Selection
@@ -132,6 +148,7 @@
 - [ ] Add initial README title.
 - [ ] Add README assignment summary.
 - [ ] Add README repository choice section.
+- [ ] Add README repository-size evidence section.
 - [ ] Add README selected bug section.
 - [ ] Add README quick-start placeholder.
 - [ ] Add README project structure placeholder.
@@ -143,12 +160,18 @@
 - [ ] Add research questions to `reports/reverse_engineering_report.md`.
 - [ ] Add research questions to README.
 - [ ] Add final checklist to `reports/final_submission_checklist.md`.
+- [ ] Create `docs/PRD_agent_instruction_architecture.md`.
+- [ ] Add agent instruction architecture placeholder to README.
 
 ### 0.6 Phase 0 Review
 
-- [ ] Confirm project scope is small enough.
+- [ ] Confirm selected repository is large enough for assignment requirements.
+- [ ] Confirm selected investigation path is focused enough to complete.
+- [ ] Confirm repository has approximately 10,000+ source lines.
+- [ ] Confirm repository has at least 70 source-code files.
 - [ ] Confirm repository choice is justified.
 - [ ] Confirm selected bug is feasible.
+- [ ] Confirm initial agent instructions exist.
 - [ ] Confirm all required directories exist.
 - [ ] Confirm `uv` commands work.
 - [ ] Confirm initial docs exist.
@@ -492,8 +515,26 @@
 - [ ] Add text-unit count for each node.
 - [ ] Add token estimate for each node.
 
-### 3.5 Agent Prompts
+### 3.5 Agent Instructions and Prompts
 
+- [ ] Define agent roles before writing code.
+- [ ] Define agent responsibilities before writing code.
+- [ ] Define agent input contracts.
+- [ ] Define agent output contracts.
+- [ ] Define modular architecture rules for agent-generated code.
+- [ ] Define module-boundary preservation rules.
+- [ ] Define when agents must consult Graphify first.
+- [ ] Define when agents must consult Obsidian first.
+- [ ] Define when agents may inspect raw source files.
+- [ ] Define maximum raw files per investigation iteration.
+- [ ] Define evidence format for agent conclusions.
+- [ ] Define root-cause hypothesis format.
+- [ ] Define rejected-hypothesis logging format.
+- [ ] Define fix proposal format.
+- [ ] Define verification proposal format.
+- [ ] Write `docs/PRD_agent_instruction_architecture.md`.
+- [ ] Link agent instruction architecture from README.
+- [ ] Link agent instruction architecture from agent workflow report.
 - [ ] Write system prompt for graph-guided behavior.
 - [ ] Write prompt requiring `index.md` before source code.
 - [ ] Write prompt requiring `hot.md` before source code.
@@ -1102,4 +1143,3 @@
 - [ ] Record final iteration reduction.
 - [ ] Record final original extension.
 - [ ] Record final submission URL.
-

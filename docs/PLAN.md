@@ -10,30 +10,26 @@ The strongest submission is not the largest one. The strongest submission is the
 
 ### 2.1 Repository Choice
 
-Recommended first choice:
+Updated requirement:
 
-`martinpeck/broken-python`
+- The selected repository should contain approximately 10,000+ lines of meaningful source code.
+- The selected repository should contain at least 70 source-code files.
+- The selected repository may be our own repository or another approved repository.
+- The repository must be substantial enough to justify Graphify, Obsidian, reverse engineering, and modular agent-guided work.
 
-Reason:
+Recommended selection strategy:
 
-- Smaller and easier to control.
-- Good for demonstrating debugging without losing time on environment setup.
-- Better fit if the goal is a polished, complete EX04 submission.
+- Choose a large enough codebase.
+- Run Graphify on the full repository.
+- Use graph analysis to narrow the investigation to one focused bug-critical subgraph.
+- Avoid reading the full codebase linearly.
+- Preserve evidence that the full repository satisfies the required scale.
 
-Recommended second choice:
+Rejected as main submission choices:
 
-`andela/buggy-python`
-
-Reason:
-
-- Also simple enough for a focused bug investigation.
-- Useful if `broken-python` does not provide enough structure for diagrams.
-
-Use `soarsmu/BugsInPy` only if:
-
-- The team wants a more realistic challenge.
-- The environment setup is manageable.
-- A single bug can be isolated quickly.
+- Tiny broken-script repositories.
+- Toy debugging collections with far fewer than 70 code files.
+- Repositories that cannot support architecture/OOP/module analysis.
 
 ### 2.2 Agent Framework
 
@@ -142,16 +138,23 @@ If the target repository already has its own structure, keep its code intact and
 - Select one bug candidate.
 - Create the EX04 submission skeleton.
 - Define initial research questions.
+- Prove the repository satisfies the 10,000+ LOC / 70+ source-code files requirement.
+- Draft the first version of the agent instruction architecture.
 
 ### 4.2 Tasks
 
 1. Review candidate repositories.
 2. Choose one repository and document the reason.
-3. Clone or copy the target project.
-4. Identify one candidate bug.
-5. Create repository structure.
-6. Create initial README skeleton.
-7. Create project tracking docs:
+3. Count source-code files.
+4. Count meaningful source lines.
+5. Exclude generated files, dependencies, virtual environments, and caches from the count.
+6. Save repository-size evidence.
+7. Clone or copy the target project.
+8. Identify one candidate bug or bug-critical subsystem.
+9. Create repository structure.
+10. Create initial README skeleton.
+11. Create initial agent instruction architecture document.
+12. Create project tracking docs:
    - `docs/PRD.md`
    - `docs/PLAN.md`
    - `docs/TODO.md`
@@ -159,12 +162,17 @@ If the target repository already has its own structure, keep its code intact and
 ### 4.3 Outputs
 
 - Repository choice section in README.
+- Repository-size evidence section in README.
+- `reports/repository_size_report.md`.
+- `docs/PRD_agent_instruction_architecture.md`.
 - Initial TODO list.
 - Initial bug candidate note.
 
 ### 4.4 Exit Criteria
 
 - Team can explain why the repository was selected.
+- Team can prove the repository meets the scale requirement.
+- Team has initial modular agent instructions.
 - Team has a specific bug candidate.
 - Project structure exists.
 
@@ -736,11 +744,11 @@ Use a simple 1-5 scale and explain the rating.
 | Risk | Probability | Impact | Response |
 |---|---:|---:|---|
 | Graphify cannot parse selected repo | Medium | High | Keep generated artifacts, document limitation, supplement manually |
-| Bug cannot be reproduced | Medium | High | Switch to smaller known buggy repo early |
+| Bug cannot be reproduced | Medium | High | Keep the substantial repository, but switch to another bug path inside the same codebase if possible |
 | Agent workflow is too complex | Medium | Medium | Use fixed LangGraph stages and simple tools |
 | Token comparison is imprecise | High | Medium | Use transparent estimates plus file-count metrics |
 | Diagrams take too long | Medium | Medium | Use Mermaid diagrams first, polish later |
-| Environment setup consumes time | Medium | High | Avoid large repos unless setup works quickly |
+| Environment setup consumes time | Medium | High | Use static graph analysis first, then select a runtime path with manageable dependencies |
 
 ## 17. Definition of Done
 
@@ -753,4 +761,3 @@ The project is complete when:
 - Token efficiency is measured.
 - At least one original extension is included.
 - README provides a complete guided tour through all artifacts.
-
