@@ -147,6 +147,18 @@ runtime/
 *.mp3
 *.flac
 
+# AL / Dynamics 365 Business Central local artifacts from initial GitHub template
+.alcache/
+.alpackages/
+.snapshots/
+.output/
+*.app
+rad.json
+*.g.xlf
+*.bclicense
+*.flf
+TestResults.xml
+
 # Local Graphify/cache noise, while keeping required submitted artifacts trackable
 artifacts/**/.cache/
 artifacts/**/tmp/
@@ -192,3 +204,4 @@ target-repo/
 !docs/
 !docs/**
 !uv.lock
+

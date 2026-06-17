@@ -1,4 +1,6 @@
-# EX04 - Graph-Guided Reverse Engineering
+# AI-agents-EX4
+
+Reverse Engineering, Debugging, and Token-Efficient Agentic AI with Graphify and Obsidian.
 
 ## Status
 
