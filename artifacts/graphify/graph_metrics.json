@@ -1,0 +1,229 @@
+{
+  "source_root": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-06-17\\files-mentioned-by-the-user-l07\\work\\target_repos\\broken-python\\mathsquiz",
+  "analysis_kind": "graphify_style_ast_static_analysis",
+  "tool_note": "Graphify executable was not available, so this graph was generated from Python AST plus syntax-fallback line scanning.",
+  "files": {
+    "mathsquiz/mathsquiz-step1.py": {
+      "total_lines": 158,
+      "meaningful_lines": 93,
+      "parse_status": "parsed",
+      "imports": [],
+      "functions": [],
+      "module_level_calls": [
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "input",
+        "int",
+        "print",
+        "print",
+        "print",
+        "print",
+        "print",
+        "print",
+        "print",
+        "print"
+      ],
+      "state_variables": {
+        "score": 11,
+        "answer": 10
+      }
+    },
+    "mathsquiz/mathsquiz-step2.py": {
+      "total_lines": 57,
+      "meaningful_lines": 38,
+      "parse_status": "parsed",
+      "imports": [],
+      "functions": [
+        "welcome_message",
+        "ask_question",
+        "print_final_scores"
+      ],
+      "module_level_calls": [
+        "welcome_message",
+        "ask_question",
+        "ask_question",
+        "ask_question",
+        "ask_question",
+        "ask_question",
+        "ask_question",
+        "ask_question",
+        "ask_question",
+        "ask_question",
+        "ask_question",
+        "print_final_scores"
+      ],
+      "state_variables": {
+        "answer": 1,
+        "points_awarded": 2,
+        "score": 11
+      }
+    },
+    "mathsquiz/mathsquiz-step3.py": {
+      "total_lines": 62,
+      "meaningful_lines": 37,
+      "parse_status": "parsed",
+      "imports": [
+        "random"
+      ],
+      "functions": [
+        "welcome_message",
+        "ask_question",
+        "print_final_scores"
+      ],
+      "module_level_calls": [
+        "welcome_message",
+        "range",
+        "print",
+        "randint",
+        "randint",
+        "ask_question",
+        "print_final_scores"
+      ],
+      "state_variables": {
+        "answer": 1,
+        "correct_answer": 1,
+        "points_awarded": 2,
+        "percentage": 1,
+        "score": 2,
+        "number_of_questions": 1,
+        "first_number": 1,
+        "second_number": 1
+      }
+    },
+    "mathsquiz/mathsquiz.py": {
+      "total_lines": 94,
+      "meaningful_lines": 53,
+      "parse_status": "syntax_error",
+      "syntax_error": {
+        "line": 3,
+        "message": "Missing parentheses in call to 'print'. Did you mean print(...)?"
+      }
+    }
+  },
+  "totals": {
+    "nodes": 47,
+    "edges": 153,
+    "files": 4,
+    "functions": 6,
+    "bug_risks": 14,
+    "syntax_errors": 1
+  },
+  "top_nodes_by_degree": [
+    {
+      "id": "call:print",
+      "label": "print",
+      "type": "callable_reference",
+      "degree": 73
+    },
+    {
+      "id": "file:mathsquiz/mathsquiz-step1.py",
+      "label": "mathsquiz/mathsquiz-step1.py",
+      "type": "file",
+      "degree": 72
+    },
+    {
+      "id": "file:mathsquiz/mathsquiz-step2.py",
+      "label": "mathsquiz/mathsquiz-step2.py",
+      "type": "file",
+      "degree": 20
+    },
+    {
+      "id": "file:mathsquiz/mathsquiz-step3.py",
+      "label": "mathsquiz/mathsquiz-step3.py",
+      "type": "file",
+      "degree": 20
+    },
+    {
+      "id": "call:input",
+      "label": "input",
+      "type": "callable_reference",
+      "degree": 12
+    },
+    {
+      "id": "call:int",
+      "label": "int",
+      "type": "callable_reference",
+      "degree": 12
+    },
+    {
+      "id": "file:mathsquiz/mathsquiz.py",
+      "label": "mathsquiz/mathsquiz.py",
+      "type": "file",
+      "degree": 12
+    },
+    {
+      "id": "call:ask_question",
+      "label": "ask_question",
+      "type": "callable_reference",
+      "degree": 11
+    },
+    {
+      "id": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "label": "print_final_scores",
+      "type": "function",
+      "degree": 9
+    },
+    {
+      "id": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "label": "print_final_scores",
+      "type": "function",
+      "degree": 9
+    }
+  ]
+}

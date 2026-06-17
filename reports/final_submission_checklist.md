@@ -2,14 +2,16 @@
 
 - [ ] Repository selected and justified.
 - [x] Primary subsystem selected: `mathsquiz`.
-- [ ] Exact `mathsquiz` bug selected.
+- [ ] Exact `mathsquiz` bug selected from Phase 1 candidates.
 - [ ] Repository size verified: approximately 10,000+ source lines.
 - [ ] Repository size verified: at least 70 source-code files.
 - [ ] Repository size report completed.
 - [ ] Agent instruction architecture completed.
 - [ ] Bug selected and reproduced.
 - [ ] Graphify artifacts generated.
+- [x] Phase 1 Graphify-style artifacts generated.
 - [ ] Obsidian vault completed.
+- [x] Initial Obsidian graph-guided notes updated.
 - [ ] Architecture diagram completed.
 - [ ] OOP/module diagram completed.
 - [ ] Agent workflow implemented.

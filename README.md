@@ -4,7 +4,7 @@ Reverse Engineering, Debugging, and Token-Efficient Agentic AI with Graphify and
 
 ## Status
 
-Phase 0 scaffold is mostly complete. The repository and investigation subsystem are selected; the remaining Phase 0 work is to choose the exact `mathsquiz` bug instance and prepare the first reproduction note before Phase 1.
+Phase 1 graph and initial knowledge-base setup is complete using a local Graphify-style static analyzer. The remaining decision before Phase 2/3 is to lock the exact `mathsquiz` bug instance for the final fix.
 
 ## Assignment Goal
 
@@ -118,6 +118,35 @@ Rationale:
 - It is suitable for comparing versions/steps and extracting a small architecture from imperfect code.
 - It supports focused debugging while still allowing Graphify/Obsidian to demonstrate navigation, hot-context construction, and token reduction.
 - It is more suitable than `polygons` as the primary path because it provides a richer interaction flow: random question generation, input parsing, answer validation, score state, loop control, and user-facing behavior.
+
+## Phase 1 Graph Artifacts
+
+Graphify executable was not available locally, so Phase 1 generated Graphify-style static-analysis artifacts from Python AST plus syntax-fallback scanning.
+
+Generation log:
+
+- `artifacts/logs/graphify_run.md`
+
+Generated artifacts:
+
+- `artifacts/graphify/graph.json`
+- `artifacts/graphify/GRAPH_REPORT.md`
+- `artifacts/graphify/graph_metrics.json`
+- `artifacts/graphify/graph.html`
+
+Graph totals:
+
+- Nodes: 47
+- Edges: 153
+- Files analyzed: 4 `mathsquiz` Python files
+- Functions detected: 6
+- Bug-risk nodes: 14
+- Syntax-error nodes: 1
+
+Primary bug candidates from Phase 1:
+
+- `mathsquiz/mathsquiz.py`: syntax and baseline logic defects, including Python 2 `print`, assignment inside conditions, invalid `else if`, wrong expected answers, and missing score increments.
+- `mathsquiz/mathsquiz-step2.py` and `mathsquiz/mathsquiz-step3.py`: `print_final_scores(...)` accepts `final_score` but reads global `score`, which is an architectural state-coupling bug.
 
 ## Agent Instruction Architecture
 

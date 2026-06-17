@@ -6,7 +6,7 @@ EX04 - Graph-Guided Reverse Engineering, Debugging, and Token-Efficient Agentic 
 
 ## Current Status
 
-Phase 0 scaffold is complete.
+Phase 1 graph and initial knowledge-base setup is complete.
 
 Repository choice: `martinpeck/broken-python`
 
@@ -15,6 +15,11 @@ Selection status: instructor-approved exception to the general repository-size t
 Selected subsystem: [[mathsquiz]]
 
 Selected bug: TBD after final reproduction pass.
+
+Current top candidates:
+
+- Baseline syntax/logic failure in `mathsquiz/mathsquiz.py`.
+- State-coupling bug in `print_final_scores` in `mathsquiz-step2.py` and `mathsquiz-step3.py`.
 
 ## Navigation
 
@@ -30,13 +35,14 @@ Selected bug: TBD after final reproduction pass.
 ## Required Artifacts
 
 - Graphify output: `../artifacts/graphify/`
+- Main graph report: `../artifacts/graphify/GRAPH_REPORT.md`
+- Machine-readable graph: `../artifacts/graphify/graph.json`
 - Reports: `../reports/`
 - Diagrams: `../artifacts/diagrams/`
 - Logs: `../artifacts/logs/`
 
 ## Open Questions
 
-- Which repository will be selected?
 - Which exact `mathsquiz` script/behavior will become the primary bug target?
-- What Graphify nodes will be central to the bug path?
-- Which files should enter `hot.md` after Graphify analysis?
+- Should the final fix target the obvious broken baseline or the subtler state-coupling bug?
+- Which graph-risk node should become the root of the agent investigation?

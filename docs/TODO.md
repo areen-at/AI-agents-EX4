@@ -192,85 +192,85 @@
 
 ### 1.1 Graphify Preparation
 
-- [ ] Install or locate Graphify.
+- [x] Install or locate Graphify.
 - [ ] Read Graphify usage instructions.
-- [ ] Identify Graphify input path.
-- [ ] Identify Graphify output path.
-- [ ] Decide whether to run Graphify on full repo or selected subdirectory.
+- [x] Identify Graphify input path.
+- [x] Identify Graphify output path.
+- [x] Decide whether to run Graphify on full repo or selected subdirectory.
 - [ ] Exclude irrelevant folders if needed.
 - [ ] Exclude virtual environments.
 - [ ] Exclude build artifacts.
 - [ ] Exclude cache directories.
-- [ ] Exclude `.git`.
+- [x] Exclude `.git`.
 - [ ] Exclude generated report directories if needed.
-- [ ] Record the exact Graphify command.
+- [x] Record the exact Graphify command.
 - [ ] Add Graphify command to README.
 - [ ] Add Graphify command to `reports/reverse_engineering_report.md`.
 - [ ] Add Graphify command to `obsidian/index.md`.
 
 ### 1.2 Graphify Execution
 
-- [ ] Run Graphify on selected codebase.
-- [ ] Save `graph.json` to `artifacts/graphify/graph.json`.
-- [ ] Save `GRAPH_REPORT.md` to `artifacts/graphify/GRAPH_REPORT.md`.
-- [ ] Save any `graph.html` output to `artifacts/graphify/`.
+- [x] Run Graphify on selected codebase.
+- [x] Save `graph.json` to `artifacts/graphify/graph.json`.
+- [x] Save `GRAPH_REPORT.md` to `artifacts/graphify/GRAPH_REPORT.md`.
+- [x] Save any `graph.html` output to `artifacts/graphify/`.
 - [ ] Save any image output to `artifacts/graphify/`.
-- [ ] Save Graphify console logs to `artifacts/logs/graphify_run.md`.
-- [ ] Verify `graph.json` is valid JSON.
-- [ ] Verify `graph.json` contains nodes.
-- [ ] Verify `graph.json` contains edges.
-- [ ] Verify `GRAPH_REPORT.md` is readable.
-- [ ] Record total node count.
-- [ ] Record total edge count.
-- [ ] Record graph generation date.
-- [ ] Record Graphify limitations.
-- [ ] Record any parse failures.
+- [x] Save Graphify console logs to `artifacts/logs/graphify_run.md`.
+- [x] Verify `graph.json` is valid JSON.
+- [x] Verify `graph.json` contains nodes.
+- [x] Verify `graph.json` contains edges.
+- [x] Verify `GRAPH_REPORT.md` is readable.
+- [x] Record total node count.
+- [x] Record total edge count.
+- [x] Record graph generation date.
+- [x] Record Graphify limitations.
+- [x] Record any parse failures.
 - [ ] Record unsupported files.
 - [ ] Record any missing semantic links.
 
 ### 1.3 Graph Artifact Inspection
 
-- [ ] Identify top-level files represented in graph.
-- [ ] Identify main modules represented in graph.
-- [ ] Identify functions represented in graph.
-- [ ] Identify classes represented in graph.
+- [x] Identify top-level files represented in graph.
+- [x] Identify main modules represented in graph.
+- [x] Identify functions represented in graph.
+- [x] Identify classes represented in graph.
 - [ ] Identify import edges.
-- [ ] Identify call edges.
-- [ ] Identify semantic or inferred edges if available.
+- [x] Identify call edges.
+- [x] Identify semantic or inferred edges if available.
 - [ ] Identify ambiguous edges if available.
-- [ ] Identify high-degree nodes.
-- [ ] Identify possible hubs.
+- [x] Identify high-degree nodes.
+- [x] Identify possible hubs.
 - [ ] Identify possible God nodes.
 - [ ] Identify isolated nodes.
 - [ ] Identify isolated clusters.
 - [ ] Identify communities if available.
 - [ ] Identify bridge nodes if available.
-- [ ] Identify paths related to selected bug.
+- [x] Identify paths related to selected bug.
 - [ ] Identify nodes related to failing tests.
-- [ ] Identify nodes related to bug keywords.
-- [ ] Record initial graph observations in `reports/reverse_engineering_report.md`.
-- [ ] Record initial graph observations in `obsidian/architecture.md`.
-- [ ] Record initial graph observations in `obsidian/hot.md`.
+- [x] Identify nodes related to bug keywords.
+- [x] Record initial graph observations in `reports/reverse_engineering_report.md`.
+- [x] Record initial graph observations in `obsidian/architecture.md`.
+- [x] Record initial graph observations in `obsidian/hot.md`.
 
 ### 1.4 Obsidian Vault Setup
 
-- [ ] Add title to `obsidian/index.md`.
-- [ ] Add project overview to `obsidian/index.md`.
-- [ ] Add source repository link to `obsidian/index.md`.
+- [x] Add title to `obsidian/index.md`.
+- [x] Add project overview to `obsidian/index.md`.
+- [x] Add source repository link to `obsidian/index.md`.
 - [ ] Add selected bug summary to `obsidian/index.md`.
-- [ ] Add navigation links to `obsidian/index.md`.
-- [ ] Link `[[hot]]` from `index.md`.
-- [ ] Link `[[architecture]]` from `index.md`.
-- [ ] Link `[[components]]` from `index.md`.
-- [ ] Link `[[bug_investigation]]` from `index.md`.
-- [ ] Link `[[tests_and_verification]]` from `index.md`.
-- [ ] Link `[[token_efficiency]]` from `index.md`.
-- [ ] Link `[[original_extension]]` from `index.md`.
-- [ ] Add Graphify artifact references to `index.md`.
-- [ ] Add report references to `index.md`.
+- [x] Add navigation links to `obsidian/index.md`.
+- [x] Link `[[hot]]` from `index.md`.
+- [x] Link `[[architecture]]` from `index.md`.
+- [x] Link `[[components]]` from `index.md`.
+- [x] Link `[[bug_investigation]]` from `index.md`.
+- [x] Link `[[tests_and_verification]]` from `index.md`.
+- [x] Link `[[token_efficiency]]` from `index.md`.
+- [x] Link `[[original_extension]]` from `index.md`.
+- [x] Add Graphify artifact references to `index.md`.
+- [x] Add report references to `index.md`.
 - [ ] Add diagram references to `index.md`.
-- [ ] Add open questions section to `index.md`.
-- [ ] Add current investigation status to `index.md`.
+- [x] Add open questions section to `index.md`.
+- [x] Add current investigation status to `index.md`.
 
 ### 1.5 Hot Context Setup
 

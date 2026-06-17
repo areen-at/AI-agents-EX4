@@ -1,0 +1,1773 @@
+{
+  "nodes": [
+    {
+      "id": "file:mathsquiz/mathsquiz-step1.py",
+      "label": "mathsquiz/mathsquiz-step1.py",
+      "type": "file",
+      "source_file": "mathsquiz/mathsquiz-step1.py",
+      "total_lines": 158,
+      "meaningful_lines": 93,
+      "degree": 72,
+      "in_degree": 1,
+      "out_degree": 71
+    },
+    {
+      "id": "call:print",
+      "label": "print",
+      "type": "callable_reference",
+      "degree": 73,
+      "in_degree": 73,
+      "out_degree": 0
+    },
+    {
+      "id": "call:input",
+      "label": "input",
+      "type": "callable_reference",
+      "degree": 12,
+      "in_degree": 12,
+      "out_degree": 0
+    },
+    {
+      "id": "call:int",
+      "label": "int",
+      "type": "callable_reference",
+      "degree": 12,
+      "in_degree": 12,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step1.py:score",
+      "label": "score",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step1.py",
+      "assignments": 11,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step1.py:answer",
+      "label": "answer",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step1.py",
+      "assignments": 10,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "file:mathsquiz/mathsquiz-step2.py",
+      "label": "mathsquiz/mathsquiz-step2.py",
+      "type": "file",
+      "source_file": "mathsquiz/mathsquiz-step2.py",
+      "total_lines": 57,
+      "meaningful_lines": 38,
+      "degree": 20,
+      "in_degree": 1,
+      "out_degree": 19
+    },
+    {
+      "id": "function:mathsquiz/mathsquiz-step2.py:welcome_message",
+      "label": "welcome_message",
+      "type": "function",
+      "source_file": "mathsquiz/mathsquiz-step2.py",
+      "line": 3,
+      "args": [],
+      "degree": 3,
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "id": "function:mathsquiz/mathsquiz-step2.py:ask_question",
+      "label": "ask_question",
+      "type": "function",
+      "source_file": "mathsquiz/mathsquiz-step2.py",
+      "line": 8,
+      "args": [
+        "first_number",
+        "second_number"
+      ],
+      "degree": 7,
+      "in_degree": 1,
+      "out_degree": 6
+    },
+    {
+      "id": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "label": "print_final_scores",
+      "type": "function",
+      "source_file": "mathsquiz/mathsquiz-step2.py",
+      "line": 23,
+      "args": [
+        "final_score"
+      ],
+      "degree": 9,
+      "in_degree": 1,
+      "out_degree": 8
+    },
+    {
+      "id": "call:welcome_message",
+      "label": "welcome_message",
+      "type": "callable_reference",
+      "degree": 2,
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "id": "call:ask_question",
+      "label": "ask_question",
+      "type": "callable_reference",
+      "degree": 11,
+      "in_degree": 11,
+      "out_degree": 0
+    },
+    {
+      "id": "call:print_final_scores",
+      "label": "print_final_scores",
+      "type": "callable_reference",
+      "degree": 2,
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step2.py:answer",
+      "label": "answer",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step2.py",
+      "assignments": 1,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step2.py:points_awarded",
+      "label": "points_awarded",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step2.py",
+      "assignments": 2,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step2.py:score",
+      "label": "score",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step2.py",
+      "assignments": 11,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz-step2.py:print_final_scores:unused_arg:final_score",
+      "label": "unused parameter final_score",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz-step2.py",
+      "function": "print_final_scores",
+      "parameter": "final_score",
+      "line": 23,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz-step2.py:print_final_scores:global_score_instead_of_param",
+      "label": "reads global score instead of final_score",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz-step2.py",
+      "function": "print_final_scores",
+      "line": 23,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "file:mathsquiz/mathsquiz-step3.py",
+      "label": "mathsquiz/mathsquiz-step3.py",
+      "type": "file",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "total_lines": 62,
+      "meaningful_lines": 37,
+      "degree": 20,
+      "in_degree": 1,
+      "out_degree": 19
+    },
+    {
+      "id": "import:random",
+      "label": "random",
+      "type": "external_module",
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "function:mathsquiz/mathsquiz-step3.py:welcome_message",
+      "label": "welcome_message",
+      "type": "function",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "line": 4,
+      "args": [],
+      "degree": 3,
+      "in_degree": 1,
+      "out_degree": 2
+    },
+    {
+      "id": "function:mathsquiz/mathsquiz-step3.py:ask_question",
+      "label": "ask_question",
+      "type": "function",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "line": 9,
+      "args": [
+        "first_number",
+        "second_number"
+      ],
+      "degree": 7,
+      "in_degree": 1,
+      "out_degree": 6
+    },
+    {
+      "id": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "label": "print_final_scores",
+      "type": "function",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "line": 27,
+      "args": [
+        "final_score",
+        "max_possible_score"
+      ],
+      "degree": 9,
+      "in_degree": 1,
+      "out_degree": 8
+    },
+    {
+      "id": "call:range",
+      "label": "range",
+      "type": "callable_reference",
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "call:randint",
+      "label": "randint",
+      "type": "callable_reference",
+      "degree": 2,
+      "in_degree": 2,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step3.py:answer",
+      "label": "answer",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "assignments": 1,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step3.py:correct_answer",
+      "label": "correct_answer",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "assignments": 1,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step3.py:points_awarded",
+      "label": "points_awarded",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "assignments": 2,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step3.py:percentage",
+      "label": "percentage",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "assignments": 1,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step3.py:score",
+      "label": "score",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "assignments": 2,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step3.py:number_of_questions",
+      "label": "number_of_questions",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "assignments": 1,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step3.py:first_number",
+      "label": "first_number",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "assignments": 1,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "state:mathsquiz/mathsquiz-step3.py:second_number",
+      "label": "second_number",
+      "type": "state_variable",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "assignments": 1,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz-step3.py:print_final_scores:unused_arg:final_score",
+      "label": "unused parameter final_score",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "function": "print_final_scores",
+      "parameter": "final_score",
+      "line": 27,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz-step3.py:print_final_scores:global_score_instead_of_param",
+      "label": "reads global score instead of final_score",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz-step3.py",
+      "function": "print_final_scores",
+      "line": 27,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "file:mathsquiz/mathsquiz.py",
+      "label": "mathsquiz/mathsquiz.py",
+      "type": "file",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "total_lines": 94,
+      "meaningful_lines": 53,
+      "degree": 12,
+      "in_degree": 0,
+      "out_degree": 12
+    },
+    {
+      "id": "syntax_error:mathsquiz/mathsquiz.py:3",
+      "label": "SyntaxError line 3",
+      "type": "syntax_error",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 3,
+      "message": "Missing parentheses in call to 'print'. Did you mean print(...)?",
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:3:py2_print",
+      "label": "Python 2 print syntax",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 3,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:4:py2_print",
+      "label": "Python 2 print syntax",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 4,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:14:assignment_in_condition",
+      "label": "assignment in condition",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 14,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:25:assignment_in_condition",
+      "label": "assignment in condition",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 25,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:36:assignment_in_condition",
+      "label": "assignment in condition",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 36,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:47:assignment_in_condition",
+      "label": "assignment in condition",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 47,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:58:assignment_in_condition",
+      "label": "assignment in condition",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 58,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:70:assignment_in_condition",
+      "label": "assignment in condition",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 70,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:91:else_if",
+      "label": "invalid else if",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 91,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    },
+    {
+      "id": "risk:mathsquiz/mathsquiz.py:93:else_if",
+      "label": "invalid else if",
+      "type": "bug_risk",
+      "source_file": "mathsquiz/mathsquiz.py",
+      "line": 93,
+      "degree": 1,
+      "in_degree": 1,
+      "out_degree": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 4
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 5
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 20
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 21
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 22
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 23
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 24
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 27
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 32
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 33
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 34
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 35
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 36
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 39
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 45
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 46
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 47
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 48
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 49
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 52
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 58
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 59
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 60
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 61
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 62
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 65
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 71
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 72
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 73
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 74
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 75
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 78
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 85
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 86
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 87
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 88
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 89
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 92
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 98
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 99
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 100
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 101
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 102
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 105
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 109
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 110
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 111
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 112
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 113
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 116
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 121
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 122
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 123
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 124
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 125
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 128
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 133
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 134
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 135
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 136
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 137
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 140
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 149
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 150
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 152
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 154
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 156
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 158
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "state:mathsquiz/mathsquiz-step1.py:score",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "state:mathsquiz/mathsquiz-step1.py:answer",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "function:mathsquiz/mathsquiz-step2.py:welcome_message",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "line": 3
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:welcome_message",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 4
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:welcome_message",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 5
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "function:mathsquiz/mathsquiz-step2.py:ask_question",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "line": 8
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:ask_question",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 9
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:ask_question",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 10
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:ask_question",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 11
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:ask_question",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 12
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:ask_question",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 15
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:ask_question",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 18
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "line": 23
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 24
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 25
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 27
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 29
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 31
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 33
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:welcome_message",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 39
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 45
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 46
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 47
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 48
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 49
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 50
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 51
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 52
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 53
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 54
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "call:print_final_scores",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 57
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "state:mathsquiz/mathsquiz-step2.py:answer",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "state:mathsquiz/mathsquiz-step2.py:points_awarded",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "state:mathsquiz/mathsquiz-step2.py:score",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "target": "risk:mathsquiz/mathsquiz-step2.py:print_final_scores:unused_arg:final_score",
+      "relation": "contains_bug_risk",
+      "confidence": "INFERRED",
+      "rationale": "parameter is declared but not read in function body"
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+      "target": "risk:mathsquiz/mathsquiz-step2.py:print_final_scores:global_score_instead_of_param",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "rationale": "function receives final_score but reads global score"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "import:random",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "line": 1
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "function:mathsquiz/mathsquiz-step3.py:welcome_message",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "line": 4
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:welcome_message",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 5
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:welcome_message",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 6
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "function:mathsquiz/mathsquiz-step3.py:ask_question",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "line": 9
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:ask_question",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 10
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:ask_question",
+      "target": "call:input",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 11
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:ask_question",
+      "target": "call:int",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 15
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:ask_question",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 16
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:ask_question",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 19
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:ask_question",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 22
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "line": 27
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 29
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 30
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 35
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 37
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 39
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 41
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "call:welcome_message",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 45
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "call:range",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 54
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "call:print",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 55
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "call:randint",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 56
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "call:randint",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 57
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "call:ask_question",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 58
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "call:print_final_scores",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "line": 62
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "state:mathsquiz/mathsquiz-step3.py:answer",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "state:mathsquiz/mathsquiz-step3.py:correct_answer",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "state:mathsquiz/mathsquiz-step3.py:points_awarded",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "state:mathsquiz/mathsquiz-step3.py:percentage",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "state:mathsquiz/mathsquiz-step3.py:score",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "state:mathsquiz/mathsquiz-step3.py:number_of_questions",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "state:mathsquiz/mathsquiz-step3.py:first_number",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step3.py",
+      "target": "state:mathsquiz/mathsquiz-step3.py:second_number",
+      "relation": "maintains_state",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "target": "risk:mathsquiz/mathsquiz-step3.py:print_final_scores:unused_arg:final_score",
+      "relation": "contains_bug_risk",
+      "confidence": "INFERRED",
+      "rationale": "parameter is declared but not read in function body"
+    },
+    {
+      "source": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+      "target": "risk:mathsquiz/mathsquiz-step3.py:print_final_scores:global_score_instead_of_param",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "rationale": "function receives final_score but reads global score"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "syntax_error:mathsquiz/mathsquiz.py:3",
+      "relation": "has_syntax_error",
+      "confidence": "EXTRACTED",
+      "line": 3
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:3:py2_print",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 3
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:4:py2_print",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 4
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:14:assignment_in_condition",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 14
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:25:assignment_in_condition",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 25
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:36:assignment_in_condition",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 36
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:47:assignment_in_condition",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 47
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:58:assignment_in_condition",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 58
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:70:assignment_in_condition",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 70
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:91:else_if",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 91
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "risk:mathsquiz/mathsquiz.py:93:else_if",
+      "relation": "contains_bug_risk",
+      "confidence": "EXTRACTED",
+      "line": 93
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz.py",
+      "target": "file:mathsquiz/mathsquiz-step1.py",
+      "relation": "evolves_to_or_refines",
+      "confidence": "INFERRED",
+      "rationale": "step scripts represent progressive repairs/refactoring of mathsquiz"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step1.py",
+      "target": "file:mathsquiz/mathsquiz-step2.py",
+      "relation": "evolves_to_or_refines",
+      "confidence": "INFERRED",
+      "rationale": "step scripts represent progressive repairs/refactoring of mathsquiz"
+    },
+    {
+      "source": "file:mathsquiz/mathsquiz-step2.py",
+      "target": "file:mathsquiz/mathsquiz-step3.py",
+      "relation": "evolves_to_or_refines",
+      "confidence": "INFERRED",
+      "rationale": "step scripts represent progressive repairs/refactoring of mathsquiz"
+    }
+  ],
+  "metrics": {
+    "source_root": "C:\\Users\\LENOVO\\Documents\\Codex\\2026-06-17\\files-mentioned-by-the-user-l07\\work\\target_repos\\broken-python\\mathsquiz",
+    "analysis_kind": "graphify_style_ast_static_analysis",
+    "tool_note": "Graphify executable was not available, so this graph was generated from Python AST plus syntax-fallback line scanning.",
+    "files": {
+      "mathsquiz/mathsquiz-step1.py": {
+        "total_lines": 158,
+        "meaningful_lines": 93,
+        "parse_status": "parsed",
+        "imports": [],
+        "functions": [],
+        "module_level_calls": [
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "input",
+          "int",
+          "print",
+          "print",
+          "print",
+          "print",
+          "print",
+          "print",
+          "print",
+          "print"
+        ],
+        "state_variables": {
+          "score": 11,
+          "answer": 10
+        }
+      },
+      "mathsquiz/mathsquiz-step2.py": {
+        "total_lines": 57,
+        "meaningful_lines": 38,
+        "parse_status": "parsed",
+        "imports": [],
+        "functions": [
+          "welcome_message",
+          "ask_question",
+          "print_final_scores"
+        ],
+        "module_level_calls": [
+          "welcome_message",
+          "ask_question",
+          "ask_question",
+          "ask_question",
+          "ask_question",
+          "ask_question",
+          "ask_question",
+          "ask_question",
+          "ask_question",
+          "ask_question",
+          "ask_question",
+          "print_final_scores"
+        ],
+        "state_variables": {
+          "answer": 1,
+          "points_awarded": 2,
+          "score": 11
+        }
+      },
+      "mathsquiz/mathsquiz-step3.py": {
+        "total_lines": 62,
+        "meaningful_lines": 37,
+        "parse_status": "parsed",
+        "imports": [
+          "random"
+        ],
+        "functions": [
+          "welcome_message",
+          "ask_question",
+          "print_final_scores"
+        ],
+        "module_level_calls": [
+          "welcome_message",
+          "range",
+          "print",
+          "randint",
+          "randint",
+          "ask_question",
+          "print_final_scores"
+        ],
+        "state_variables": {
+          "answer": 1,
+          "correct_answer": 1,
+          "points_awarded": 2,
+          "percentage": 1,
+          "score": 2,
+          "number_of_questions": 1,
+          "first_number": 1,
+          "second_number": 1
+        }
+      },
+      "mathsquiz/mathsquiz.py": {
+        "total_lines": 94,
+        "meaningful_lines": 53,
+        "parse_status": "syntax_error",
+        "syntax_error": {
+          "line": 3,
+          "message": "Missing parentheses in call to 'print'. Did you mean print(...)?"
+        }
+      }
+    },
+    "totals": {
+      "nodes": 47,
+      "edges": 153,
+      "files": 4,
+      "functions": 6,
+      "bug_risks": 14,
+      "syntax_errors": 1
+    },
+    "top_nodes_by_degree": [
+      {
+        "id": "call:print",
+        "label": "print",
+        "type": "callable_reference",
+        "degree": 73
+      },
+      {
+        "id": "file:mathsquiz/mathsquiz-step1.py",
+        "label": "mathsquiz/mathsquiz-step1.py",
+        "type": "file",
+        "degree": 72
+      },
+      {
+        "id": "file:mathsquiz/mathsquiz-step2.py",
+        "label": "mathsquiz/mathsquiz-step2.py",
+        "type": "file",
+        "degree": 20
+      },
+      {
+        "id": "file:mathsquiz/mathsquiz-step3.py",
+        "label": "mathsquiz/mathsquiz-step3.py",
+        "type": "file",
+        "degree": 20
+      },
+      {
+        "id": "call:input",
+        "label": "input",
+        "type": "callable_reference",
+        "degree": 12
+      },
+      {
+        "id": "call:int",
+        "label": "int",
+        "type": "callable_reference",
+        "degree": 12
+      },
+      {
+        "id": "file:mathsquiz/mathsquiz.py",
+        "label": "mathsquiz/mathsquiz.py",
+        "type": "file",
+        "degree": 12
+      },
+      {
+        "id": "call:ask_question",
+        "label": "ask_question",
+        "type": "callable_reference",
+        "degree": 11
+      },
+      {
+        "id": "function:mathsquiz/mathsquiz-step2.py:print_final_scores",
+        "label": "print_final_scores",
+        "type": "function",
+        "degree": 9
+      },
+      {
+        "id": "function:mathsquiz/mathsquiz-step3.py:print_final_scores",
+        "label": "print_final_scores",
+        "type": "function",
+        "degree": 9
+      }
+    ]
+  }
+}
