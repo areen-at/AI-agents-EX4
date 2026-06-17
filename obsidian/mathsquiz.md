@@ -4,6 +4,8 @@
 
 Selected as the primary EX04 investigation subsystem.
 
+Official selected bug: [[print_final_scores_global_state_bug]]
+
 ## Source Files
 
 - `mathsquiz/mathsquiz-step1.py`
@@ -18,14 +20,14 @@ Selected as the primary EX04 investigation subsystem.
 - It is compact enough for a complete investigation while still allowing Graphify and Obsidian to demonstrate focused navigation.
 - It is more suitable than `polygons` as the primary path because it includes interactive stateful behavior.
 
-## Initial Investigation Questions
+## Investigation Questions
 
-- Which script contains the best bug candidate for a reproducible before/after fix?
 - How do the step files relate to the final `mathsquiz.py`?
 - Which functions or blocks are central to quiz flow?
 - Where does user input enter the system?
 - Where is the answer checked?
 - Where is score state updated?
+- Why does `print_final_scores(...)` accept `final_score` but read global `score`?
 
 ## Phase 1 Graph Summary
 
@@ -54,9 +56,26 @@ Totals:
 | `mathsquiz/mathsquiz-step2.py` | parsed | Functional refactor with score-state risk |
 | `mathsquiz/mathsquiz-step3.py` | parsed | Randomized quiz version with score-state risk |
 
-## Candidate Bug Paths
+## Bug Path Decision
 
-### Candidate A: Broken Baseline
+### Selected: Hidden State Coupling
+
+Target: `print_final_scores` in `mathsquiz-step2.py` and `mathsquiz-step3.py`
+
+Evidence:
+
+- Function receives `final_score`.
+- Function reads global `score`.
+- The parameter is effectively unused.
+- Graph analysis marks the same risk in both functional quiz versions.
+
+Value:
+
+- Better architectural discussion.
+- Demonstrates modularity and function-boundary correctness.
+- Stronger fit for agent-instruction architecture.
+
+### Rejected/Background: Broken Baseline
 
 Target: `mathsquiz/mathsquiz.py`
 
@@ -70,25 +89,8 @@ Evidence:
 
 Value:
 
-- Easy to reproduce.
-- Clear before/after fix.
-- Less architecturally subtle.
-
-### Candidate B: Hidden State Coupling
-
-Target: `print_final_scores` in `mathsquiz-step2.py` and/or `mathsquiz-step3.py`
-
-Evidence:
-
-- Function receives `final_score`.
-- Function reads global `score`.
-- The parameter is effectively unused.
-
-Value:
-
-- Better architectural discussion.
-- Demonstrates modularity and function-boundary correctness.
-- Stronger fit for agent-instruction architecture.
+- Easy to reproduce but less architecturally subtle.
+- Kept as evidence of the repository's broken baseline, not the official fix path.
 
 ## Links
 

@@ -40,12 +40,14 @@ Approved exception:
 Selected investigation subsystem:
 
 - `mathsquiz`
-- Candidate files:
-  - `mathsquiz/mathsquiz-step1.py`
+- Official bug path: `print_final_scores` global-state coupling.
+- Primary files:
   - `mathsquiz/mathsquiz-step2.py`
   - `mathsquiz/mathsquiz-step3.py`
+- Supporting context files:
+  - `mathsquiz/mathsquiz-step1.py`
   - `mathsquiz/mathsquiz.py`
-- The final bug instance will be selected after a short reproduction pass and then locked before Phase 1.
+- The selected bug is that `print_final_scores(...)` accepts score parameters but reads the module-level global `score`, violating modular function boundaries.
 
 ### 2.2 Agent Framework
 
@@ -190,7 +192,7 @@ If the target repository already has its own structure, keep its code intact and
 - Team can prove the repository meets the scale requirement.
 - Or, if using the approved exception, team can prove and document the lecturer-approved exception.
 - Team has selected the `mathsquiz` subsystem as the primary investigation path.
-- Team has identified the exact `mathsquiz` bug candidate or has a short reproduction task remaining before Phase 1.
+- Team has identified the exact `mathsquiz` bug candidate: `print_final_scores` global-state coupling.
 - Team has initial modular agent instructions.
 - Team has a specific bug candidate.
 - Project structure exists.
@@ -237,6 +239,8 @@ If the target repository already has its own structure, keep its code intact and
 - Relevant relationships.
 - Next code files to inspect.
 - Open questions.
+
+For this project, `hot.md` must keep the official Phase 1 focus on `print_final_scores(...)` and its hidden dependency on global `score`.
 
 ### 5.5 Outputs
 
@@ -395,7 +399,7 @@ The agent must:
 
 ### 8.2 Tasks
 
-1. Define bug reproduction command or input.
+1. Define a focused reproduction for `print_final_scores(...)` by calling the function with a controlled `final_score` while the module-level `score` has a different value.
 2. Capture failing behavior.
 3. Use graph-guided workflow to identify suspect files.
 4. Inspect source evidence.
@@ -763,7 +767,7 @@ Use a simple 1-5 scale and explain the rating.
 | Risk | Probability | Impact | Response |
 |---|---:|---:|---|
 | Graphify cannot parse selected repo | Medium | High | Keep generated artifacts, document limitation, supplement manually |
-| Bug cannot be reproduced | Medium | High | Keep the substantial repository, but switch to another bug path inside the same codebase if possible |
+| Bug cannot be reproduced | Low | High | Use direct function-level reproduction for `print_final_scores(...)`; keep baseline and input-conversion bugs only as backups |
 | Agent workflow is too complex | Medium | Medium | Use fixed LangGraph stages and simple tools |
 | Token comparison is imprecise | High | Medium | Use transparent estimates plus file-count metrics |
 | Diagrams take too long | Medium | Medium | Use Mermaid diagrams first, polish later |

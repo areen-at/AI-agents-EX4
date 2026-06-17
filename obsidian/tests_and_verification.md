@@ -2,18 +2,25 @@
 
 ## Before Fix
 
-TBD after exact bug selection.
+Official bug: [[print_final_scores_global_state_bug]]
 
-Candidate checks:
+Focused reproduction checks:
 
-- Run `mathsquiz.py` under Python 3 and capture syntax failure.
-- Unit-style call to `print_final_scores(final_score=...)` after controlling global `score`, to expose global state coupling.
-- Run `ask_question` with mocked input to verify score return.
+- Load or copy the `print_final_scores(...)` implementation from `mathsquiz-step2.py`.
+- Set module global `score` to a value different from the function argument.
+- Call `print_final_scores(final_score=2)`.
+- Capture stdout.
+- Expected before fix: output incorrectly follows global `score`.
+- Load or copy the `print_final_scores(...)` implementation from `mathsquiz-step3.py`.
+- Set module global `score` to a value different from `final_score`.
+- Call `print_final_scores(final_score=10, max_possible_score=10)`.
+- Capture stdout.
+- Expected before fix: output incorrectly reports the global score and global-score percentage.
 
 ## After Fix
 
-TBD
+The same checks should pass because all final-score output and percentage calculations use `final_score`.
 
 ## Test Commands
 
-TBD after exact bug selection.
+Phase 1 prepares the reproduction design. Phase 4 should turn it into a repeatable pytest or documented script.

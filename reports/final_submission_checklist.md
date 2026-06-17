@@ -2,12 +2,13 @@
 
 - [ ] Repository selected and justified.
 - [x] Primary subsystem selected: `mathsquiz`.
-- [ ] Exact `mathsquiz` bug selected from Phase 1 candidates.
+- [x] Exact `mathsquiz` bug selected: `print_final_scores` global-state coupling.
 - [ ] Repository size verified: approximately 10,000+ source lines.
 - [ ] Repository size verified: at least 70 source-code files.
 - [ ] Repository size report completed.
 - [ ] Agent instruction architecture completed.
-- [ ] Bug selected and reproduced.
+- [x] Bug selected.
+- [ ] Bug reproduced.
 - [ ] Graphify artifacts generated.
 - [x] Phase 1 Graphify-style artifacts generated.
 - [ ] Obsidian vault completed.

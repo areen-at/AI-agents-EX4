@@ -57,5 +57,19 @@ Analyzed files: `mathsquiz/*.py`
 - `mathsquiz-step2.py` refactors the quiz into functions, introducing a likely state bug: `print_final_scores(final_score)` receives a parameter but reads global `score`.
 - `mathsquiz-step3.py` adds randomness and max score handling, but `print_final_scores(final_score, max_possible_score)` still reads global `score` instead of `final_score`.
 
+## Official Selected Bug Path
+
+The official investigation target is the `print_final_scores` global-state coupling bug in `mathsquiz-step2.py` and `mathsquiz-step3.py`.
+
+Selected evidence:
+
+- `mathsquiz-step2.py` line 23: `print_final_scores(final_score)` has an unused `final_score` parameter and reads global `score`.
+- `mathsquiz-step3.py` line 27: `print_final_scores(final_score, max_possible_score)` has an unused `final_score` parameter and reads global `score`.
+
+Rejected/background evidence:
+
+- `mathsquiz.py` baseline syntax and logic failures remain useful context, but they are not the official fix path.
+- `ask_question(...)` input-conversion risk remains a possible extension or robustness note, but not the official bug path.
+
 ## Phase 1 Next Use
-Use this graph to update `obsidian/index.md`, `obsidian/hot.md`, `obsidian/mathsquiz.md`, and the reverse-engineering report before choosing the final bug fix for Phase 4.
+Use this graph to keep `obsidian/index.md`, `obsidian/hot.md`, `obsidian/mathsquiz.md`, and the reverse-engineering report focused on the selected `print_final_scores` bug path before Phase 2 diagrams and Phase 4 reproduction/fix work.

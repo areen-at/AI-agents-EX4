@@ -133,17 +133,17 @@
 - [ ] Avoid bugs that are purely trivial syntax fixes if possible.
 - [ ] Choose one primary bug.
 - [x] Choose `mathsquiz` as the primary investigation subsystem.
-- [ ] Choose the exact `mathsquiz` bug instance.
+- [x] Choose the exact `mathsquiz` bug instance: `print_final_scores` global-state coupling.
 - [ ] Choose one backup bug.
 - [ ] Use `polygons` only as backup if `mathsquiz` reproduction fails.
-- [ ] Record the selected bug in README.
+- [x] Record the selected bug in README.
 - [x] Record the selected subsystem in README.
-- [ ] Record the selected bug in `obsidian/hot.md`.
+- [x] Record the selected bug in `obsidian/hot.md`.
 - [x] Record the selected subsystem in `obsidian/hot.md`.
-- [ ] Record the selected bug in `reports/bug_analysis_report.md`.
-- [ ] Define initial expected behavior.
-- [ ] Define initial actual behavior.
-- [ ] Define initial reproduction command.
+- [x] Record the selected bug in `reports/bug_analysis_report.md`.
+- [x] Define initial expected behavior for `print_final_scores`.
+- [x] Define initial actual behavior for `print_final_scores`.
+- [x] Define initial reproduction plan for `print_final_scores`.
 - [ ] Define initial verification command.
 - [ ] Capture any failing output.
 - [ ] Save failing output to `artifacts/logs/`.
@@ -158,7 +158,7 @@
 - [ ] Add README assignment summary.
 - [ ] Add README repository choice section.
 - [ ] Add README repository-size evidence section.
-- [ ] Add README selected bug section.
+- [x] Add README selected bug section.
 - [ ] Add README quick-start placeholder.
 - [ ] Add README project structure placeholder.
 - [ ] Add README artifact index placeholder.
@@ -181,7 +181,7 @@
 - [ ] Confirm repository has at least 70 source-code files.
 - [ ] Confirm repository choice is justified.
 - [x] Confirm `mathsquiz` subsystem choice is documented.
-- [ ] Confirm selected bug is feasible.
+- [x] Confirm selected bug is feasible.
 - [ ] Confirm initial agent instructions exist.
 - [ ] Confirm all required directories exist.
 - [ ] Confirm `uv` commands work.
@@ -257,7 +257,7 @@
 - [x] Add title to `obsidian/index.md`.
 - [x] Add project overview to `obsidian/index.md`.
 - [x] Add source repository link to `obsidian/index.md`.
-- [ ] Add selected bug summary to `obsidian/index.md`.
+- [x] Add selected bug summary to `obsidian/index.md`.
 - [x] Add navigation links to `obsidian/index.md`.
 - [x] Link `[[hot]]` from `index.md`.
 - [x] Link `[[architecture]]` from `index.md`.
@@ -275,10 +275,10 @@
 ### 1.5 Hot Context Setup
 
 - [ ] Add title to `obsidian/hot.md`.
-- [ ] Add selected bug summary.
-- [ ] Add expected behavior.
-- [ ] Add actual behavior.
-- [ ] Add reproduction command.
+- [x] Add selected bug summary.
+- [x] Add expected behavior.
+- [x] Add actual behavior.
+- [x] Add reproduction plan.
 - [ ] Add failing output summary.
 - [ ] Add suspected files section.
 - [ ] Add suspected modules section.
@@ -435,7 +435,7 @@
 
 - [ ] Add report title.
 - [ ] Add repository overview.
-- [ ] Add selected bug overview.
+- [x] Add selected bug overview.
 - [ ] Add Graphify method.
 - [ ] Add graph findings.
 - [ ] Add architecture findings.
@@ -1145,7 +1145,7 @@
 ## Completion Notes
 
 - [ ] Record final selected repository.
-- [ ] Record final selected bug.
+- [x] Record final selected bug: `print_final_scores` global-state coupling.
 - [ ] Record final Graphify command.
 - [ ] Record final agent command.
 - [ ] Record final test command.

@@ -4,7 +4,7 @@
 
 - `welcome_message`: displays introduction text.
 - `ask_question`: asks one multiplication question, parses answer, returns 1 or 0.
-- `print_final_scores`: displays score and feedback.
+- `print_final_scores`: displays score and feedback; official bug target because it reads global `score` instead of using its explicit parameter.
 - Module-level quiz flow: initializes score, asks questions, accumulates score, prints final result.
 
 ## Central Nodes
@@ -19,6 +19,6 @@ From Phase 1 graph metrics:
 
 ## Possible Bottlenecks
 
-- `print_final_scores`: final feedback depends on score state.
+- `print_final_scores`: final feedback incorrectly depends on hidden global score state.
 - `ask_question`: central point for input parsing and answer correctness.
 - Global `score`: hidden dependency risk in step2/step3.

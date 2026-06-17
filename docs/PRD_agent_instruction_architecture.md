@@ -21,6 +21,19 @@ Agents must behave like constrained engineering workers:
 - They document rejected hypotheses.
 - They verify fixes before accepting them.
 
+## 2.1 Active Investigation Target
+
+Official bug path: `print_final_scores` global-state coupling in the `mathsquiz` subsystem.
+
+Primary source files:
+
+- `mathsquiz/mathsquiz-step2.py`
+- `mathsquiz/mathsquiz-step3.py`
+
+The agent workflow must treat this as the locked bug target unless a human explicitly changes the target. Agents should use `mathsquiz.py` baseline syntax/logic issues and `ask_question(...)` input-conversion risks only as background or rejected hypotheses.
+
+The modularity rule for the fix is explicit: `print_final_scores(...)` must use its function parameters, not hidden global `score` state.
+
 ## 3. Required Agent Roles
 
 ### 3.1 Graph Navigator Agent
@@ -162,4 +175,3 @@ Agent outputs must be saved or summarized in:
 - The bug fix follows modular architecture constraints.
 - Agent logs show graph-first and Obsidian-first behavior.
 - The final README links this document.
-

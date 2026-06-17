@@ -310,6 +310,12 @@ Acceptance criteria:
 
 The project shall identify and explain at least one real bug in the selected `mathsquiz` subsystem.
 
+Official selected bug:
+
+- `print_final_scores` global-state coupling in `mathsquiz-step2.py` and `mathsquiz-step3.py`.
+- The function signature accepts `final_score`, but the implementation reads global `score`.
+- This violates modular design because callers and tests cannot rely on the explicit function interface.
+
 Required documentation:
 
 - Bug summary.
@@ -570,14 +576,14 @@ Graph-guided mode should show improvement over naive mode in at least two of:
 Goals:
 
 - Choose repository.
-- Define selected bug.
+- Define selected bug: `print_final_scores` global-state coupling.
 - Create base project structure.
 - Confirm tooling.
 
 Exit criteria:
 
 - Repository choice documented.
-- Bug candidate selected.
+- Bug selected: `print_final_scores` global-state coupling.
 - Initial README skeleton exists.
 - `docs/PRD.md`, `docs/PLAN.md`, and `docs/TODO.md` exist.
 
@@ -701,7 +707,8 @@ Exit criteria:
 ## 13. Final Acceptance Checklist
 
 - [ ] Repository selected and justified.
-- [ ] Bug selected and reproduced.
+- [x] Bug selected: `print_final_scores` global-state coupling.
+- [ ] Bug reproduced.
 - [ ] Graphify artifacts generated.
 - [ ] Obsidian vault created with `index.md` and `hot.md`.
 - [ ] Architecture block diagram created.

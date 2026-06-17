@@ -52,7 +52,16 @@ mathsquiz/*.py
 }
 ```
 
+## Selected Bug Path From Phase 1
+
+Official target: `print_final_scores` global-state coupling.
+
+Evidence:
+
+- `mathsquiz-step2.py::print_final_scores(final_score)` reads global `score`.
+- `mathsquiz-step3.py::print_final_scores(final_score, max_possible_score)` reads global `score`.
+- The graph marks the `final_score` parameter as unused in both implementations.
+
 ## Limitation
 
 This is a Graphify-style substitute, not an official Graphify execution. The limitation is documented in `GRAPH_REPORT.md` and should be mentioned in the final README unless official Graphify is installed and rerun later.
-

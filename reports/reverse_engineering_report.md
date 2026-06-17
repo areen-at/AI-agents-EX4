@@ -50,12 +50,22 @@ Artifacts:
 
 ## Initial Bug-Risk Findings
 
-- Baseline syntax and logic defects in `mathsquiz.py`.
-- Hidden state coupling in `print_final_scores` in step2/step3.
-- Possible input-conversion crash path through unguarded `int(answer)`.
+- Official target: hidden state coupling in `print_final_scores` in `mathsquiz-step2.py` and `mathsquiz-step3.py`.
+- Background candidate: baseline syntax and logic defects in `mathsquiz.py`.
+- Background candidate: possible input-conversion crash path through unguarded `int(answer)`.
+
+## Official Bug-Critical Path
+
+```text
+module-level quiz flow
+-> ask_question(...)
+-> score accumulation
+-> print_final_scores(final_score, ...)
+-> hidden read of global score
+-> incorrect or non-isolated final-score output
+```
 
 ## Next Reverse-Engineering Tasks
 
-- Choose exact bug target.
-- Verify candidate bug with reproduction.
+- Verify the `print_final_scores` global-state bug with a focused function-level reproduction.
 - Build architecture and module interaction diagrams in Phase 2.

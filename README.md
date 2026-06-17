@@ -4,7 +4,7 @@ Reverse Engineering, Debugging, and Token-Efficient Agentic AI with Graphify and
 
 ## Status
 
-Phase 1 graph and initial knowledge-base setup is complete using a local Graphify-style static analyzer. The remaining decision before Phase 2/3 is to lock the exact `mathsquiz` bug instance for the final fix.
+Phase 1 graph and initial knowledge-base setup is complete using a local Graphify-style static analyzer. The official investigation target is now locked: the `print_final_scores` global-state bug in the `mathsquiz` subsystem.
 
 ## Assignment Goal
 
@@ -40,16 +40,35 @@ Instructor-approved exception:
 
 ## Selected Bug
 
-Selected subsystem / bug path: `mathsquiz`
+Selected subsystem: `mathsquiz`
+
+Official bug path: `print_final_scores` global-state coupling
 
 Primary investigation scope:
 
-- `mathsquiz/mathsquiz-step1.py`
 - `mathsquiz/mathsquiz-step2.py`
 - `mathsquiz/mathsquiz-step3.py`
+
+Supporting context files:
+
+- `mathsquiz/mathsquiz-step1.py`
 - `mathsquiz/mathsquiz.py`
 
-The exact bug instance will be selected during the final Phase 0 reproduction pass. The graph-guided investigation will focus on how the quiz flow handles question generation, user input, answer checking, score tracking, and termination behavior.
+Bug summary:
+
+`print_final_scores(...)` accepts score data through parameters, but its implementation reads the module-level global variable `score` instead. This creates a hidden dependency between the final-score reporting function and the script's global state. If the function is reused, tested in isolation, or called with a score value that differs from the global variable, it reports the wrong result.
+
+Files and functions involved:
+
+- `mathsquiz/mathsquiz-step2.py`: `print_final_scores(final_score)`
+- `mathsquiz/mathsquiz-step3.py`: `print_final_scores(final_score, max_possible_score)`
+- Related flow: module-level quiz setup, calls to `ask_question(...)`, score accumulation, final call to `print_final_scores(...)`
+
+Expected fix:
+
+- Use the `final_score` parameter inside `print_final_scores(...)`.
+- In `mathsquiz-step3.py`, calculate the percentage from `final_score` and `max_possible_score`.
+- Remove the hidden dependency on global `score` from final-score reporting.
 
 The chosen `mathsquiz` bug must support:
 
@@ -143,10 +162,15 @@ Graph totals:
 - Bug-risk nodes: 14
 - Syntax-error nodes: 1
 
-Primary bug candidates from Phase 1:
+Official Phase 1 bug decision:
+
+- Selected target: `mathsquiz-step2.py` and `mathsquiz-step3.py` `print_final_scores` global-state coupling.
+- Reason: the bug violates modular function design and is directly visible in the graph as a score-state dependency risk.
+
+Rejected/background candidates from Phase 1:
 
 - `mathsquiz/mathsquiz.py`: syntax and baseline logic defects, including Python 2 `print`, assignment inside conditions, invalid `else if`, wrong expected answers, and missing score increments.
-- `mathsquiz/mathsquiz-step2.py` and `mathsquiz/mathsquiz-step3.py`: `print_final_scores(...)` accepts `final_score` but reads global `score`, which is an architectural state-coupling bug.
+- `ask_question(...)`: unguarded `int(answer)` can crash on non-numeric input.
 
 ## Agent Instruction Architecture
 

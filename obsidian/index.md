@@ -14,16 +14,18 @@ Selection status: instructor-approved exception to the general repository-size t
 
 Selected subsystem: [[mathsquiz]]
 
-Selected bug: TBD after final reproduction pass.
+Selected bug: [[print_final_scores_global_state_bug]]
 
-Current top candidates:
+Official investigation target:
 
-- Baseline syntax/logic failure in `mathsquiz/mathsquiz.py`.
-- State-coupling bug in `print_final_scores` in `mathsquiz-step2.py` and `mathsquiz-step3.py`.
+- `print_final_scores` accepts explicit score parameters but reads global `score`.
+- Primary files: `mathsquiz/mathsquiz-step2.py` and `mathsquiz/mathsquiz-step3.py`.
+- This is the official bug path because it demonstrates hidden state coupling and modular boundary failure.
 
 ## Navigation
 
 - [[hot]] - Focused bug investigation context
+- [[print_final_scores_global_state_bug]] - Official selected bug path
 - [[mathsquiz]] - Selected subsystem notes
 - [[architecture]] - Architecture notes and diagrams
 - [[components]] - Component map
@@ -41,8 +43,8 @@ Current top candidates:
 - Diagrams: `../artifacts/diagrams/`
 - Logs: `../artifacts/logs/`
 
-## Open Questions
+## Phase 1 Next Questions
 
-- Which exact `mathsquiz` script/behavior will become the primary bug target?
-- Should the final fix target the obvious broken baseline or the subtler state-coupling bug?
-- Which graph-risk node should become the root of the agent investigation?
+- What focused reproduction best proves that `final_score` is ignored?
+- Should the Phase 4 fix change both step2 and step3, or use step3 as the main fixed artifact and step2 as comparative evidence?
+- Which graph node references should be embedded in the final architecture diagram?

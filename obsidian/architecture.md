@@ -22,15 +22,23 @@ The subsystem has four relevant files:
 
 ## Bug-Critical Path
 
-Current candidate path:
+Official bug-critical path:
 
 ```text
-module flow -> ask_question -> score accumulation -> print_final_scores
+module flow -> ask_question -> score accumulation -> print_final_scores(final_score, ...) -> global score read
 ```
 
 Risk:
 
 `print_final_scores(final_score, ...)` reads global `score` instead of the parameter, creating hidden state coupling.
+
+## Modularity Violation
+
+The function boundary says final-score reporting is controlled by parameters. The implementation contradicts that interface by reading module-level `score`. This mixes presentation, scoring state, and module execution state inside one function, making the function harder to test, reuse, and reason about.
+
+## Expected Architectural Fix
+
+Keep score ownership in the module-level quiz flow and pass the final value into `print_final_scores(...)`. The final-score function should become a pure reporting component over explicit inputs.
 
 ## Diagram Links
 
