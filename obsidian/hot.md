@@ -2,7 +2,14 @@
 
 ## Bug Focus
 
-TBD
+TBD from `martinpeck/broken-python`.
+
+Candidate areas:
+
+- `mathsquiz/`
+- `polygons/`
+
+The final bug path will be selected after initial Graphify inspection.
 
 ## Expected Behavior
 
@@ -49,4 +56,3 @@ TBD
 - [[index]]
 - [[bug_investigation]]
 - [[tests_and_verification]]
-

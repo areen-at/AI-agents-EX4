@@ -31,6 +31,12 @@ Rejected as main submission choices:
 - Toy debugging collections with far fewer than 70 code files.
 - Repositories that cannot support architecture/OOP/module analysis.
 
+Approved exception:
+
+- `martinpeck/broken-python` is selected because the lecturer explicitly allowed it for this assignment.
+- It does not satisfy the normal 10,000+ LOC / 70+ source-code files threshold.
+- The project must therefore document the exception, report the actual repository size, and add stronger original analysis to compensate.
+
 ### 2.2 Agent Framework
 
 Recommended:
@@ -172,6 +178,7 @@ If the target repository already has its own structure, keep its code intact and
 
 - Team can explain why the repository was selected.
 - Team can prove the repository meets the scale requirement.
+- Or, if using the approved exception, team can prove and document the lecturer-approved exception.
 - Team has initial modular agent instructions.
 - Team has a specific bug candidate.
 - Project structure exists.

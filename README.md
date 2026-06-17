@@ -14,7 +14,9 @@ The final submission must prove that graph-guided investigation is more focused 
 
 ## Repository Choice
 
-Selected repository: TBD
+Selected repository: [`martinpeck/broken-python`](https://github.com/martinpeck/broken-python)
+
+Selection status: instructor-approved exception.
 
 Minimum repository scale:
 
@@ -29,6 +31,12 @@ Selection strategy:
 - Do not shrink the repository below the assignment scale just to make the bug easier.
 - Do keep the investigation focused after Graphify identifies the relevant subgraph.
 - Prefer a repository with modular structure, tests, classes/functions, and enough dependencies between components to justify Graphify and Obsidian.
+
+Instructor-approved exception:
+
+- The lecturer explicitly allowed using `martinpeck/broken-python` for this project.
+- The repository does not meet the general 10,000+ LOC / 70+ files scale rule.
+- Because it is approved, the project will document the size gap transparently and compensate with deeper graph-guided analysis, stronger agent-instruction architecture, and original extensions.
 
 ## Selected Bug
 
@@ -83,6 +91,13 @@ The selected target repository must be substantial:
 - Public, team-owned, or otherwise instructor-approved.
 
 The repository-size evidence will be documented in `reports/repository_size_report.md`.
+
+Current selected repository size:
+
+- Source-code files counted: 5 Python files.
+- Total Python lines: 446.
+- Meaningful Python lines: 260.
+- This is below the general threshold, so the selection relies on the lecturer-approved exception.
 
 ## Agent Instruction Architecture
 

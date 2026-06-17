@@ -8,7 +8,9 @@ EX04 - Graph-Guided Reverse Engineering, Debugging, and Token-Efficient Agentic 
 
 Phase 0 scaffold is complete.
 
-Repository choice: TBD
+Repository choice: `martinpeck/broken-python`
+
+Selection status: instructor-approved exception to the general repository-size threshold.
 
 Selected bug: TBD
 
@@ -32,7 +34,7 @@ Selected bug: TBD
 ## Open Questions
 
 - Which repository will be selected?
+- Which specific bug path inside `mathsquiz` or `polygons` will be selected?
 - Which bug will become the primary investigation target?
 - What Graphify nodes will be central to the bug path?
 - Which files should enter `hot.md` after Graphify analysis?
-

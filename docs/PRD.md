@@ -97,7 +97,7 @@ Minimum expected scale:
 - The repository may be an existing public repository, a team-owned repository, or another repository approved by the instructor.
 - The codebase must contain enough structure to support architectural analysis, OOP/module diagrams, graph navigation, and agent-guided context narrowing.
 
-Small debugging exercise repositories such as tiny broken-script collections are not sufficient for the main submission unless they are only used as supplementary demonstrations.
+Small debugging exercise repositories such as tiny broken-script collections are not sufficient for the main submission unless they are explicitly approved by the lecturer. If such an exception is used, the repository-size gap must be documented transparently and the project must compensate through stronger analysis, agent-instruction design, and original extensions.
 
 ### 5.2 Selection Criteria
 
@@ -138,6 +138,7 @@ Acceptance criteria:
 - The measured codebase has at least 70 source-code files.
 - The measured codebase has approximately 10,000+ meaningful lines of code.
 - Generated files, virtual environments, dependency folders, and cache files are excluded from the count.
+- If the repository does not satisfy the numeric threshold, the final submission must explicitly document the lecturer-approved exception and explain how the work still satisfies the pedagogical goals of EX04.
 
 ## 6. Functional Requirements
 

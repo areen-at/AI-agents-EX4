@@ -109,13 +109,17 @@
 - [ ] Exclude virtual environments from count.
 - [ ] Exclude cache folders from count.
 - [ ] Choose the final repository.
+- [x] Choose `martinpeck/broken-python` as the instructor-approved exception repository.
 - [ ] Document the selected repository in README.
+- [x] Document the selected repository in README.
 - [ ] Document rejected alternatives in README or report.
 - [ ] Explain why selected repository fits EX04.
 - [ ] Explain how selected repository satisfies 10,000+ LOC.
 - [ ] Explain how selected repository satisfies 70+ source-code files.
 - [ ] Create `reports/repository_size_report.md`.
 - [ ] Link repository size report from README.
+- [x] Record that selected repository does not meet the numeric size threshold.
+- [x] Record lecturer-approved exception.
 - [ ] Explain expected bug investigation scope.
 
 ### 0.4 Bug Candidate Selection
@@ -166,6 +170,7 @@
 ### 0.6 Phase 0 Review
 
 - [ ] Confirm selected repository is large enough for assignment requirements.
+- [x] Confirm selected repository is not large enough but is approved by lecturer.
 - [ ] Confirm selected investigation path is focused enough to complete.
 - [ ] Confirm repository has approximately 10,000+ source lines.
 - [ ] Confirm repository has at least 70 source-code files.
