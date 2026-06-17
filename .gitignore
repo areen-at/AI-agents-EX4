@@ -1,0 +1,194 @@
+# EX04 safe gitignore
+# Keep source, docs, reports, Obsidian notes, diagrams, and required artifacts tracked.
+
+# Secrets and local environment files
+.env
+.env.*
+!.env-example
+.envrc
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+*.pem
+*.key
+*.pub
+*.p12
+*.pfx
+*.crt
+*.csr
+*.der
+*.jks
+*.keystore
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+known_hosts
+authorized_keys
+credentials.json
+credentials.*
+secrets.json
+secret.json
+service-account*.json
+firebase*.json
+google-credentials*.json
+gcp-credentials*.json
+aws-credentials*
+azure-credentials*
+.npmrc
+.pypirc
+.netrc
+.dockercfg
+.docker/config.json
+*secret*
+*credentials*
+*token*
+*apikey*
+*api_key*
+*private*
+
+# Cloud and local credential stores
+.aws/
+.azure/
+.gcloud/
+.config/gcloud/
+.kube/
+.ssh/
+
+# Python caches and build outputs
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.hypothesis/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Virtual environments and package-manager local state
+.venv/
+venv/
+env/
+ENV/
+.python-version
+.uv-cache/
+uv-cache/
+.nox/
+.tox/
+
+# Jupyter and notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE/editor local files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary runtime noise
+*.log
+tmp/
+temp/
+.cache/
+cache/
+logs/
+runtime/
+
+# Local databases, dumps, and generated binary state
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.joblib
+*.dump
+*.bak
+*.backup
+*.tmp
+*.temp
+
+# Archives and large packaged exports
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.gz
+*.bz2
+*.xz
+
+# Generated media/output files should be added deliberately.
+# Required diagrams/screenshots can still be tracked by force-adding or by placing curated files below.
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.flac
+
+# Local Graphify/cache noise, while keeping required submitted artifacts trackable
+artifacts/**/.cache/
+artifacts/**/tmp/
+artifacts/**/temp/
+artifacts/**/raw/
+artifacts/**/downloads/
+
+# Large raw data should be documented before tracking.
+# Keep curated small data files if needed for reproduction.
+data/raw/
+data/downloads/
+data/private/
+data/secrets/
+data/**/*.db
+data/**/*.sqlite
+data/**/*.sqlite3
+data/**/*.parquet
+data/**/*.pkl
+data/**/*.pickle
+
+# Local target repository clones can become large or dirty. Track only curated source snapshots.
+external/
+vendor/
+third_party/
+target_repo/
+target-repo/
+
+# Never ignore these required submission artifacts
+!artifacts/graphify/
+!artifacts/graphify/**
+!artifacts/diagrams/
+!artifacts/diagrams/**
+!artifacts/logs/
+!artifacts/logs/**
+!artifacts/token_measurements/
+!artifacts/token_measurements/**
+!artifacts/before_after/
+!artifacts/before_after/**
+!obsidian/
+!obsidian/**
+!reports/
+!reports/**
+!docs/
+!docs/**
+!uv.lock
