@@ -12,11 +12,14 @@ Repository choice: `martinpeck/broken-python`
 
 Selection status: instructor-approved exception to the general repository-size threshold.
 
-Selected bug: TBD
+Selected subsystem: [[mathsquiz]]
+
+Selected bug: TBD after final reproduction pass.
 
 ## Navigation
 
 - [[hot]] - Focused bug investigation context
+- [[mathsquiz]] - Selected subsystem notes
 - [[architecture]] - Architecture notes and diagrams
 - [[components]] - Component map
 - [[bug_investigation]] - Investigation timeline
@@ -34,7 +37,6 @@ Selected bug: TBD
 ## Open Questions
 
 - Which repository will be selected?
-- Which specific bug path inside `mathsquiz` or `polygons` will be selected?
-- Which bug will become the primary investigation target?
+- Which exact `mathsquiz` script/behavior will become the primary bug target?
 - What Graphify nodes will be central to the bug path?
 - Which files should enter `hot.md` after Graphify analysis?

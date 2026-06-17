@@ -1,6 +1,8 @@
 # Final Submission Checklist
 
 - [ ] Repository selected and justified.
+- [x] Primary subsystem selected: `mathsquiz`.
+- [ ] Exact `mathsquiz` bug selected.
 - [ ] Repository size verified: approximately 10,000+ source lines.
 - [ ] Repository size verified: at least 70 source-code files.
 - [ ] Repository size report completed.

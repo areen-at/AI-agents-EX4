@@ -120,6 +120,8 @@ The final `README.md` must explain:
 - Why it fits EX04 goals.
 - How it satisfies the 10,000+ lines / 70+ source-code files requirement, including evidence from a file/LOC count.
 - What bug or defect was chosen for detailed investigation.
+- Which subsystem is selected as the primary investigation path.
+- Why that subsystem is the best fit for Graphify/Obsidian and agent-guided debugging.
 
 ### 5.4 Repository Size Evidence
 
@@ -306,11 +308,12 @@ Acceptance criteria:
 
 ### FR-7: Bug Identification and Root Cause
 
-The project shall identify and explain at least one real bug.
+The project shall identify and explain at least one real bug in the selected `mathsquiz` subsystem.
 
 Required documentation:
 
 - Bug summary.
+- Selected `mathsquiz` script or scripts.
 - Failing behavior.
 - Reproduction steps.
 - Suspected components.
@@ -323,6 +326,7 @@ Acceptance criteria:
 
 - Bug analysis exists in `reports/bug_analysis_report.md`.
 - Root cause is tied to source files and tests.
+- Source evidence references the `mathsquiz` investigation path.
 - Report clearly separates hypotheses from verified facts.
 
 ### FR-8: Code Fix

@@ -37,6 +37,16 @@ Approved exception:
 - It does not satisfy the normal 10,000+ LOC / 70+ source-code files threshold.
 - The project must therefore document the exception, report the actual repository size, and add stronger original analysis to compensate.
 
+Selected investigation subsystem:
+
+- `mathsquiz`
+- Candidate files:
+  - `mathsquiz/mathsquiz-step1.py`
+  - `mathsquiz/mathsquiz-step2.py`
+  - `mathsquiz/mathsquiz-step3.py`
+  - `mathsquiz/mathsquiz.py`
+- The final bug instance will be selected after a short reproduction pass and then locked before Phase 1.
+
 ### 2.2 Agent Framework
 
 Recommended:
@@ -179,6 +189,8 @@ If the target repository already has its own structure, keep its code intact and
 - Team can explain why the repository was selected.
 - Team can prove the repository meets the scale requirement.
 - Or, if using the approved exception, team can prove and document the lecturer-approved exception.
+- Team has selected the `mathsquiz` subsystem as the primary investigation path.
+- Team has identified the exact `mathsquiz` bug candidate or has a short reproduction task remaining before Phase 1.
 - Team has initial modular agent instructions.
 - Team has a specific bug candidate.
 - Project structure exists.

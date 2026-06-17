@@ -4,7 +4,7 @@ Reverse Engineering, Debugging, and Token-Efficient Agentic AI with Graphify and
 
 ## Status
 
-Phase 0 scaffold is complete. Repository selection and bug selection are prepared but still need final confirmation before Phase 1.
+Phase 0 scaffold is mostly complete. The repository and investigation subsystem are selected; the remaining Phase 0 work is to choose the exact `mathsquiz` bug instance and prepare the first reproduction note before Phase 1.
 
 ## Assignment Goal
 
@@ -40,9 +40,18 @@ Instructor-approved exception:
 
 ## Selected Bug
 
-Selected bug: TBD
+Selected subsystem / bug path: `mathsquiz`
 
-The chosen bug must support:
+Primary investigation scope:
+
+- `mathsquiz/mathsquiz-step1.py`
+- `mathsquiz/mathsquiz-step2.py`
+- `mathsquiz/mathsquiz-step3.py`
+- `mathsquiz/mathsquiz.py`
+
+The exact bug instance will be selected during the final Phase 0 reproduction pass. The graph-guided investigation will focus on how the quiz flow handles question generation, user input, answer checking, score tracking, and termination behavior.
+
+The chosen `mathsquiz` bug must support:
 
 - Reproduction before the fix.
 - Root-cause analysis.
@@ -98,6 +107,17 @@ Current selected repository size:
 - Total Python lines: 446.
 - Meaningful Python lines: 260.
 - This is below the general threshold, so the selection relies on the lecturer-approved exception.
+
+## Selected Investigation Subsystem
+
+Subsystem: `mathsquiz`
+
+Rationale:
+
+- It contains multiple related Python scripts that represent an evolving quiz implementation.
+- It is suitable for comparing versions/steps and extracting a small architecture from imperfect code.
+- It supports focused debugging while still allowing Graphify/Obsidian to demonstrate navigation, hot-context construction, and token reduction.
+- It is more suitable than `polygons` as the primary path because it provides a richer interaction flow: random question generation, input parsing, answer validation, score state, loop control, and user-facing behavior.
 
 ## Agent Instruction Architecture
 

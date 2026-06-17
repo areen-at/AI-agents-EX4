@@ -2,14 +2,16 @@
 
 ## Bug Focus
 
-TBD from `martinpeck/broken-python`.
+Selected subsystem: `mathsquiz`
 
-Candidate areas:
+Candidate files:
 
-- `mathsquiz/`
-- `polygons/`
+- `mathsquiz/mathsquiz-step1.py`
+- `mathsquiz/mathsquiz-step2.py`
+- `mathsquiz/mathsquiz-step3.py`
+- `mathsquiz/mathsquiz.py`
 
-The final bug path will be selected after initial Graphify inspection.
+The exact bug instance will be selected after a short reproduction pass. The investigation will focus on quiz behavior: question generation, input parsing, answer checking, score tracking, loop control, and user-facing behavior.
 
 ## Expected Behavior
 
@@ -25,7 +27,13 @@ TBD
 
 ## Current Suspects
 
-TBD after Graphify execution.
+Initial suspects before Graphify:
+
+- Quiz loop control.
+- User input validation.
+- Answer comparison.
+- Score state update.
+- Differences between step scripts and final `mathsquiz.py`.
 
 ## Graph Evidence
 
