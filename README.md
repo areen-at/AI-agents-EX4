@@ -196,8 +196,21 @@ Phase 2 artifacts:
 
 - Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
 - OOP/module interaction diagram: `artifacts/diagrams/oop_diagram.md`
+- Score-state flow diagram: `artifacts/diagrams/score_state_flow_diagram.md`
 - Reverse-engineering report: `reports/reverse_engineering_report.md`
+- Phase 2 architecture review: `reports/phase2_architecture_review.md`
 - Phase 1 review gate: `reports/phase1_review.md`
+
+## Phase 3 Agent Workflow Preparation
+
+Phase 3 preparation has started. The workflow is designed to read Obsidian and graph artifacts before raw source code.
+
+Prepared artifacts:
+
+- Agent workflow diagram: `artifacts/diagrams/agent_workflow_diagram.md`
+- Agent workflow report: `reports/agent_workflow_report.md`
+- Graph-guided agent log scaffold: `artifacts/logs/graph_guided_agent_log.md`
+- Agent code scaffold: `src/agent/`
 
 ## Planned Workflow
 
@@ -241,6 +254,8 @@ uv run ruff check .
 - Diagrams: `artifacts/diagrams/`
 - Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
 - OOP/module interaction diagram: `artifacts/diagrams/oop_diagram.md`
+- Score-state flow diagram: `artifacts/diagrams/score_state_flow_diagram.md`
+- Agent workflow diagram: `artifacts/diagrams/agent_workflow_diagram.md`
 - Logs: `artifacts/logs/`
 - Phase 1 bug probe: `artifacts/logs/phase1_print_final_scores_probe.md`
 - Token measurements: `artifacts/token_measurements/`

@@ -15,6 +15,9 @@
 - [x] Initial Obsidian graph-guided notes updated.
 - [x] Architecture diagram completed.
 - [x] OOP/module diagram completed.
+- [x] Score-state flow diagram completed.
+- [x] Phase 2 architecture review completed.
+- [x] Agent workflow prepared.
 - [ ] Agent workflow implemented.
 - [ ] Bug fixed and verified.
 - [ ] Token efficiency report completed.

@@ -43,11 +43,15 @@ Official investigation target:
 - Diagrams: `../artifacts/diagrams/`
 - Architecture diagram: `../artifacts/diagrams/architecture_block_diagram.md`
 - OOP/module diagram: `../artifacts/diagrams/oop_diagram.md`
+- Score-state flow diagram: `../artifacts/diagrams/score_state_flow_diagram.md`
+- Agent workflow diagram: `../artifacts/diagrams/agent_workflow_diagram.md`
 - Logs: `../artifacts/logs/`
 
 ## Phase 2 Status
 
 Phase 2 has started. The first architecture block diagram and module interaction diagram exist, and the reverse-engineering report now documents entry points, responsibilities, central nodes, bottlenecks, and the OOP assessment.
+
+Phase 2 review added the missing bug-focused score-state flow diagram. The architecture set is now complete enough to move to Phase 3.
 
 ## Phase 2 Handoff Questions
 

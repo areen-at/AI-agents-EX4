@@ -44,6 +44,7 @@ Keep score ownership in the module-level quiz flow and pass the final value into
 
 - `../artifacts/diagrams/architecture_block_diagram.md`
 - `../artifacts/diagrams/oop_diagram.md`
+- `../artifacts/diagrams/score_state_flow_diagram.md`
 
 ## Phase 2 Findings
 
@@ -56,3 +57,5 @@ Keep score ownership in the module-level quiz flow and pass the final value into
 ## Phase 2 Diagram Interpretation
 
 The architecture diagram shows the evolution from baseline to functional versions. The module/function diagram shows why the code looks modular at first but still contains hidden state coupling.
+
+The score-state flow diagram was added during Phase 2 review because the first two diagrams did not isolate the exact state-flow defect. It shows the intended explicit parameter path and the actual hidden global-state path.

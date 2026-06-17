@@ -168,9 +168,9 @@
 - [ ] Add artifact index to `obsidian/index.md`.
 - [ ] Add research questions to `reports/reverse_engineering_report.md`.
 - [ ] Add research questions to README.
-- [ ] Add final checklist to `reports/final_submission_checklist.md`.
-- [ ] Create `docs/PRD_agent_instruction_architecture.md`.
-- [ ] Add agent instruction architecture placeholder to README.
+- [x] Add final checklist to `reports/final_submission_checklist.md`.
+- [x] Create `docs/PRD_agent_instruction_architecture.md`.
+- [x] Add agent instruction architecture placeholder to README.
 
 ### 0.6 Phase 0 Review
 
@@ -456,7 +456,7 @@
 - [x] Confirm diagrams are complete.
 - [x] Confirm report answers research questions.
 - [x] Confirm Graphify claims are source-verified where important.
-- [ ] Commit Phase 2 artifacts.
+- [x] Commit Phase 2 artifacts.
 
 ## Phase 3 - Agent Workflow
 
@@ -465,11 +465,11 @@
 - [ ] Confirm LangGraph or CrewAI choice.
 - [ ] Document framework choice in README.
 - [ ] Add framework dependency with `uv`.
-- [ ] Create `src/agent/`.
-- [ ] Create `src/agent/__init__.py`.
-- [ ] Create `src/agent/state.py`.
-- [ ] Create `src/agent/tools.py`.
-- [ ] Create `src/agent/workflow.py`.
+- [x] Create `src/agent/`.
+- [x] Create `src/agent/__init__.py`.
+- [x] Create `src/agent/state.py`.
+- [x] Create `src/agent/tools.py`.
+- [x] Create `src/agent/workflow.py`.
 - [ ] Create `src/agent/prompts.py` if needed.
 - [ ] Create `src/agent/run_agent.py` if needed.
 - [ ] Create tests for agent helper functions if feasible.
@@ -491,7 +491,7 @@
 - [ ] Add file read log field.
 - [ ] Add iteration count field.
 - [ ] Add final report field.
-- [ ] Document state schema in `reports/agent_workflow_report.md`.
+- [x] Document state schema in `reports/agent_workflow_report.md`.
 
 ### 3.3 Agent Tools
 
@@ -542,11 +542,11 @@
 - [ ] Define root-cause hypothesis format.
 - [ ] Define rejected-hypothesis logging format.
 - [ ] Define fix proposal format.
-- [ ] Define verification proposal format.
-- [ ] Write `docs/PRD_agent_instruction_architecture.md`.
-- [ ] Link agent instruction architecture from README.
-- [ ] Link agent instruction architecture from agent workflow report.
-- [ ] Write system prompt for graph-guided behavior.
+- [x] Define verification proposal format.
+- [x] Write `docs/PRD_agent_instruction_architecture.md`.
+- [x] Link agent instruction architecture from README.
+- [x] Link agent instruction architecture from agent workflow report.
+- [x] Write system prompt for graph-guided behavior.
 - [ ] Write prompt requiring `index.md` before source code.
 - [ ] Write prompt requiring `hot.md` before source code.
 - [ ] Write prompt requiring evidence labels.
@@ -555,7 +555,7 @@
 - [ ] Write prompt requiring root-cause explanation.
 - [ ] Write prompt requiring fix plan.
 - [ ] Write prompt requiring verification plan.
-- [ ] Save prompts in `src/agent/prompts.py` or report.
+- [x] Save prompts in `src/agent/prompts.py` or report.
 - [ ] Document prompts in prompt log.
 
 ### 3.6 Agent Execution
@@ -568,18 +568,18 @@
 - [ ] Save agent proposed fix.
 - [ ] Save agent token estimates.
 - [ ] Save agent iteration count.
-- [ ] Update `artifacts/logs/graph_guided_agent_log.md`.
-- [ ] Update `reports/agent_workflow_report.md`.
+- [x] Update `artifacts/logs/graph_guided_agent_log.md`.
+- [x] Update `reports/agent_workflow_report.md`.
 - [ ] Update `obsidian/bug_investigation.md`.
 - [ ] Update `obsidian/hot.md`.
 
 ### 3.7 Agent Workflow Report
 
-- [ ] Add framework choice explanation.
-- [ ] Add workflow diagram.
-- [ ] Add node descriptions.
-- [ ] Add state schema.
-- [ ] Add context narrowing strategy.
+- [x] Add framework choice explanation.
+- [x] Add workflow diagram.
+- [x] Add node descriptions.
+- [x] Add state schema.
+- [x] Add context narrowing strategy.
 - [ ] Add graph-first proof.
 - [ ] Add file-read log.
 - [ ] Add token estimate.
@@ -591,7 +591,7 @@
 - [ ] Confirm agent reads graph/Obsidian before source.
 - [ ] Confirm agent does not read all files.
 - [ ] Confirm workflow is reproducible.
-- [ ] Confirm logs are saved.
+- [x] Confirm logs are saved.
 - [ ] Commit Phase 3 artifacts.
 
 ## Phase 4 - Bug Reproduction, Root Cause, and Fix
@@ -732,7 +732,7 @@
 - [ ] Define quality rating scale.
 - [ ] Create `artifacts/token_measurements/token_comparison.csv`.
 - [ ] Create `artifacts/logs/naive_baseline_log.md`.
-- [ ] Create `artifacts/logs/graph_guided_agent_log.md`.
+- [x] Create `artifacts/logs/graph_guided_agent_log.md`.
 - [ ] Add measurement method to token report.
 
 ### 5.2 Naive Baseline Workflow

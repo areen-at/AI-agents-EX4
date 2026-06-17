@@ -1,6 +1,6 @@
 # Reverse Engineering Report
 
-Status: Phase 2 reverse-engineering report in progress.
+Status: Phase 2 complete enough to enter Phase 3.
 
 ## Scope
 
@@ -95,6 +95,17 @@ Diagram files:
 
 - `artifacts/diagrams/architecture_block_diagram.md`
 - `artifacts/diagrams/oop_diagram.md`
+- `artifacts/diagrams/score_state_flow_diagram.md`
+
+### Missing View Found During Review
+
+The first two diagrams covered subsystem structure and module/function relationships, but they did not isolate the state-flow bug tightly enough. Phase 2 therefore adds `score_state_flow_diagram.md`.
+
+That diagram shows:
+
+- Intended path: accumulated `score` is passed into the `final_score` parameter.
+- Actual path: `print_final_scores(...)` reads global `score`.
+- Fix implication: remove the hidden global-state edge and use the explicit parameter path.
 
 ## Source Verification Notes
 
@@ -133,6 +144,11 @@ Diagram files:
 ## Phase 2 Conclusion
 
 The Phase 2 architecture work confirms that the selected bug is not isolated trivia. It is a boundary failure inside the subsystem's main data flow: score is accumulated in module-level orchestration, then passed into a reporting function that secretly ignores the explicit argument. The next phase should build the agent workflow around this narrow, graph-supported path.
+
+See also:
+
+- `reports/phase2_architecture_review.md`
+- `artifacts/diagrams/agent_workflow_diagram.md`
 
 ## Initial Bug-Risk Findings
 
