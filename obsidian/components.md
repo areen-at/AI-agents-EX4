@@ -22,3 +22,13 @@ From Phase 1 graph metrics:
 - `print_final_scores`: final feedback incorrectly depends on hidden global score state.
 - `ask_question`: central point for input parsing and answer correctness.
 - Global `score`: hidden dependency risk in step2/step3.
+
+## Phase 2 Component Classification
+
+| Component | Type | Responsibility | Risk |
+|---|---|---|---|
+| `welcome_message` | Presentation function | Prints intro text | Low |
+| `ask_question` | Mixed behavior function | Input, parsing, validation, feedback, point return | Medium: several responsibilities in one function |
+| `score` | Module state | Stores accumulated result | Medium: global mutable state |
+| `print_final_scores` | Reporting function | Prints result and feedback | High: reads hidden global `score` |
+| Module-level flow | Orchestration | Calls functions, controls score accumulation | Medium: execution and state are not isolated |

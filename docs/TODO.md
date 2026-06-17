@@ -268,7 +268,7 @@
 - [x] Link `[[original_extension]]` from `index.md`.
 - [x] Add Graphify artifact references to `index.md`.
 - [x] Add report references to `index.md`.
-- [ ] Add diagram references to `index.md`.
+- [x] Add diagram references to `index.md`.
 - [x] Add open questions section to `index.md`.
 - [x] Add current investigation status to `index.md`.
 
@@ -308,7 +308,7 @@
 - [ ] Add source file references to each component note.
 - [ ] Link related components together.
 - [x] Link bug-critical components to `hot.md`.
-- [ ] Link central components to `architecture.md`.
+- [x] Link central components to `architecture.md`.
 
 ### 1.7 Phase 1 Review
 
@@ -323,7 +323,7 @@
 
 ### 2.1 Macro Architecture Reading
 
-- [ ] Identify project entry point.
+- [x] Identify project entry point.
 - [ ] Identify CLI entry point if present.
 - [ ] Identify GUI entry point if present.
 - [ ] Identify library API entry point if present.
@@ -335,9 +335,9 @@
 - [ ] Identify database or storage usage if any.
 - [ ] Identify test entry points.
 - [ ] Identify main execution path.
-- [ ] Identify bug-critical execution path.
-- [ ] Document macro architecture in `obsidian/architecture.md`.
-- [ ] Document macro architecture in `reports/reverse_engineering_report.md`.
+- [x] Identify bug-critical execution path.
+- [x] Document macro architecture in `obsidian/architecture.md`.
+- [x] Document macro architecture in `reports/reverse_engineering_report.md`.
 
 ### 2.2 Meso Community Reading
 
@@ -352,9 +352,9 @@
 - [ ] Identify bridge nodes between communities.
 - [ ] Identify risky bridge nodes.
 - [ ] Identify healthy hubs.
-- [ ] Identify possible bottlenecks.
-- [ ] Document community findings.
-- [ ] Add community notes to Obsidian.
+- [x] Identify possible bottlenecks.
+- [x] Document community findings.
+- [x] Add community notes to Obsidian.
 
 ### 2.3 Micro Node and Edge Reading
 
@@ -377,26 +377,26 @@
 
 ### 2.4 Research Questions
 
-- [ ] Answer what the actual architecture is.
-- [ ] Answer what was not obvious from first glance.
-- [ ] Answer which modules are most central.
-- [ ] Answer which classes are most central.
-- [ ] Answer which functions are most central.
-- [ ] Answer where complexity centers exist.
-- [ ] Answer where mixed responsibilities exist.
-- [ ] Answer whether God nodes exist.
-- [ ] Answer how architecture can be extracted from code.
-- [ ] Answer how OOP structure can be extracted.
-- [ ] Answer how Graphify helped.
+- [x] Answer what the actual architecture is.
+- [x] Answer what was not obvious from first glance.
+- [x] Answer which modules are most central.
+- [x] Answer which classes are most central.
+- [x] Answer which functions are most central.
+- [x] Answer where complexity centers exist.
+- [x] Answer where mixed responsibilities exist.
+- [x] Answer whether God nodes exist.
+- [x] Answer how architecture can be extracted from code.
+- [x] Answer how OOP structure can be extracted.
+- [x] Answer how Graphify helped.
 - [ ] Answer how Obsidian helped.
 - [ ] Answer where documentation was missing or misleading.
 
 ### 2.5 Architecture Block Diagram
 
-- [ ] Decide diagram format.
-- [ ] Use Mermaid if possible.
-- [ ] Create `artifacts/diagrams/architecture_block_diagram.md`.
-- [ ] Add system boundary.
+- [x] Decide diagram format.
+- [x] Use Mermaid if possible.
+- [x] Create `artifacts/diagrams/architecture_block_diagram.md`.
+- [x] Add system boundary.
 - [ ] Add user or caller block.
 - [ ] Add entry point block.
 - [ ] Add core module block.
@@ -409,53 +409,53 @@
 - [ ] Add arrows showing data flow if different.
 - [ ] Add note for graph-discovered relationship.
 - [ ] Add note for verified source relationship.
-- [ ] Add diagram explanation below Mermaid.
-- [ ] Link diagram from README.
-- [ ] Link diagram from `obsidian/architecture.md`.
-- [ ] Link diagram from reverse-engineering report.
+- [x] Add diagram explanation below Mermaid.
+- [x] Link diagram from README.
+- [x] Link diagram from `obsidian/architecture.md`.
+- [x] Link diagram from reverse-engineering report.
 
 ### 2.6 OOP or Module Diagram
 
-- [ ] Determine whether target project has classes.
+- [x] Determine whether target project has classes.
 - [ ] If classes exist, identify all relevant classes.
 - [ ] If classes exist, identify inheritance.
 - [ ] If classes exist, identify composition.
 - [ ] If classes exist, identify important method calls.
 - [ ] If classes exist, identify wrappers/adapters.
-- [ ] If classes do not exist, document procedural design.
-- [ ] If classes do not exist, create module/function interaction diagram.
-- [ ] Create `artifacts/diagrams/oop_diagram.md`.
-- [ ] Add Mermaid class diagram if applicable.
-- [ ] Add explanation of diagram.
-- [ ] Link diagram from README.
-- [ ] Link diagram from `obsidian/architecture.md`.
-- [ ] Link diagram from reverse-engineering report.
+- [x] If classes do not exist, document procedural design.
+- [x] If classes do not exist, create module/function interaction diagram.
+- [x] Create `artifacts/diagrams/oop_diagram.md`.
+- [x] Add Mermaid class diagram if applicable.
+- [x] Add explanation of diagram.
+- [x] Link diagram from README.
+- [x] Link diagram from `obsidian/architecture.md`.
+- [x] Link diagram from reverse-engineering report.
 
 ### 2.7 Reverse Engineering Report
 
 - [ ] Add report title.
-- [ ] Add repository overview.
+- [x] Add repository overview.
 - [x] Add selected bug overview.
 - [ ] Add Graphify method.
-- [ ] Add graph findings.
-- [ ] Add architecture findings.
-- [ ] Add component table.
-- [ ] Add central node table.
-- [ ] Add suspected bottleneck table.
-- [ ] Add community analysis.
-- [ ] Add source verification notes.
-- [ ] Add architecture diagram link.
-- [ ] Add OOP diagram link.
-- [ ] Add open questions.
-- [ ] Add limitations.
-- [ ] Add conclusion.
+- [x] Add graph findings.
+- [x] Add architecture findings.
+- [x] Add component table.
+- [x] Add central node table.
+- [x] Add suspected bottleneck table.
+- [x] Add community analysis.
+- [x] Add source verification notes.
+- [x] Add architecture diagram link.
+- [x] Add OOP diagram link.
+- [x] Add open questions.
+- [x] Add limitations.
+- [x] Add conclusion.
 
 ### 2.8 Phase 2 Review
 
-- [ ] Confirm architecture is understood.
-- [ ] Confirm diagrams are complete.
-- [ ] Confirm report answers research questions.
-- [ ] Confirm Graphify claims are source-verified where important.
+- [x] Confirm architecture is understood.
+- [x] Confirm diagrams are complete.
+- [x] Confirm report answers research questions.
+- [x] Confirm Graphify claims are source-verified where important.
 - [ ] Commit Phase 2 artifacts.
 
 ## Phase 3 - Agent Workflow

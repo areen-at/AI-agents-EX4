@@ -8,13 +8,13 @@
 - [ ] Repository size report completed.
 - [ ] Agent instruction architecture completed.
 - [x] Bug selected.
-- [ ] Bug reproduced.
-- [ ] Graphify artifacts generated.
+- [x] Bug reproduced with Phase 1 probe.
+- [x] Graphify artifacts generated.
 - [x] Phase 1 Graphify-style artifacts generated.
 - [ ] Obsidian vault completed.
 - [x] Initial Obsidian graph-guided notes updated.
-- [ ] Architecture diagram completed.
-- [ ] OOP/module diagram completed.
+- [x] Architecture diagram completed.
+- [x] OOP/module diagram completed.
 - [ ] Agent workflow implemented.
 - [ ] Bug fixed and verified.
 - [ ] Token efficiency report completed.

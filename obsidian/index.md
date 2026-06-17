@@ -41,10 +41,16 @@ Official investigation target:
 - Machine-readable graph: `../artifacts/graphify/graph.json`
 - Reports: `../reports/`
 - Diagrams: `../artifacts/diagrams/`
+- Architecture diagram: `../artifacts/diagrams/architecture_block_diagram.md`
+- OOP/module diagram: `../artifacts/diagrams/oop_diagram.md`
 - Logs: `../artifacts/logs/`
 
-## Phase 1 Next Questions
+## Phase 2 Status
 
-- What focused reproduction best proves that `final_score` is ignored?
+Phase 2 has started. The first architecture block diagram and module interaction diagram exist, and the reverse-engineering report now documents entry points, responsibilities, central nodes, bottlenecks, and the OOP assessment.
+
+## Phase 2 Handoff Questions
+
+- Resolved: the focused Phase 1 probe proves that non-zero `final_score` is ignored when global `score=0`.
 - Should the Phase 4 fix change both step2 and step3, or use step3 as the main fixed artifact and step2 as comparative evidence?
 - Which graph node references should be embedded in the final architecture diagram?

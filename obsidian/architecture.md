@@ -44,3 +44,15 @@ Keep score ownership in the module-level quiz flow and pass the final value into
 
 - `../artifacts/diagrams/architecture_block_diagram.md`
 - `../artifacts/diagrams/oop_diagram.md`
+
+## Phase 2 Findings
+
+- The architecture is script-first and procedural.
+- `mathsquiz-step2.py` and `mathsquiz-step3.py` introduce functions, but module-level code still controls execution and state.
+- No classes exist, so the required OOP view is represented as a module/function interaction diagram.
+- `ask_question(...)` combines input, parsing, correctness checking, printing, and point calculation.
+- `print_final_scores(...)` should be a reporting boundary, but it reaches into global `score`, which makes it the selected modularity failure.
+
+## Phase 2 Diagram Interpretation
+
+The architecture diagram shows the evolution from baseline to functional versions. The module/function diagram shows why the code looks modular at first but still contains hidden state coupling.

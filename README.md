@@ -180,6 +180,25 @@ Before implementing the agent workflow, the project defines explicit agent instr
 
 This document specifies agent roles, allowed inputs/outputs, graph-first context rules, evidence format, and modular architecture constraints for agent-generated code.
 
+## Phase 2 Architecture Understanding
+
+Phase 2 reverse engineering has started and produced the first architecture diagrams.
+
+Architecture summary:
+
+- The selected subsystem is procedural and script-first.
+- `mathsquiz-step2.py` and `mathsquiz-step3.py` introduce functions, but module-level code still controls score state and execution order.
+- There are no classes, so the required OOP view is represented as a module/function interaction diagram.
+- The main bug-critical path is `ask_question(...) -> score accumulation -> print_final_scores(...)`.
+- The key modularity failure is that `print_final_scores(...)` accepts score parameters but reads global `score`.
+
+Phase 2 artifacts:
+
+- Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
+- OOP/module interaction diagram: `artifacts/diagrams/oop_diagram.md`
+- Reverse-engineering report: `reports/reverse_engineering_report.md`
+- Phase 1 review gate: `reports/phase1_review.md`
+
 ## Planned Workflow
 
 1. Select repository and bug.
@@ -220,6 +239,8 @@ uv run ruff check .
 - Repository size report: `reports/repository_size_report.md`
 - Graphify outputs: `artifacts/graphify/`
 - Diagrams: `artifacts/diagrams/`
+- Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
+- OOP/module interaction diagram: `artifacts/diagrams/oop_diagram.md`
 - Logs: `artifacts/logs/`
 - Phase 1 bug probe: `artifacts/logs/phase1_print_final_scores_probe.md`
 - Token measurements: `artifacts/token_measurements/`
