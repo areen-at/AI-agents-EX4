@@ -144,8 +144,8 @@
 - [x] Define initial expected behavior for `print_final_scores`.
 - [x] Define initial actual behavior for `print_final_scores`.
 - [x] Define initial reproduction plan for `print_final_scores`.
-- [ ] Define initial verification command.
-- [ ] Capture any failing output.
+- [x] Define initial verification command.
+- [x] Capture Phase 1 failing-output probe.
 - [ ] Save failing output to `artifacts/logs/`.
 - [ ] Record bug selection rationale.
 
@@ -274,13 +274,13 @@
 
 ### 1.5 Hot Context Setup
 
-- [ ] Add title to `obsidian/hot.md`.
+- [x] Add title to `obsidian/hot.md`.
 - [x] Add selected bug summary.
 - [x] Add expected behavior.
 - [x] Add actual behavior.
 - [x] Add reproduction plan.
-- [ ] Add failing output summary.
-- [ ] Add suspected files section.
+- [x] Add failing output summary.
+- [x] Add suspected files section.
 - [ ] Add suspected modules section.
 - [ ] Add suspected functions/classes section.
 - [ ] Add Graphify evidence section.
@@ -307,16 +307,16 @@
 - [ ] Add graph evidence to each component note.
 - [ ] Add source file references to each component note.
 - [ ] Link related components together.
-- [ ] Link bug-critical components to `hot.md`.
+- [x] Link bug-critical components to `hot.md`.
 - [ ] Link central components to `architecture.md`.
 
 ### 1.7 Phase 1 Review
 
-- [ ] Confirm Graphify artifacts exist.
-- [ ] Confirm Obsidian vault is navigable.
-- [ ] Confirm `index.md` is useful as entry point.
-- [ ] Confirm `hot.md` narrows bug context.
-- [ ] Confirm graph observations are documented.
+- [x] Confirm Graphify artifacts exist.
+- [x] Confirm Obsidian vault is navigable.
+- [x] Confirm `index.md` is useful as entry point.
+- [x] Confirm `hot.md` narrows bug context.
+- [x] Confirm graph observations are documented.
 - [ ] Commit Phase 1 artifacts.
 
 ## Phase 2 - Reverse Engineering

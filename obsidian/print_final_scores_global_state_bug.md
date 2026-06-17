@@ -46,6 +46,18 @@ Related functions:
 6. Capture output and prove it reports `0` and `0%` before the fix.
 7. Repeat after the fix and prove output follows `final_score`.
 
+## Phase 1 Probe Result
+
+Probe script: `../tests/reproduction/print_final_scores_probe.py`
+
+Saved output: `../artifacts/logs/phase1_print_final_scores_probe.md`
+
+Result:
+
+- Step2: with global `score=0`, calling with `final_score=2` still prints `0`.
+- Step3: with global `score=0`, calling with `final_score=10` still prints `0` and low-score feedback.
+- The result confirms the selected bug is observable, not only theoretical.
+
 ## Links
 
 - [[index]]

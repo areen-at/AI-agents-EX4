@@ -18,6 +18,7 @@
 - `GRAPH_REPORT.md` lists syntax and conditional defects in `mathsquiz.py`.
 - `GRAPH_REPORT.md` detects unused `final_score` parameter in step2/step3.
 - `GRAPH_REPORT.md` detects reads of global `score` in `print_final_scores`.
+- `phase1_print_final_scores_probe.md` confirms the failure mode: output follows global `score=0` even when `final_score` is non-zero.
 
 ## Rejected Hypotheses
 
@@ -33,4 +34,4 @@
 - Keep `[[hot]]` centered on `print_final_scores`.
 - Build Phase 2 diagrams around `module flow -> score accumulation -> print_final_scores`.
 - In Phase 3, instruct the agent to inspect graph/Obsidian context before reading `mathsquiz-step2.py` and `mathsquiz-step3.py`.
-- In Phase 4, reproduce by making global `score` differ from `final_score`.
+- In Phase 4, convert `tests/reproduction/print_final_scores_probe.py` into an automated regression test against the fixed implementation.

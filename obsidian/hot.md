@@ -86,6 +86,12 @@ Replace internal `score` reads with `final_score`; in step3, compute percentage 
 
 ## Verification
 
+Phase 1 probe completed:
+
+- Script: `../tests/reproduction/print_final_scores_probe.py`
+- Log: `../artifacts/logs/phase1_print_final_scores_probe.md`
+- Result: when global `score=0`, step2 ignores `final_score=2` and step3 ignores `final_score=10`.
+
 Use focused function-level reproduction before and after the fix. The key test condition is `global score != final_score`.
 
 ## Links

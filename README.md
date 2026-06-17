@@ -221,4 +221,5 @@ uv run ruff check .
 - Graphify outputs: `artifacts/graphify/`
 - Diagrams: `artifacts/diagrams/`
 - Logs: `artifacts/logs/`
+- Phase 1 bug probe: `artifacts/logs/phase1_print_final_scores_probe.md`
 - Token measurements: `artifacts/token_measurements/`

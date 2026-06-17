@@ -53,6 +53,8 @@ Evidence:
 - `mathsquiz-step2.py::print_final_scores(final_score)` reads global `score`.
 - `mathsquiz-step3.py::print_final_scores(final_score, max_possible_score)` reads global `score`.
 - The `final_score` parameter is unused, violating modular function design.
+- `tests/reproduction/print_final_scores_probe.py` demonstrates the failure without modifying the target code.
+- `artifacts/logs/phase1_print_final_scores_probe.md` records the before-fix output: both step2 and step3 report global `score=0` while non-zero `final_score` values are passed.
 
 ## Rejected or Background Candidates
 
@@ -63,7 +65,7 @@ Evidence:
 
 1. Update `obsidian/hot.md` so the focused context names `print_final_scores` as the active bug.
 2. Record the graph evidence linking the bug-risk nodes to `mathsquiz-step2.py` and `mathsquiz-step3.py`.
-3. Inspect the source lines for both `print_final_scores(...)` implementations.
-4. Define a direct reproduction where `final_score` and global `score` intentionally differ.
-5. Add the reproduction plan to `obsidian/tests_and_verification.md`.
-6. Carry this focused context into Phase 2 architecture diagrams and Phase 3 agent workflow prompts.
+3. Inspect the source lines for both `print_final_scores(...)` implementations. Done for Phase 1.
+4. Define a direct reproduction where `final_score` and global `score` intentionally differ. Done through the Phase 1 probe.
+5. Add the reproduction plan to `obsidian/tests_and_verification.md`. Done.
+6. Carry this focused context into Phase 2 architecture diagrams and Phase 3 agent workflow prompts. Next.
