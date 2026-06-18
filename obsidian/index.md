@@ -6,7 +6,7 @@ EX04 - Graph-Guided Reverse Engineering, Debugging, and Token-Efficient Agentic 
 
 ## Current Status
 
-Phases 1-5 are complete for the official `print_final_scores` investigation path.
+Phases 1-6 are complete for the official `print_final_scores` investigation path.
 
 Repository choice: `martinpeck/broken-python`
 
@@ -33,6 +33,7 @@ Official investigation target:
 - [[tests_and_verification]] - Reproduction and verification
 - [[token_efficiency]] - Naive vs graph-guided comparison
 - [[original_extension]] - Extension beyond minimum requirements
+- [[hot.generated]] - Generated hot context from suspicious-node ranking
 
 ## Required Artifacts
 
@@ -48,6 +49,9 @@ Official investigation target:
 - Logs: `../artifacts/logs/`
 - Token efficiency report: `../reports/token_efficiency_report.md`
 - Token comparison CSV: `../artifacts/token_measurements/token_comparison.csv`
+- Original extension report: `../reports/original_extension_report.md`
+- Suspicious-node ranking: `../reports/suspicious_nodes.md`
+- Generated hot context: `hot.generated.md`
 
 ## Phase 2 Status
 
@@ -72,3 +76,13 @@ Best operational result:
 - Reduction: 17.4% fewer estimated input tokens, 50% fewer text units, and 50% fewer iterations.
 
 The full graph-guided audit workflow is documented separately because it includes the complete `graph.json`. It improves traceability, but it is not token-cheaper for this tiny instructor-approved exception repository.
+
+## Phase 6 Status
+
+Phase 6 adds an executable original extension:
+
+- `src/analysis/suspicious_nodes.py` ranks graph nodes by degree, keyword matches, explicit risk labels, and proximity to selected files.
+- `src/analysis/hot_md_generator.py` generates `hot.generated.md` from the ranked nodes.
+- The ranking prioritizes `print_final_scores` risk nodes and the two selected implementation files.
+
+The extension is complete and ready for Phase 7 packaging.

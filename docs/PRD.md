@@ -684,6 +684,14 @@ Exit criteria:
 - Extension report complete.
 - README explains extension value.
 
+Execution status:
+
+- Complete.
+- Suspicious-node ranking implemented in `src/analysis/suspicious_nodes.py`.
+- Generated hot-context note implemented in `src/analysis/hot_md_generator.py`.
+- Outputs exist in `reports/suspicious_nodes.md` and `obsidian/hot.generated.md`.
+- Extension is documented in `reports/original_extension_report.md`.
+
 ### Phase 7: Final Packaging
 
 Goals:
@@ -728,6 +736,6 @@ Exit criteria:
 - [x] Code fix implemented.
 - [x] Tests or reproduction checks pass.
 - [x] Token-efficiency comparison completed.
-- [ ] Original extension completed.
+- [x] Original extension completed.
 - [ ] README completed.
 - [ ] Final artifact links verified.

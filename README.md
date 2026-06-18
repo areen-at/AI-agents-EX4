@@ -4,7 +4,7 @@ Reverse Engineering, Debugging, and Token-Efficient Agentic AI with Graphify and
 
 ## Status
 
-Phases 1-5 are complete for the official `print_final_scores` global-state bug in the `mathsquiz` subsystem. The project has graph artifacts, Obsidian notes, architecture diagrams, an executable graph-guided agent workflow, a verified fix, before/after evidence, and token-efficiency measurements.
+Phases 1-6 are complete for the official `print_final_scores` global-state bug in the `mathsquiz` subsystem. The project has graph artifacts, Obsidian notes, architecture diagrams, an executable graph-guided agent workflow, a verified fix, before/after evidence, token-efficiency measurements, and an original graph-analysis extension.
 
 ## Assignment Goal
 
@@ -280,6 +280,39 @@ Phase 5 artifacts:
 - Phase 5 verification log: `artifacts/logs/phase5_verification.md`
 - Phase 5 review: `reports/phase5_review.md`
 
+## Phase 6 Original Extension
+
+Phase 6 is complete. The project adds an executable original extension that ranks suspicious graph nodes and generates a fresh Obsidian hot-context note from the ranking.
+
+Purpose:
+
+- Convert `artifacts/graphify/graph.json` into a small ordered suspect list.
+- Prioritize bug-specific risk nodes over noisy high-degree utility calls.
+- Generate `obsidian/hot.generated.md` so an agent can start from focused context instead of loading the whole graph.
+- Connect the Phase 6 extension back to Phase 5 token efficiency.
+
+Run commands:
+
+```bash
+python -m src.analysis.suspicious_nodes --graph artifacts/graphify/graph.json --output reports/suspicious_nodes.md
+python -m src.analysis.hot_md_generator --graph artifacts/graphify/graph.json --output obsidian/hot.generated.md
+```
+
+Main result:
+
+- The ranking correctly prioritizes `print_final_scores` risk nodes.
+- The highest-ranked risks are `unused_arg:final_score` and `global_score_instead_of_param`.
+- The top implementation files are `mathsquiz-step2.py` and `mathsquiz-step3.py`.
+
+Phase 6 artifacts:
+
+- Extension report: `reports/original_extension_report.md`
+- Suspicious-node report: `reports/suspicious_nodes.md`
+- Generated hot context: `obsidian/hot.generated.md`
+- Phase 6 review: `reports/phase6_review.md`
+- Extension code: `src/analysis/`
+- Extension tests: `tests/unit/test_phase6_analysis.py`
+
 ## Planned Workflow
 
 1. Select repository and bug.
@@ -315,7 +348,7 @@ uv run pytest
 Current local fallback used during Phases 3-4:
 
 ```bash
-python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow
+python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow tests.unit.test_phase6_analysis
 python -m compileall src tests
 ```
 
@@ -335,6 +368,9 @@ uv run ruff check .
 - Phase 4 review: `reports/phase4_review.md`
 - Phase 5 token efficiency report: `reports/token_efficiency_report.md`
 - Phase 5 review: `reports/phase5_review.md`
+- Phase 6 original extension report: `reports/original_extension_report.md`
+- Phase 6 suspicious-node report: `reports/suspicious_nodes.md`
+- Phase 6 review: `reports/phase6_review.md`
 - Graphify outputs: `artifacts/graphify/`
 - Diagrams: `artifacts/diagrams/`
 - Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
@@ -349,6 +385,9 @@ uv run ruff check .
 - Phase 4 before-fix reproduction: `artifacts/logs/bug_reproduction_before.md`
 - Phase 5 naive baseline log: `artifacts/logs/naive_baseline_log.md`
 - Phase 5 verification: `artifacts/logs/phase5_verification.md`
+- Phase 6 verification: `artifacts/logs/phase6_verification.md`
 - Before/after evidence: `artifacts/before_after/`
 - Token measurements: `artifacts/token_measurements/`
 - Token comparison CSV: `artifacts/token_measurements/token_comparison.csv`
+- Analysis extension code: `src/analysis/`
+- Generated hot context: `obsidian/hot.generated.md`

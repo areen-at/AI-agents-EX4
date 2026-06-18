@@ -813,82 +813,82 @@
 
 ### 6.1 Extension Selection
 
-- [ ] Confirm selected extension.
-- [ ] Document why extension was chosen.
-- [ ] Document how extension exceeds minimum requirements.
-- [ ] Document how extension supports token efficiency.
-- [ ] Document how extension supports reverse engineering.
+- [x] Confirm selected extension.
+- [x] Document why extension was chosen.
+- [x] Document how extension exceeds minimum requirements.
+- [x] Document how extension supports token efficiency.
+- [x] Document how extension supports reverse engineering.
 
 ### 6.2 Suspicious Node Ranking
 
-- [ ] Create `src/analysis/`.
-- [ ] Create `src/analysis/__init__.py`.
-- [ ] Create `src/analysis/graph_loader.py`.
-- [ ] Create `src/analysis/suspicious_nodes.py`.
-- [ ] Load `graph.json`.
-- [ ] Parse nodes.
-- [ ] Parse edges.
-- [ ] Compute degree for nodes.
-- [ ] Compute inbound degree.
-- [ ] Compute outbound degree.
-- [ ] Compute keyword score.
-- [ ] Compute proximity to bug keywords.
-- [ ] Compute proximity to failing test names if possible.
-- [ ] Combine scores.
-- [ ] Sort suspicious nodes.
-- [ ] Output top 5 suspicious nodes.
-- [ ] Output top 10 suspicious nodes.
-- [ ] Save suspicious node report.
-- [ ] Add explanation of scoring method.
-- [ ] Add limitations of scoring method.
+- [x] Create `src/analysis/`.
+- [x] Create `src/analysis/__init__.py`.
+- [x] Create `src/analysis/graph_loader.py`.
+- [x] Create `src/analysis/suspicious_nodes.py`.
+- [x] Load `graph.json`.
+- [x] Parse nodes.
+- [x] Parse edges.
+- [x] Compute degree for nodes.
+- [x] Compute inbound degree.
+- [x] Compute outbound degree.
+- [x] Compute keyword score.
+- [x] Compute proximity to bug keywords.
+- [x] Compute proximity to failing test names if possible.
+- [x] Combine scores.
+- [x] Sort suspicious nodes.
+- [x] Output top 5 suspicious nodes.
+- [x] Output top 10 suspicious nodes.
+- [x] Save suspicious node report.
+- [x] Add explanation of scoring method.
+- [x] Add limitations of scoring method.
 
 ### 6.3 Dynamic Hot Context Generation
 
-- [ ] Create `src/analysis/hot_md_generator.py`.
-- [ ] Read suspicious node report.
-- [ ] Read selected bug summary.
-- [ ] Read Graphify artifact paths.
-- [ ] Read source file references.
-- [ ] Generate `hot.md` header.
-- [ ] Generate bug summary section.
-- [ ] Generate top suspects section.
-- [ ] Generate graph evidence section.
-- [ ] Generate source files to inspect section.
-- [ ] Generate open questions section.
-- [ ] Generate links back to index.
-- [ ] Write generated output to `obsidian/hot.generated.md`.
-- [ ] Decide whether to merge into `obsidian/hot.md`.
-- [ ] Document generated file in README.
+- [x] Create `src/analysis/hot_md_generator.py`.
+- [x] Read suspicious node report.
+- [x] Read selected bug summary.
+- [x] Read Graphify artifact paths.
+- [x] Read source file references.
+- [x] Generate `hot.md` header.
+- [x] Generate bug summary section.
+- [x] Generate top suspects section.
+- [x] Generate graph evidence section.
+- [x] Generate source files to inspect section.
+- [x] Generate open questions section.
+- [x] Generate links back to index.
+- [x] Write generated output to `obsidian/hot.generated.md`.
+- [x] Decide whether to merge into `obsidian/hot.md`.
+- [x] Document generated file in README.
 
 ### 6.4 Optional Git Diff Integration
 
-- [ ] Check whether project is in Git.
-- [ ] Capture diff after fix.
-- [ ] Save diff to `artifacts/before_after/fix.diff`.
-- [ ] Parse changed files.
-- [ ] Add changed files to generated hot context.
-- [ ] Add impact section to generated hot context.
-- [ ] Document diff integration.
+- [x] Check whether project is in Git.
+- [x] Capture diff after fix.
+- [x] Save diff to `artifacts/before_after/fix.diff`.
+- [x] Parse changed files.
+- [x] Add changed files to generated hot context.
+- [x] Add impact section to generated hot context.
+- [x] Document diff integration.
 
 ### 6.5 Original Extension Report
 
-- [ ] Add extension title.
-- [ ] Add motivation.
-- [ ] Add inputs.
-- [ ] Add algorithm.
-- [ ] Add outputs.
-- [ ] Add example result.
-- [ ] Add how it improves context selection.
-- [ ] Add limitations.
-- [ ] Add future improvements.
+- [x] Add extension title.
+- [x] Add motivation.
+- [x] Add inputs.
+- [x] Add algorithm.
+- [x] Add outputs.
+- [x] Add example result.
+- [x] Add how it improves context selection.
+- [x] Add limitations.
+- [x] Add future improvements.
 
 ### 6.6 Phase 6 Review
 
-- [ ] Confirm extension artifact exists.
-- [ ] Confirm extension is explained in README.
-- [ ] Confirm extension connects to EX04 requirements.
-- [ ] Confirm extension is not just cosmetic.
-- [ ] Commit Phase 6 artifacts.
+- [x] Confirm extension artifact exists.
+- [x] Confirm extension is explained in README.
+- [x] Confirm extension connects to EX04 requirements.
+- [x] Confirm extension is not just cosmetic.
+- [x] Commit Phase 6 artifacts.
 
 ## Phase 7 - Final README and Submission Packaging
 
