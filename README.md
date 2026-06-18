@@ -267,7 +267,7 @@ Best operational comparison:
 
 Important limitation:
 
-- The full graph-guided audit workflow uses 15403 estimated input tokens because it includes the complete `graph.json`.
+- The full graph-guided audit workflow uses 15599 estimated input tokens because it includes the complete `graph.json`.
 - This full audit mode is useful for traceability, but it is not token-cheaper for the tiny instructor-approved `broken-python` exception repository.
 - The token-efficient pattern is to distill Graphify output into `obsidian/hot.md` plus focused source evidence before sending context to an LLM.
 

@@ -104,8 +104,8 @@ Process:
 Measured input:
 
 - Text units: 5.
-- Characters: 61615.
-- Estimated input tokens: 15403.
+- Characters: 62401.
+- Estimated input tokens: 15599.
 - Iterations: 2.
 - Root cause reached: yes.
 - Fix reached: yes.
@@ -115,13 +115,15 @@ Important limitation:
 
 The full audit workflow is not token-cheaper than naive reading for this tiny repository. It is more traceable and structured, but `graph.json` dominates the token count.
 
+This mode is included as an audit trail, not as the recommended production prompting strategy.
+
 ## Comparison Table
 
 | Mode | Text Units | Characters | Input Tokens | Iterations | Root Cause | Fix | Quality | Notes |
 |---|---:|---:|---:|---:|---|---|---:|---|
 | Naive raw-code baseline | 4 | 8303 | 2074 | 4 | Yes | Yes | 3 | Reads all source files, including unrelated baseline noise |
 | Graph-guided hot-context workflow | 2 | 6855 | 1713 | 2 | Yes | Yes | 5 | Uses `hot.md` and focused source evidence |
-| Graph-guided full audit workflow | 5 | 61615 | 15403 | 2 | Yes | Yes | 5 | Includes full `graph.json`; useful but costly here |
+| Graph-guided full audit workflow | 5 | 62401 | 15599 | 2 | Yes | Yes | 5 | Includes full `graph.json`; useful but costly here |
 
 CSV:
 
@@ -133,7 +135,7 @@ The best operational workflow is the graph-guided hot-context workflow. It saves
 
 The full graph-guided audit workflow is intentionally heavier because it loads the whole machine-readable graph. This is valuable for traceability and reproducibility, but for the small instructor-approved `broken-python` repository it is not token-efficient.
 
-The key lesson is architectural: Graphify and Obsidian are most useful when the graph is distilled into `hot.md` and focused evidence before being sent to an LLM.
+The key lesson is architectural: Graphify and Obsidian are most useful when the graph is distilled into `hot.md` and focused evidence before being sent to an LLM. The full graph remains useful for reproducibility, but the agent should not blindly load it during normal debugging.
 
 ## Limitations
 

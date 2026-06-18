@@ -145,12 +145,12 @@ The workflow records character counts and estimated input tokens for each text u
 
 Current run:
 
-- `obsidian/index.md`: 637 estimated tokens.
+- `obsidian/index.md`: 833 estimated tokens.
 - `obsidian/hot.md`: 1204 estimated tokens.
 - `artifacts/graphify/GRAPH_REPORT.md`: 1157 estimated tokens.
 - `artifacts/graphify/graph.json`: 11896 estimated tokens.
 - `artifacts/source_evidence/print_final_scores_source.md`: 509 estimated tokens.
-- Total estimated input tokens: 15403.
+- Total estimated input tokens: 15599.
 
 ## Limitations
 

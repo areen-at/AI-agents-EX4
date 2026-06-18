@@ -37,6 +37,12 @@ The graph-guided hot-context workflow is the best operational workflow:
 
 The full graph-guided audit workflow is intentionally heavier because it includes the complete `graph.json`. It is stronger for traceability, but it is not token-cheaper in this tiny instructor-approved exception repository.
 
+Fresh audit re-run:
+
+- Full audit characters: 62401.
+- Full audit estimated input tokens: 15599.
+- Reason for increase from the prior Phase 5 commit: `obsidian/index.md` gained Phase 5 links, and the agent log was re-run after that documentation polish.
+
 ## Decision
 
 Phase 5 is complete enough to move to Phase 6.
