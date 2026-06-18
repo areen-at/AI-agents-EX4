@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from typing import Literal, TypedDict
 
-
 EvidenceType = Literal["graph", "obsidian", "source", "test", "agent_inference"]
 
 

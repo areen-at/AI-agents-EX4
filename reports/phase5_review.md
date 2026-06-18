@@ -1,4 +1,4 @@
-# Phase 5 Review
+﻿# Phase 5 Review
 
 Status: complete.
 
@@ -39,15 +39,16 @@ The full graph-guided audit workflow is intentionally heavier because it include
 
 Fresh audit re-run:
 
-- Full audit characters: 63105.
-- Full audit estimated input tokens: 15775.
+- Full audit characters: 63701.
+- Full audit estimated input tokens: 15924.
 - Reason for increase from the prior Phase 5 commit: `obsidian/index.md` gained final packaging links, and the agent log was re-run during Phase 7 verification.
 
 ## Decision
 
-Phase 5 is complete enough to move to Phase 6.
+Phase 5 is complete for final submission.
 
 ## Verification
 
 - `python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow`: passed, 6 tests.
 - `python -m compileall src tests`: passed.
+

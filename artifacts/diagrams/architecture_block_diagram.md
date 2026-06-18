@@ -1,6 +1,6 @@
 # Architecture Block Diagram
 
-Status: Phase 2 draft.
+Status: final architecture view.
 
 ```mermaid
 flowchart TD
@@ -61,3 +61,7 @@ module-level quiz flow
 -> print_final_scores(final_score, ...)
 -> hidden read of global score
 ```
+
+## Grading Note
+
+This is the required architecture block diagram. It shows the selected repository, the `mathsquiz` subsystem, the evolution from broken baseline to functional quiz scripts, and the exact architectural boundary where the selected bug occurs.

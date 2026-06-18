@@ -1,6 +1,6 @@
 # Final Submission Report
 
-Status: Phase 7 complete.
+Status: submission-ready after final end-to-end audit.
 
 ## Repository
 
@@ -48,8 +48,11 @@ This is documented in `reports/repository_size_report.md`. The repository remain
 
 ```bash
 python -m src.agent.run_agent --json
+python -m src.agent.run_agent --engine langgraph --json
 python -m src.analysis.suspicious_nodes --graph artifacts/graphify/graph.json --output reports/suspicious_nodes.md
 python -m src.analysis.hot_md_generator --graph artifacts/graphify/graph.json --output obsidian/hot.generated.md
+python -m pytest
+python -m ruff check .
 python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow tests.unit.test_phase6_analysis
 python -m compileall src tests
 ```
@@ -57,22 +60,35 @@ python -m compileall src tests
 ## Final Results
 
 - Unit tests: 9 passed.
+- Pytest: 9 passed.
+- Ruff: passed.
 - Compile check: passed.
 - Agent workflow: passed.
 - LangGraph workflow: passed locally with `engine_used: langgraph`; see `artifacts/logs/langgraph_run_output.md`.
 - Suspicious-node generator: passed.
 - Generated hot context: passed.
 - Secret scan: no real API keys or cloud credentials found.
-- Ruff: configured in `pyproject.toml`, but not installed in this local Python environment.
 - LangGraph: installed and executed locally during final verification.
 - `uv.lock`: absent; fallback verification commands are documented in README.
+
+## Final End-to-End Audit Result
+
+The repository was audited against the assignment expectations for repository choice, Graphify/graph artifacts, Obsidian vault navigation, architecture/OOP diagrams, graph-first agent workflow, bug reproduction, root-cause explanation, fix verification, token-efficiency comparison, original extension, and final packaging.
+
+All locally controllable deliverables are present and linked from the README, Obsidian index, final checklist, and rubric checklist.
 
 ## Final Limitations
 
 - Repository size uses a lecturer-approved exception.
 - Graphify-style artifacts were generated with local static analysis because the Graphify executable was not available.
 - Token counts are estimates, not API-metered values.
-- Ruff could not be run in the final local environment because the package was not installed.
+- `uv.lock` is absent, so verification is documented with direct Python commands in addition to `pyproject.toml`.
+
+## Submission Readiness
+
+Recommendation: ready to submit.
+
+The only remaining risk is external: if the grader requires output from a specific official Graphify executable, the assignment materials did not provide an installable command or package in this environment. The repository mitigates this by documenting the install attempt and supplying Graphify-style graph artifacts, visual graph output, architecture diagrams, and a local run report.
 
 ## Submission Message
 

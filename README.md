@@ -1,4 +1,4 @@
-# AI-agents-EX4
+﻿# AI-agents-EX4
 
 Reverse Engineering, Debugging, and Token-Efficient Agentic AI with Graphify and Obsidian.
 
@@ -61,7 +61,7 @@ Browse the main deliverables:
 
 ## Assignment Goal
 
-This project will demonstrate reverse engineering, debugging, and token-efficient agentic AI using Graphify, Obsidian, and a graph-guided AI workflow.
+This project demonstrates reverse engineering, debugging, and token-efficient agentic AI using Graphify-style graph artifacts, Obsidian, and a graph-guided LangGraph workflow.
 
 The final submission must prove that graph-guided investigation is more focused than naive raw-code reading.
 
@@ -89,7 +89,7 @@ Instructor-approved exception:
 
 - The lecturer explicitly allowed using `martinpeck/broken-python` for this project.
 - The repository does not meet the general 10,000+ LOC / 70+ files scale rule.
-- Because it is approved, the project will document the size gap transparently and compensate with deeper graph-guided analysis, stronger agent-instruction architecture, and original extensions.
+- Because it is approved, the project documents the size gap transparently and compensates with deeper graph-guided analysis, stronger agent-instruction architecture, local LangGraph execution, and original graph-analysis extensions.
 
 ## Selected Bug
 
@@ -210,7 +210,7 @@ Rationale:
 
 ## Phase 1 Graph Artifacts
 
-Graphify executable was not available locally, so Phase 1 generated Graphify-style static-analysis artifacts from Python AST plus syntax-fallback scanning.
+The official Graphify executable/package was not available locally, so Phase 1 generated Graphify-style static-analysis artifacts from Python AST plus syntax-fallback scanning and documented the attempted local install/run path.
 
 Generation log:
 
@@ -254,7 +254,7 @@ This document specifies agent roles, allowed inputs/outputs, graph-first context
 
 ## Phase 2 Architecture Understanding
 
-Phase 2 reverse engineering has started and produced the first architecture diagrams.
+Phase 2 reverse engineering is complete and produced the architecture views required for submission.
 
 Architecture summary:
 
@@ -354,7 +354,7 @@ Best operational comparison:
 
 Important limitation:
 
-- The full graph-guided audit workflow uses 15775 estimated input tokens because it includes the complete `graph.json`.
+- The full graph-guided audit workflow uses 15924 estimated input tokens because it includes the complete `graph.json`.
 - This full audit mode is useful for traceability, but it is not token-cheaper for the tiny instructor-approved `broken-python` exception repository.
 - The token-efficient pattern is to distill Graphify output into `obsidian/hot.md` plus focused source evidence before sending context to an LLM.
 
@@ -420,6 +420,7 @@ Phase 7 is complete. Final packaging added a grader-oriented README flow, final 
 Phase 7 artifacts:
 
 - Final submission report: `reports/final_submission_report.md`
+- Final end-to-end audit: `reports/final_end_to_end_audit.md`
 - Final submission checklist: `reports/final_submission_checklist.md`
 - Final verification log: `artifacts/logs/phase7_verification.md`
 
@@ -445,11 +446,13 @@ uv run pytest
 Current local fallback verification:
 
 ```bash
+python -m pytest
+python -m ruff check .
 python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow tests.unit.test_phase6_analysis
 python -m compileall src tests
 ```
 
-Note: `uv.lock` is not present in this submitted workspace. The reproducible fallback verification path uses the Python standard library `unittest` and `compileall` commands above.
+Note: `uv.lock` is not present in this submitted workspace. The reproducible fallback verification path uses the direct Python commands above.
 
 ## Lint
 
@@ -457,15 +460,15 @@ Note: `uv.lock` is not present in this submitted workspace. The reproducible fal
 uv run ruff check .
 ```
 
-Local note: Ruff is configured in `pyproject.toml`, but `python -m ruff check .` was not available in the final local environment because Ruff was not installed there. This limitation is recorded in `artifacts/logs/phase7_verification.md`.
+Final local verification result: `python -m ruff check .` passed after installing the declared dev dependency.
 
 ## Final Limitations
 
-- The selected source repository is much smaller than the general 10,000+ LOC / 70+ file guideline, but it is documented as a lecturer-approved exception.
-- Graphify itself was not available locally, so the project generated Graphify-style artifacts with Python AST/static analysis and documented that method.
-- Token counts are estimates based on `characters / 4`; no API billing logs were available.
-- `uv.lock` is absent in this workspace, so the final verification path uses standard-library commands that do not require dependency installation.
-- The project has no UI, so screenshots are not required; visual evidence is represented through Mermaid diagrams and `artifacts/graphify/graph.html`.
+- The selected source repository is smaller than the general 10,000+ LOC / 70+ file guideline; the lecturer-approved exception is documented in the README and reports.
+- The official Graphify executable/package was not available locally; the repository includes Graphify-style AST/static-analysis artifacts, a graph visualization, and a local Graphify attempt report.
+- Token counts are estimates based on `characters / 4`; the method is documented and applied consistently.
+- `uv.lock` is absent in this workspace, so the final verification path documents direct Python commands plus the explicit LangGraph install/run evidence.
+- The project has no UI; visual evidence is represented through Mermaid diagrams, `artifacts/graphify/graph.html`, and `artifacts/screenshots/README.md`.
 
 ## Credits
 
@@ -481,6 +484,7 @@ Local note: Ruff is configured in `pyproject.toml`, but `python -m ruff check .`
 - Reports: `reports/`
 - Repository size report: `reports/repository_size_report.md`
 - Final submission report: `reports/final_submission_report.md`
+- Final end-to-end audit: `reports/final_end_to_end_audit.md`
 - Final submission checklist: `reports/final_submission_checklist.md`
 - Rubric-mapped checklist: `reports/rubric_submission_checklist.md`
 - Final Phase 7 review: `reports/phase7_review.md`
@@ -493,6 +497,7 @@ Local note: Ruff is configured in `pyproject.toml`, but `python -m ruff check .`
 - Phase 7 verification: `artifacts/logs/phase7_verification.md`
 - Graphify outputs: `artifacts/graphify/`
 - Graphify local run report: `reports/graphify_local_run_report.md`
+- Visual evidence note: `artifacts/screenshots/README.md`
 - Diagrams: `artifacts/diagrams/`
 - Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
 - OOP/module interaction diagram: `artifacts/diagrams/oop_diagram.md`
@@ -513,3 +518,4 @@ Local note: Ruff is configured in `pyproject.toml`, but `python -m ruff check .`
 - Token comparison CSV: `artifacts/token_measurements/token_comparison.csv`
 - Analysis extension code: `src/analysis/`
 - Generated hot context: `obsidian/hot.generated.md`
+

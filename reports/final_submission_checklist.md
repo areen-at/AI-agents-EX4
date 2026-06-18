@@ -24,3 +24,10 @@
 - [x] Token efficiency report completed.
 - [x] Original extension completed.
 - [x] README completed.
+- [x] Rubric-mapped checklist completed.
+- [x] Final end-to-end audit completed.
+- [x] LangGraph workflow executed locally and captured.
+- [x] Graphify local attempt documented.
+- [x] Visual graph/diagram evidence linked.
+- [x] Obsidian `index.md` and `hot.md` verified as navigation and focus notes.
+- [x] Final reports link required evidence.

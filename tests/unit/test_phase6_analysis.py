@@ -8,7 +8,6 @@ from pathlib import Path
 from src.analysis.hot_md_generator import generate_hot_context
 from src.analysis.suspicious_nodes import rank_suspicious_nodes
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 

@@ -10,7 +10,6 @@ from __future__ import annotations
 from contextlib import redirect_stdout
 from io import StringIO
 
-
 score = 0
 
 

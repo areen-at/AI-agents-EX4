@@ -8,7 +8,6 @@ from pathlib import Path
 from .graph_loader import load_graph
 from .suspicious_nodes import DEFAULT_SELECTED_FILES, RankedNode, rank_suspicious_nodes
 
-
 BUG_SUMMARY = (
     "`print_final_scores(...)` accepts score data through parameters but reads the "
     "module-level global `score` variable instead."

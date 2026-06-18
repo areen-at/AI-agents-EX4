@@ -1,6 +1,6 @@
 # Phase 1 Review
 
-Status: complete and ready for Phase 2.
+Status: complete.
 
 ## Review Questions
 
@@ -26,11 +26,11 @@ The selected bug is now supported by three evidence layers:
 - The Phase 1 probe mirrors the relevant functions rather than importing the interactive scripts directly. This avoids blocking on `input(...)` and keeps Phase 1 non-invasive.
 - The actual code fix and pytest-style regression test belong to Phase 4.
 
-## Phase 2 Entry Decision
+## Final Phase 1 Decision
 
-Phase 1 is complete enough to enter Phase 2. The next work is reverse-engineering:
+Phase 1 is complete. It provides the graph artifacts, selected bug path, reproduction probe, and initial Obsidian context used by later phases:
 
-- Draw the architecture block diagram.
-- Draw the functional/module interaction diagram.
-- Explain why an OOP diagram is not applicable.
-- Document central nodes, bottlenecks, data flow, and the bug-critical path.
+- Architecture block diagram.
+- Functional/module interaction diagram.
+- OOP non-applicability explanation.
+- Central nodes, bottlenecks, data flow, and bug-critical path documentation.

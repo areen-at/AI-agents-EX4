@@ -1,4 +1,4 @@
-# Token Efficiency Report
+﻿# Token Efficiency Report
 
 Status: Phase 5 complete.
 
@@ -104,8 +104,8 @@ Process:
 Measured input:
 
 - Text units: 5.
-- Characters: 63105.
-- Estimated input tokens: 15775.
+- Characters: 63701.
+- Estimated input tokens: 15924.
 - Iterations: 2.
 - Root cause reached: yes.
 - Fix reached: yes.
@@ -123,7 +123,7 @@ This mode is included as an audit trail, not as the recommended production promp
 |---|---:|---:|---:|---:|---|---|---:|---|
 | Naive raw-code baseline | 4 | 8303 | 2074 | 4 | Yes | Yes | 3 | Reads all source files, including unrelated baseline noise |
 | Graph-guided hot-context workflow | 2 | 6855 | 1713 | 2 | Yes | Yes | 5 | Uses `hot.md` and focused source evidence |
-| Graph-guided full audit workflow | 5 | 63105 | 15775 | 2 | Yes | Yes | 5 | Includes full `graph.json`; useful but costly here |
+| Graph-guided full audit workflow | 5 | 63701 | 15924 | 2 | Yes | Yes | 5 | Includes full `graph.json`; useful but costly here |
 
 CSV:
 
@@ -155,3 +155,4 @@ For this project:
 - It reduced text units by 50%.
 - It reduced investigation iterations by 50%.
 - It produced a stronger, evidence-backed root-cause explanation.
+

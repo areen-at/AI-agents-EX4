@@ -14,13 +14,13 @@ The workflow read Obsidian context first, then graph artifacts, then selected gr
 
 | Text Unit | Characters | Estimated Tokens |
 |---|---:|---:|
-| `obsidian\index.md` | 4038 | 1009 |
-| `obsidian\hot.md` | 4817 | 1204 |
-| `artifacts\graphify\GRAPH_REPORT.md` | 4628 | 1157 |
-| `artifacts\graphify\graph.json` | 47584 | 11896 |
-| `artifacts\source_evidence\print_final_scores_source.md` | 2038 | 509 |
+| `C:\Users\LENOVO\Documents\Codex\2026-06-17\files-mentioned-by-the-user-l07\outputs\ex04_submission_project\obsidian\index.md` | 4634 | 1158 |
+| `C:\Users\LENOVO\Documents\Codex\2026-06-17\files-mentioned-by-the-user-l07\outputs\ex04_submission_project\obsidian\hot.md` | 4817 | 1204 |
+| `C:\Users\LENOVO\Documents\Codex\2026-06-17\files-mentioned-by-the-user-l07\outputs\ex04_submission_project\artifacts\graphify\GRAPH_REPORT.md` | 4628 | 1157 |
+| `C:\Users\LENOVO\Documents\Codex\2026-06-17\files-mentioned-by-the-user-l07\outputs\ex04_submission_project\artifacts\graphify\graph.json` | 47584 | 11896 |
+| `C:\Users\LENOVO\Documents\Codex\2026-06-17\files-mentioned-by-the-user-l07\outputs\ex04_submission_project\artifacts\source_evidence\print_final_scores_source.md` | 2038 | 509 |
 
-Total estimated input tokens: 15775
+Total estimated input tokens: 15924
 
 ## Ranked Suspect Nodes
 

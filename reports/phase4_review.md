@@ -1,6 +1,6 @@
 # Phase 4 Review
 
-Status: complete and ready for Phase 5.
+Status: complete.
 
 ## Scope
 
@@ -64,13 +64,13 @@ python -m pip install uv
 uv sync --group dev
 ```
 
-## Phase 5 Handoff
+## Token-Efficiency Follow-Up
 
-Phase 5 can now compare:
+Phase 5 compares:
 
 - Naive investigation: broad/manual reading of source files and broken baseline context.
 - Graph-guided investigation: Obsidian + graph report + graph JSON + focused source evidence.
 
-The graph-guided token inputs are already recorded in:
+The graph-guided token inputs are recorded in:
 
 - `artifacts/logs/graph_guided_agent_log.md`

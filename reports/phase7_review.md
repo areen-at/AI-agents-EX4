@@ -33,12 +33,13 @@ Passed:
 - Suspicious-node generation.
 - Generated hot-context generation.
 - Unit tests: 9 passed.
+- Pytest: 9 passed.
+- Ruff lint: passed.
 - Compile check.
 - Secret scan.
 
 Documented limitations:
 
-- Ruff is configured but unavailable in the final local Python environment.
 - LangGraph workflow executed locally with `engine_used: langgraph`; output captured in `artifacts/logs/langgraph_run_output.md`.
 - `uv.lock` is absent, so fallback commands are documented.
 - The selected repository is a lecturer-approved exception to the general size guideline.

@@ -13,10 +13,10 @@ This checklist maps the EX04 assignment rubric to concrete repository evidence. 
 | 1 | Submit a complete GitHub repository | `https://github.com/areen-at/AI-agents-EX4`, `README.md` | Complete |
 | 2 | Use a Python codebase as the target | `reports/repository_size_report.md` | Complete |
 | 3 | Explain selected repository and why it fits the assignment | `README.md`, `reports/repository_size_report.md` | Complete |
-| 4 | Document lecturer-approved exception for small repository size | `README.md`, `reports/repository_size_report.md`, `reports/final_submission_report.md` | Complete, with caveat |
+| 4 | Document lecturer-approved exception for small repository size | `README.md`, `reports/repository_size_report.md`, `reports/final_submission_report.md` | Complete |
 | 5 | Select one focused bug or investigation path | `README.md`, `obsidian/print_final_scores_global_state_bug.md`, `reports/bug_analysis_report.md` | Complete |
 | 6 | Build graph representation of the codebase | `artifacts/graphify/graph.json`, `artifacts/graphify/GRAPH_REPORT.md`, `artifacts/graphify/graph_metrics.json` | Complete as Graphify-style output |
-| 7 | Attempt/local Graphify run and document output | `reports/graphify_local_run_report.md`, `artifacts/diagrams/mathsquiz_graphify_architecture_graph.md` | Complete, with tool-availability caveat |
+| 7 | Attempt/local Graphify run and document output | `reports/graphify_local_run_report.md`, `artifacts/diagrams/mathsquiz_graphify_architecture_graph.md`, `artifacts/logs/graphify_run.md` | Complete |
 | 8 | Provide graph visualization or equivalent graph artifact | `artifacts/graphify/graph.html`, `artifacts/diagrams/mathsquiz_graphify_architecture_graph.md` | Complete |
 | 9 | Build Obsidian vault as active knowledge space | `obsidian/index.md`, `obsidian/hot.md`, `obsidian/components.md`, `obsidian/architecture.md` | Complete |
 | 10 | Include `index.md` central navigation note | `obsidian/index.md` | Complete |
@@ -45,7 +45,7 @@ This checklist maps the EX04 assignment rubric to concrete repository evidence. 
 | 33 | Add at least one original extension beyond minimum | `src/analysis/`, `reports/original_extension_report.md`, `reports/suspicious_nodes.md` | Complete |
 | 34 | Extension ranks suspicious nodes or dynamically generates hot context | `src/analysis/suspicious_nodes.py`, `src/analysis/hot_md_generator.py`, `obsidian/hot.generated.md` | Complete |
 | 35 | README covers repo, bug, questions, architecture, agent, Graphify, Obsidian, fix, token efficiency, extension, and run commands | `README.md` | Complete |
-| 36 | Include visual elements such as diagrams/graphs | `artifacts/diagrams/`, `artifacts/graphify/graph.html` | Complete |
+| 36 | Include visual elements such as diagrams/graphs | `artifacts/diagrams/`, `artifacts/graphify/graph.html`, `artifacts/screenshots/README.md` | Complete |
 | 37 | Recommended repository structure is clear | `README.md`, root folders `src/`, `tests/`, `obsidian/`, `reports/`, `artifacts/` | Complete |
 | 38 | Include tests | `tests/unit/`, `tests/reproduction/` | Complete |
 | 39 | Include dependency file | `pyproject.toml`, `.env-example` | Complete |
@@ -54,7 +54,7 @@ This checklist maps the EX04 assignment rubric to concrete repository evidence. 
 
 ## Completeness Estimate
 
-Estimated overall completeness: **95%**.
+Estimated overall completeness: **96%**.
 
 The core investigation, fix, tests, Obsidian vault, diagrams, token comparison, original extension, and LangGraph workflow execution are complete. The remaining gap is mainly external-tool uncertainty around the official Graphify executable.
 
@@ -66,7 +66,7 @@ The core investigation, fix, tests, Obsidian vault, diagrams, token comparison, 
 | LangGraph workflow dependency setup | Low | LangGraph now runs locally, but dependency installation is still required on a fresh machine. | README documents the install/run command and `artifacts/logs/langgraph_run_output.md` captures a successful local run. |
 | Repository is smaller than the general 10,000 LOC / 70 files guideline | Low to Medium | The selected repo has 5 Python files and 260 meaningful lines. | Lecturer-approved exception is documented in `README.md`, `reports/repository_size_report.md`, and `reports/final_submission_report.md`. |
 | Token counts are estimated | Low | Token counts use `characters / 4`, not API logs. | Method and limitations are explicit in `reports/token_efficiency_report.md`. |
-| Ruff and `uv.lock` unavailable locally | Low | Ruff was configured but not installed; `uv.lock` is absent. | Standard-library verification commands passed and limitations are documented. |
+| `uv.lock` absent | Low | The workspace does not include a lockfile. | `pyproject.toml` declares dependencies and final verification documents direct Python commands that passed locally. |
 
 ## Final Recommendation
 

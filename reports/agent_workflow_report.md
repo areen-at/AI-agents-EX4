@@ -1,4 +1,4 @@
-# Agent Workflow Report
+﻿# Agent Workflow Report
 
 Status: Phase 3 complete.
 
@@ -156,20 +156,21 @@ The workflow records character counts and estimated input tokens for each text u
 
 Current run:
 
-- `obsidian/index.md`: 1009 estimated tokens.
+- `obsidian/index.md`: 1158 estimated tokens.
 - `obsidian/hot.md`: 1204 estimated tokens.
 - `artifacts/graphify/GRAPH_REPORT.md`: 1157 estimated tokens.
 - `artifacts/graphify/graph.json`: 11896 estimated tokens.
 - `artifacts/source_evidence/print_final_scores_source.md`: 509 estimated tokens.
-- Total estimated input tokens: 15775.
+- Total estimated input tokens: 15924.
 
 ## Limitations
 
 - LangGraph now runs locally after installing dependencies with `python -m pip install langgraph networkx pydantic python-dotenv`.
 - This workflow does not call a live LLM; the assignment focus is graph-guided context selection, investigation, and fix evidence.
-- `pytest` is declared in the dev dependency group, but was not available in the current local Python environment during verification.
+- `pytest` is declared in the dev dependency group and passed in the final local verification.
 
 ## Future Improvements
 
 - Add a source-snippet reader that records exact source-line evidence during Phase 4.
 - Connect Phase 5 token-efficiency comparison directly to `text_units_read`.
+

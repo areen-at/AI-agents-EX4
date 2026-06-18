@@ -1,4 +1,4 @@
-# LangGraph Run Output
+﻿# LangGraph Run Output
 
 Status: passed.
 
@@ -28,7 +28,7 @@ python -m src.agent.run_agent --engine langgraph --json
   ],
   "suspect_nodes_count": 7,
   "evidence_count": 2,
-  "total_estimated_input_tokens": 15775,
+  "total_estimated_input_tokens": 15924,
   "proposed_fix": "Replace reads of global score inside print_final_scores with final_score; in step3 compute percentage from final_score / max_possible_score."
 }
 ```
@@ -61,3 +61,4 @@ The full JSON output included:
   - `risk:mathsquiz/mathsquiz-step2.py:print_final_scores:unused_arg:final_score`
   - `risk:mathsquiz/mathsquiz-step3.py:print_final_scores:global_score_instead_of_param`
   - `risk:mathsquiz/mathsquiz-step3.py:print_final_scores:unused_arg:final_score`
+

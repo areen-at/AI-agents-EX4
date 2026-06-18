@@ -1,6 +1,6 @@
 # Phase 3 Agent Workflow Diagram
 
-Status: Phase 3 preparation draft.
+Status: final agent workflow view.
 
 ```mermaid
 flowchart TD

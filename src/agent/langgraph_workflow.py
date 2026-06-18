@@ -11,7 +11,12 @@ from pathlib import Path
 from typing import Any
 
 from .state import EvidenceItem, InvestigationState
-from .tools import load_graph_json, read_text_unit, select_print_final_scores_suspects, write_agent_log
+from .tools import (
+    load_graph_json,
+    read_text_unit,
+    select_print_final_scores_suspects,
+    write_agent_log,
+)
 from .workflow import build_initial_state
 
 try:  # pragma: no cover - exercised only when LangGraph is installed.

@@ -27,4 +27,4 @@ The final operational comparison remains unchanged:
 - Graph-guided hot-context workflow: 1713 estimated input tokens.
 - Reduction: 17.4% fewer estimated input tokens, 50% fewer text units, and 50% fewer iterations.
 
-The refreshed full-audit workflow now records 15599 estimated input tokens because `obsidian/index.md` gained Phase 5 links before the final agent re-run.
+The final refreshed full-audit workflow records 15924 estimated input tokens because `obsidian/index.md` gained final-audit links before the last LangGraph run.

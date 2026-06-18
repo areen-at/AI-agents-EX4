@@ -9,7 +9,6 @@ from typing import Any
 
 from .graph_loader import graph_edges, graph_nodes, load_graph
 
-
 DEFAULT_BUG_KEYWORDS = (
     "print_final_scores",
     "final_score",

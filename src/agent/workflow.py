@@ -9,7 +9,12 @@ from __future__ import annotations
 from pathlib import Path
 
 from .state import EvidenceItem, InvestigationState
-from .tools import load_graph_json, read_text_unit, select_print_final_scores_suspects, write_agent_log
+from .tools import (
+    load_graph_json,
+    read_text_unit,
+    select_print_final_scores_suspects,
+    write_agent_log,
+)
 
 
 def build_initial_state() -> InvestigationState:

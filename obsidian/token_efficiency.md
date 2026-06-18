@@ -1,4 +1,4 @@
-# Token Efficiency
+﻿# Token Efficiency
 
 ## Baseline Mode
 
@@ -26,7 +26,7 @@ Operational hot-context mode:
 Full audit mode:
 
 - Reads Obsidian context, Graphify report, full `graph.json`, and focused evidence.
-- Estimated input tokens: 15775.
+- Estimated input tokens: 15924.
 - Useful for traceability but not token-cheaper in this tiny repository.
 
 ## Comparison
@@ -40,3 +40,4 @@ Best operational comparison:
 Full report: `../reports/token_efficiency_report.md`
 
 CSV: `../artifacts/token_measurements/token_comparison.csv`
+

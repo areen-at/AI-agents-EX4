@@ -64,4 +64,4 @@ Evidence:
 
 ## Limitation
 
-This is a Graphify-style substitute, not an official Graphify execution. The limitation is documented in `GRAPH_REPORT.md` and should be mentioned in the final README unless official Graphify is installed and rerun later.
+This is a Graphify-style substitute, not an official Graphify execution. The limitation is documented in `GRAPH_REPORT.md`, `reports/graphify_local_run_report.md`, and the final README. The generated graph artifacts are used consistently as the project's graph evidence.

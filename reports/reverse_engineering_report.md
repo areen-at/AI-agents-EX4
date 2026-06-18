@@ -1,6 +1,6 @@
 # Reverse Engineering Report
 
-Status: Phase 2 complete enough to enter Phase 3.
+Status: complete.
 
 ## Scope
 
@@ -97,7 +97,7 @@ Diagram files:
 - `artifacts/diagrams/oop_diagram.md`
 - `artifacts/diagrams/score_state_flow_diagram.md`
 
-### Missing View Found During Review
+### Additional View Added During Review
 
 The first two diagrams covered subsystem structure and module/function relationships, but they did not isolate the state-flow bug tightly enough. Phase 2 therefore adds `score_state_flow_diagram.md`.
 
@@ -129,21 +129,21 @@ That diagram shows:
 7. OOP extraction method: check for classes first; because none exist, substitute a module/function interaction diagram.
 8. Graphify value: it highlighted `print_final_scores` as a repeated bug-risk pattern across both functional versions and kept attention away from broad baseline noise.
 
-## Limitations
+## Final Scope Notes
 
 - The graph is Graphify-style static analysis because the official executable was unavailable.
 - The codebase is small under the general assignment threshold, but this repository is documented as lecturer-approved.
-- Phase 2 diagrams describe current architecture before the Phase 4 fix. If the fix changes structure, diagrams should be updated.
+- Phase 2 diagrams describe the pre-fix defect and the intended fixed data path. The Phase 4 fix does not require a new component because it removes a hidden dependency inside the existing `print_final_scores(...)` boundary.
 
-## Open Questions for Later Phases
+## Resolved Phase Decisions
 
-- Should Phase 4 fix both step2 and step3, or use one as the primary fixed artifact and the other as comparative evidence?
-- Should `ask_question(...)` input validation become the original extension or remain a documented secondary risk?
-- Should the agent workflow rank `print_final_scores` using graph degree, bug-risk labels, or proximity to score-state nodes?
+- Phase 4 fixed both step2 and step3 importable target modules.
+- `ask_question(...)` input validation remains a documented secondary risk, not the official bug target.
+- The Phase 6 extension ranks suspects using graph degree, keyword matches, explicit risk labels, and proximity to selected files.
 
 ## Phase 2 Conclusion
 
-The Phase 2 architecture work confirms that the selected bug is not isolated trivia. It is a boundary failure inside the subsystem's main data flow: score is accumulated in module-level orchestration, then passed into a reporting function that secretly ignores the explicit argument. The next phase should build the agent workflow around this narrow, graph-supported path.
+The Phase 2 architecture work confirms that the selected bug is not isolated trivia. It is a boundary failure inside the subsystem's main data flow: score is accumulated in module-level orchestration, then passed into a reporting function that secretly ignores the explicit argument. The final submission builds the agent workflow, fix, verification, and token-efficiency comparison around this narrow, graph-supported path.
 
 See also:
 
@@ -167,7 +167,9 @@ module-level quiz flow
 -> incorrect or non-isolated final-score output
 ```
 
-## Next Reverse-Engineering Tasks
+## Final Reverse-Engineering Outcome
 
-- Extend the Phase 2 diagrams if the fix changes structure.
-- Prepare Phase 3 agent workflow so it starts from `index.md`, `hot.md`, and the graph report before raw source.
+- Architecture block diagram completed.
+- OOP/module interaction diagram completed with justification for the non-OOP subsystem.
+- Score-state flow diagram completed to isolate the bug path.
+- Graph-guided agent workflow completed and executed with LangGraph.

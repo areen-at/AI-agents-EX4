@@ -1,6 +1,6 @@
 # Phase 2 Architecture Review
 
-Status: complete enough to enter Phase 3 after adding the missing score-state flow view.
+Status: complete.
 
 ## Diagram 1: Architecture Block Diagram
 
@@ -65,19 +65,19 @@ Assessment:
 - Added because the first two diagrams were structurally complete but did not isolate the state-flow defect enough.
 - Completes the architecture view needed before Phase 3.
 
-## Missing Architectural Views
+## Architectural View Coverage
 
 No blocking Phase 2 views remain.
 
-Optional later views:
+Additional completed views:
 
-- Before/after fix diagram after Phase 4.
-- Agent workflow diagram in Phase 3.
-- Token-efficiency context-selection diagram in Phase 5.
+- Agent workflow diagram: `artifacts/diagrams/agent_workflow_diagram.md`.
+- Before/after behavior evidence: `artifacts/before_after/`.
+- Token-efficiency context selection: `reports/token_efficiency_report.md`.
 
 ## Phase 2 Verdict
 
-Phase 2 is complete enough to move to Phase 3.
+Phase 2 is complete for final submission.
 
 The architecture documentation now includes:
 

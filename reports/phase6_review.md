@@ -61,4 +61,4 @@ Result:
 
 ## Decision
 
-Phase 6 is complete enough to move to Phase 7.
+Phase 6 is complete for final submission.

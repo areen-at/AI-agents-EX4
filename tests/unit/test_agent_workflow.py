@@ -9,7 +9,6 @@ from src.agent.langgraph_workflow import build_langgraph_app, langgraph_availabl
 from src.agent.tools import select_print_final_scores_suspects
 from src.agent.workflow import build_initial_state, run_preparation_workflow
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 

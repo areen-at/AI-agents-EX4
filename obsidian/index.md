@@ -6,7 +6,7 @@ EX04 - Graph-Guided Reverse Engineering, Debugging, and Token-Efficient Agentic 
 
 ## Current Status
 
-Phases 1-6 are complete for the official `print_final_scores` investigation path.
+Phases 1-7 are complete for the official `print_final_scores` investigation path.
 
 Repository choice: `martinpeck/broken-python`
 
@@ -52,18 +52,22 @@ Official investigation target:
 - Original extension report: `../reports/original_extension_report.md`
 - Suspicious-node ranking: `../reports/suspicious_nodes.md`
 - Generated hot context: `hot.generated.md`
+- Final submission report: `../reports/final_submission_report.md`
+- Rubric checklist: `../reports/rubric_submission_checklist.md`
+- Successful LangGraph run: `../artifacts/logs/langgraph_run_output.md`
+- Visual evidence note: `../artifacts/screenshots/README.md`
 
-## Phase 2 Status
+## Architecture Status
 
-Phase 2 has started. The first architecture block diagram and module interaction diagram exist, and the reverse-engineering report now documents entry points, responsibilities, central nodes, bottlenecks, and the OOP assessment.
+Phase 2 is complete. The architecture block diagram, module/OOP substitute diagram, score-state flow diagram, and Graphify-style architecture graph exist and are linked from the README and reports.
 
-Phase 2 review added the missing bug-focused score-state flow diagram. The architecture set is now complete enough to move to Phase 3.
+The score-state flow diagram isolates the exact modularity failure: `print_final_scores(...)` receives explicit parameters but follows a hidden global-state path.
 
-## Phase 2 Handoff Questions
+## Resolved Handoff Decisions
 
 - Resolved: the focused Phase 1 probe proves that non-zero `final_score` is ignored when global `score=0`.
-- Should the Phase 4 fix change both step2 and step3, or use step3 as the main fixed artifact and step2 as comparative evidence?
-- Which graph node references should be embedded in the final architecture diagram?
+- Resolved: Phase 4 fixed both importable target modules, `mathsquiz_step2.py` and `mathsquiz_step3.py`.
+- Resolved: graph node references are documented in `artifacts/graphify/GRAPH_REPORT.md`, `reports/suspicious_nodes.md`, and `artifacts/diagrams/mathsquiz_graphify_architecture_graph.md`.
 
 ## Phase 5 Status
 
@@ -85,4 +89,16 @@ Phase 6 adds an executable original extension:
 - `src/analysis/hot_md_generator.py` generates `hot.generated.md` from the ranked nodes.
 - The ranking prioritizes `print_final_scores` risk nodes and the two selected implementation files.
 
-The extension is complete and ready for Phase 7 packaging.
+The extension is complete and included in final packaging.
+
+## Final Submission Path
+
+For grading, start with:
+
+1. `../README.md`
+2. `../reports/rubric_submission_checklist.md`
+3. `../reports/final_submission_report.md`
+4. `[[hot]]`
+5. `[[bug_investigation]]`
+6. `[[architecture]]`
+7. `[[token_efficiency]]`
