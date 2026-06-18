@@ -111,6 +111,10 @@ Total estimated input tokens: {total_tokens}
 ## Run Status
 
 {state['status']}
+
+## Audit Note
+
+This log represents the full audit workflow. It is intentionally heavier than the recommended hot-context workflow because it loads the complete `graph.json` for traceability.
 """
 
 

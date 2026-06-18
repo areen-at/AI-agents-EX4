@@ -30,13 +30,14 @@ Passed:
 - Agent workflow run.
 - Suspicious-node generation.
 - Generated hot-context generation.
-- Unit tests: 8 passed.
+- Unit tests: 9 passed.
 - Compile check.
 - Secret scan.
 
 Documented limitations:
 
 - Ruff is configured but unavailable in the final local Python environment.
+- LangGraph wrapper exists, but the local final run used deterministic fallback because dependencies were not installed.
 - `uv.lock` is absent, so fallback commands are documented.
 - The selected repository is a lecturer-approved exception to the general size guideline.
 

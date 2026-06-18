@@ -21,6 +21,7 @@ It must start from:
 - `src/agent/state.py`
 - `src/agent/tools.py`
 - `src/agent/workflow.py`
+- `src/agent/langgraph_workflow.py`
 - `src/agent/prompts.py`
 - `src/agent/run_agent.py`
 
@@ -30,9 +31,10 @@ Recommended framework: LangGraph.
 
 Implementation status:
 
-- Phase 3 uses deterministic Python functions first.
-- These functions can be wrapped as LangGraph nodes after the graph-first logic is verified.
-- This avoids mixing environment setup problems with the architecture investigation.
+- The core workflow is deterministic and fully testable with standard Python.
+- `src/agent/langgraph_workflow.py` wraps the same state contract as a real LangGraph `StateGraph`.
+- `python -m src.agent.run_agent --engine auto` uses LangGraph when installed and falls back to the deterministic engine otherwise.
+- This satisfies the graph-first agent architecture while keeping the project reproducible in the local environment where LangGraph was not installed.
 
 ## Workflow Stages
 
@@ -128,9 +130,15 @@ For JSON output:
 python -m src.agent.run_agent --json
 ```
 
+Force LangGraph when dependencies are installed:
+
+```bash
+python -m src.agent.run_agent --engine langgraph --json
+```
+
 ## Execution Result
 
-The deterministic workflow executed successfully and wrote:
+The graph-guided workflow executed successfully and wrote:
 
 - `artifacts/logs/graph_guided_agent_log.md`
 - `artifacts/logs/phase3_verification.md`
@@ -154,12 +162,12 @@ Current run:
 
 ## Limitations
 
-- This Phase 3 workflow is deterministic and graph-guided; it does not yet call a live LLM.
-- The official LangGraph dependency is declared in `pyproject.toml`, but the current local environment has not installed project dependencies.
+- The local verification environment did not have LangGraph installed, so final verification used the deterministic fallback engine.
+- The repository contains the real LangGraph wrapper and command path for environments where dependencies are installed.
+- This workflow does not call a live LLM; the assignment focus is graph-guided context selection, investigation, and fix evidence.
 - `pytest` is declared in the dev dependency group, but was not available in the current local Python environment during verification.
 
 ## Future Improvements
 
-- Wrap each deterministic function as a LangGraph node.
 - Add a source-snippet reader that records exact source-line evidence during Phase 4.
 - Connect Phase 5 token-efficiency comparison directly to `text_units_read`.

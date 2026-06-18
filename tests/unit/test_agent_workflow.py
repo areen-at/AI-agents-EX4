@@ -5,6 +5,7 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 
+from src.agent.langgraph_workflow import build_langgraph_app, langgraph_available
 from src.agent.tools import select_print_final_scores_suspects
 from src.agent.workflow import build_initial_state, run_preparation_workflow
 
@@ -68,6 +69,17 @@ class AgentWorkflowTests(unittest.TestCase):
         self.assertEqual(len(state["evidence"]), 2)
         self.assertEqual(state["status"], "phase3_prepared")
         self.assertIn("final_score", state["proposed_fix"])
+
+    def test_langgraph_wrapper_is_available_when_dependency_is_installed(self) -> None:
+        if not langgraph_available():
+            with self.assertRaises(RuntimeError):
+                build_langgraph_app(PROJECT_ROOT)
+            return
+
+        app = build_langgraph_app(PROJECT_ROOT)
+        state = app.invoke(build_initial_state())
+        self.assertEqual(state["status"], "langgraph_executed")
+        self.assertGreaterEqual(len(state["suspect_nodes"]), 4)
 
 
 if __name__ == "__main__":

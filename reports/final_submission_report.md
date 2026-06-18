@@ -54,13 +54,15 @@ python -m compileall src tests
 
 ## Final Results
 
-- Unit tests: 8 passed.
+- Unit tests: 9 passed.
 - Compile check: passed.
 - Agent workflow: passed.
+- LangGraph wrapper: implemented in `src/agent/langgraph_workflow.py`; local run used deterministic fallback because LangGraph was not installed.
 - Suspicious-node generator: passed.
 - Generated hot context: passed.
 - Secret scan: no real API keys or cloud credentials found.
 - Ruff: configured in `pyproject.toml`, but not installed in this local Python environment.
+- LangGraph: dependency declared in `pyproject.toml`, but not installed in this local environment during final verification.
 - `uv.lock`: absent; fallback verification commands are documented in README.
 
 ## Final Limitations

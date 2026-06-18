@@ -34,6 +34,12 @@ Run the graph-guided agent workflow:
 python -m src.agent.run_agent --json
 ```
 
+Run the LangGraph engine explicitly after installing dependencies:
+
+```bash
+python -m src.agent.run_agent --engine langgraph --json
+```
+
 Run the Phase 6 original extension:
 
 ```bash
@@ -266,6 +272,11 @@ Phase 2 artifacts:
 
 Phase 3 is complete. The workflow is designed to read Obsidian and graph artifacts before raw source code, select graph-supported suspects, produce a proposed modular fix, and write a graph-guided investigation log.
 
+The project now includes both:
+
+- A deterministic fallback workflow for local verification.
+- A real LangGraph wrapper in `src/agent/langgraph_workflow.py` that uses the same state contract and graph-first stages when LangGraph is installed.
+
 Run command:
 
 ```bash
@@ -278,6 +289,12 @@ Run with JSON state output:
 python -m src.agent.run_agent --json
 ```
 
+Run with LangGraph explicitly:
+
+```bash
+python -m src.agent.run_agent --engine langgraph --json
+```
+
 Phase 3 artifacts:
 
 - Agent workflow diagram: `artifacts/diagrams/agent_workflow_diagram.md`
@@ -285,6 +302,7 @@ Phase 3 artifacts:
 - Graph-guided agent log: `artifacts/logs/graph_guided_agent_log.md`
 - Phase 3 verification log: `artifacts/logs/phase3_verification.md`
 - Agent implementation: `src/agent/`
+- LangGraph wrapper: `src/agent/langgraph_workflow.py`
 
 ## Phase 4 Root Cause and Fix
 

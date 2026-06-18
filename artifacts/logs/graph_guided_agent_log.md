@@ -1,6 +1,6 @@
 # Graph-Guided Agent Log
 
-Status: Phase 3 workflow re-run during Phase 7 final verification.
+Status: Phase 3 executed.
 
 ## Bug Target
 
@@ -53,6 +53,6 @@ Use a regression test where global score differs from final_score and assert out
 
 phase3_executed
 
-## Phase 7 Note
+## Audit Note
 
-This log represents the full audit workflow after final README and Obsidian packaging. It is intentionally heavier than the recommended hot-context workflow because it loads the complete `graph.json` for traceability.
+This log represents the full audit workflow. It is intentionally heavier than the recommended hot-context workflow because it loads the complete `graph.json` for traceability.
