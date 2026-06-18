@@ -17,6 +17,7 @@ python -m compileall src tests
 - Generated hot context written successfully.
 - Unit tests: 8 tests passed.
 - Compile check: `src` and `tests` compiled successfully.
+- Polish check: generated hot context limits first source inspection to `mathsquiz-step2.py` and `mathsquiz-step3.py`.
 
 ## Phase 6 Output Summary
 

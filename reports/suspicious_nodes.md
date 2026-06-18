@@ -37,7 +37,8 @@ Generic calls such as `print`, `input`, `int`, `range`, and `randint` are dampen
 
 - `mathsquiz/mathsquiz-step2.py`
 - `mathsquiz/mathsquiz-step3.py`
-- `mathsquiz/mathsquiz.py`
+
+Only files connected to high-scoring nodes are listed here. Lower-scoring background files remain available in the graph, but they are not part of the recommended first context load.
 
 ## How This Improves Context Selection
 

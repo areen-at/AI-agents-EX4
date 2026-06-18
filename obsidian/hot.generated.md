@@ -24,7 +24,8 @@ The expected modular behavior is that final-score reporting uses explicit parame
 
 - `mathsquiz/mathsquiz-step2.py`
 - `mathsquiz/mathsquiz-step3.py`
-- `mathsquiz/mathsquiz.py`
+
+These are intentionally limited to the two selected implementation files. Background files remain useful for context, but they are not needed for the first focused repair pass.
 
 ## Fix-Diff Integration
 

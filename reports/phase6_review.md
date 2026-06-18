@@ -34,6 +34,15 @@ The suspicious-node ranking correctly prioritizes the official `print_final_scor
 - `global_score_instead_of_param` risk nodes.
 - `print_final_scores` function nodes in `mathsquiz-step2.py` and `mathsquiz-step3.py`.
 
+## Polish Decision
+
+The generated hot context now limits the first source-inspection list to the two selected implementation files:
+
+- `mathsquiz/mathsquiz-step2.py`
+- `mathsquiz/mathsquiz-step3.py`
+
+Lower-scoring background files remain visible in `reports/suspicious_nodes.md`, but they are not included in the first recommended agent context load.
+
 ## Verification
 
 Expected verification commands:

@@ -81,6 +81,7 @@ class Phase6AnalysisTests(unittest.TestCase):
         self.assertIn("print_final_scores", hot_context)
         self.assertIn("mathsquiz/mathsquiz-step2.py", hot_context)
         self.assertIn("Fix-Diff Integration", hot_context)
+        self.assertIn("intentionally limited", hot_context)
 
 
 if __name__ == "__main__":

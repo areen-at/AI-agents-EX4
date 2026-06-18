@@ -19,6 +19,10 @@ DEFAULT_BUG_KEYWORDS = (
     "parameter",
     "percentage",
 )
+DEFAULT_SELECTED_FILES = (
+    "mathsquiz/mathsquiz-step2.py",
+    "mathsquiz/mathsquiz-step3.py",
+)
 
 RISK_TYPES = {"bug_risk", "syntax_error"}
 SIGNAL_TYPES = {"function", "state_variable", "file"}
@@ -143,10 +147,7 @@ def rank_suspicious_nodes(
     graph: dict[str, Any],
     *,
     bug_keywords: tuple[str, ...] = DEFAULT_BUG_KEYWORDS,
-    selected_files: tuple[str, ...] = (
-        "mathsquiz/mathsquiz-step2.py",
-        "mathsquiz/mathsquiz-step3.py",
-    ),
+    selected_files: tuple[str, ...] = DEFAULT_SELECTED_FILES,
 ) -> list[RankedNode]:
     """Rank graph nodes by bug relevance, structural centrality, and risk signals."""
     nodes = graph_nodes(graph)
@@ -228,7 +229,12 @@ def format_suspicious_nodes_report(ranked_nodes: list[RankedNode], limit: int = 
         )
         for node in ranked_nodes[:limit]
     )
-    top_files = sorted({node.source_file for node in ranked_nodes[:limit] if node.source_file})
+    top_files = []
+    for node in ranked_nodes[:limit]:
+        if node.total_score < 20:
+            continue
+        if node.source_file and node.source_file not in top_files:
+            top_files.append(node.source_file)
     top_file_lines = "\n".join(f"- `{path}`" for path in top_files)
 
     return f"""# Suspicious Node Ranking
@@ -260,6 +266,8 @@ Generic calls such as `print`, `input`, `int`, `range`, and `randint` are dampen
 ## Top Source Files
 
 {top_file_lines}
+
+Only files connected to high-scoring nodes are listed here. Lower-scoring background files remain available in the graph, but they are not part of the recommended first context load.
 
 ## How This Improves Context Selection
 
@@ -309,4 +317,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

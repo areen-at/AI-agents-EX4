@@ -6,7 +6,7 @@ import argparse
 from pathlib import Path
 
 from .graph_loader import load_graph
-from .suspicious_nodes import RankedNode, rank_suspicious_nodes
+from .suspicious_nodes import DEFAULT_SELECTED_FILES, RankedNode, rank_suspicious_nodes
 
 
 BUG_SUMMARY = (
@@ -25,9 +25,17 @@ def _format_top_suspects(ranked_nodes: list[RankedNode], limit: int = 7) -> str:
     )
 
 
-def _source_files(ranked_nodes: list[RankedNode], limit: int = 3) -> list[str]:
+def _source_files(ranked_nodes: list[RankedNode], limit: int = 2) -> list[str]:
     files: list[str] = []
+    for selected_file in DEFAULT_SELECTED_FILES:
+        if any(node.source_file == selected_file for node in ranked_nodes):
+            files.append(selected_file)
+        if len(files) >= limit:
+            return files
+
     for node in ranked_nodes[:10]:
+        if node.total_score < 20:
+            continue
         if node.source_file and node.source_file not in files:
             files.append(node.source_file)
         if len(files) >= limit:
@@ -60,6 +68,8 @@ The expected modular behavior is that final-score reporting uses explicit parame
 ## Source Files To Inspect First
 
 {source_lines}
+
+These are intentionally limited to the two selected implementation files. Background files remain useful for context, but they are not needed for the first focused repair pass.
 
 ## Fix-Diff Integration
 

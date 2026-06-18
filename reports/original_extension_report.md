@@ -85,6 +85,13 @@ The extension turns the full graph into a short ranked suspect list. An agent ca
 
 This supports Phase 5's token-efficiency conclusion: the best workflow is not to load the whole graph, but to distill it into hot context and focused source evidence.
 
+The final polish pass intentionally limits the generated hot-context source list to the two selected implementation files:
+
+- `mathsquiz/mathsquiz-step2.py`
+- `mathsquiz/mathsquiz-step3.py`
+
+Background files still appear in the ranking table when relevant, but they are not recommended for the first context load.
+
 ## How It Exceeds Minimum Requirements
 
 The minimum assignment could be satisfied with manual diagrams, reports, and a bug fix. This extension adds executable analysis code that generates new investigation artifacts from the graph. It is reusable for future bug paths because the ranking logic is data-driven and separated from the reports.
