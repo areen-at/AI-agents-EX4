@@ -1,6 +1,6 @@
 # Graph-Guided Agent Log
 
-Status: Phase 3 executed.
+Status: langgraph_executed.
 
 ## Bug Target
 
@@ -51,7 +51,7 @@ Use a regression test where global score differs from final_score and assert out
 
 ## Run Status
 
-phase3_executed
+langgraph_executed
 
 ## Audit Note
 

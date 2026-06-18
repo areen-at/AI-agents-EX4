@@ -39,7 +39,7 @@ Passed:
 Documented limitations:
 
 - Ruff is configured but unavailable in the final local Python environment.
-- LangGraph wrapper exists, but the local final run used deterministic fallback because dependencies were not installed.
+- LangGraph workflow executed locally with `engine_used: langgraph`; output captured in `artifacts/logs/langgraph_run_output.md`.
 - `uv.lock` is absent, so fallback commands are documented.
 - The selected repository is a lecturer-approved exception to the general size guideline.
 

@@ -34,7 +34,7 @@ Implementation status:
 - The core workflow is deterministic and fully testable with standard Python.
 - `src/agent/langgraph_workflow.py` wraps the same state contract as a real LangGraph `StateGraph`.
 - `python -m src.agent.run_agent --engine auto` uses LangGraph when installed and falls back to the deterministic engine otherwise.
-- This satisfies the graph-first agent architecture while keeping the project reproducible in the local environment where LangGraph was not installed.
+- The final local verification installed LangGraph and successfully ran `python -m src.agent.run_agent --engine langgraph --json`.
 
 ## Workflow Stages
 
@@ -138,14 +138,17 @@ python -m src.agent.run_agent --engine langgraph --json
 
 ## Execution Result
 
-The graph-guided workflow executed successfully and wrote:
+The graph-guided workflow executed successfully with LangGraph and wrote:
 
 - `artifacts/logs/graph_guided_agent_log.md`
 - `artifacts/logs/phase3_verification.md`
+- `artifacts/logs/langgraph_run_output.md`
 
 Selected suspects: 7.
 
-Status: `phase3_executed`.
+Status: `langgraph_executed`.
+
+Engine: `langgraph`.
 
 ## Token Estimate
 
@@ -162,8 +165,7 @@ Current run:
 
 ## Limitations
 
-- The local verification environment did not have LangGraph installed, so final verification used the deterministic fallback engine.
-- The repository contains the real LangGraph wrapper and command path for environments where dependencies are installed.
+- LangGraph now runs locally after installing dependencies with `python -m pip install langgraph networkx pydantic python-dotenv`.
 - This workflow does not call a live LLM; the assignment focus is graph-guided context selection, investigation, and fix evidence.
 - `pytest` is declared in the dev dependency group, but was not available in the current local Python environment during verification.
 

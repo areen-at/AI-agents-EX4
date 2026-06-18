@@ -40,6 +40,8 @@ Run the LangGraph engine explicitly after installing dependencies:
 python -m src.agent.run_agent --engine langgraph --json
 ```
 
+The final local verification successfully executed this command with `engine_used: langgraph`; see `artifacts/logs/langgraph_run_output.md`.
+
 Run the Phase 6 original extension:
 
 ```bash
@@ -280,6 +282,7 @@ The project now includes both:
 
 - A deterministic fallback workflow for local verification.
 - A real LangGraph wrapper in `src/agent/langgraph_workflow.py` that uses the same state contract and graph-first stages when LangGraph is installed.
+- A captured successful local LangGraph run in `artifacts/logs/langgraph_run_output.md`.
 
 Run command:
 
@@ -304,6 +307,7 @@ Phase 3 artifacts:
 - Agent workflow diagram: `artifacts/diagrams/agent_workflow_diagram.md`
 - Agent workflow report: `reports/agent_workflow_report.md`
 - Graph-guided agent log: `artifacts/logs/graph_guided_agent_log.md`
+- Successful LangGraph run output: `artifacts/logs/langgraph_run_output.md`
 - Phase 3 verification log: `artifacts/logs/phase3_verification.md`
 - Agent implementation: `src/agent/`
 - LangGraph wrapper: `src/agent/langgraph_workflow.py`
@@ -497,6 +501,7 @@ Local note: Ruff is configured in `pyproject.toml`, but `python -m ruff check .`
 - Logs: `artifacts/logs/`
 - Phase 1 bug probe: `artifacts/logs/phase1_print_final_scores_probe.md`
 - Phase 3 agent log: `artifacts/logs/graph_guided_agent_log.md`
+- Successful LangGraph run output: `artifacts/logs/langgraph_run_output.md`
 - Phase 3 verification: `artifacts/logs/phase3_verification.md`
 - Phase 4 after-fix test log: `artifacts/logs/test_after_fix.md`
 - Phase 4 before-fix reproduction: `artifacts/logs/bug_reproduction_before.md`

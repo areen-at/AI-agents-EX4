@@ -70,7 +70,7 @@ def format_agent_log(state: dict[str, Any]) -> str:
 
     return f"""# Graph-Guided Agent Log
 
-Status: Phase 3 executed.
+Status: {state['status']}.
 
 ## Bug Target
 

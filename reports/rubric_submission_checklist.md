@@ -28,7 +28,7 @@ This checklist maps the EX04 assignment rubric to concrete repository evidence. 
 | 16 | Identify central modules/functions/components | `reports/reverse_engineering_report.md`, `obsidian/components.md`, `reports/suspicious_nodes.md` | Complete |
 | 17 | Identify complexity centers or God-node-like risks | `reports/reverse_engineering_report.md`, `artifacts/graphify/GRAPH_REPORT.md` | Complete |
 | 18 | Build an AI agent workflow with graph-first behavior | `src/agent/`, `reports/agent_workflow_report.md`, `artifacts/diagrams/agent_workflow_diagram.md` | Complete |
-| 19 | Include CrewAI or LangGraph implementation path | `src/agent/langgraph_workflow.py`, `src/agent/run_agent.py`, `pyproject.toml` | Complete, local run used fallback |
+| 19 | Include CrewAI or LangGraph implementation path | `src/agent/langgraph_workflow.py`, `src/agent/run_agent.py`, `artifacts/logs/langgraph_run_output.md`, `pyproject.toml` | Complete, LangGraph executed locally |
 | 20 | Agent reads Graphify/Obsidian before source code | `src/agent/workflow.py`, `artifacts/logs/graph_guided_agent_log.md`, `tests/unit/test_agent_workflow.py` | Complete |
 | 21 | Explain agent workflow stages | `reports/agent_workflow_report.md`, `artifacts/diagrams/agent_workflow_diagram.md`, `README.md` | Complete |
 | 22 | Reproduce or demonstrate selected bug | `artifacts/logs/phase1_print_final_scores_probe.md`, `tests/reproduction/print_final_scores_probe.py` | Complete |
@@ -54,16 +54,16 @@ This checklist maps the EX04 assignment rubric to concrete repository evidence. 
 
 ## Completeness Estimate
 
-Estimated overall completeness: **92%**.
+Estimated overall completeness: **95%**.
 
-The core investigation, fix, tests, Obsidian vault, diagrams, token comparison, and original extension are complete. The remaining gap is not missing project work, but external-tool/environment uncertainty around the official Graphify executable and local LangGraph dependency execution.
+The core investigation, fix, tests, Obsidian vault, diagrams, token comparison, original extension, and LangGraph workflow execution are complete. The remaining gap is mainly external-tool uncertainty around the official Graphify executable.
 
 ## Remaining Risks Before Submission
 
 | Risk | Severity | Explanation | Mitigation |
 |---|---|---|---|
 | Official Graphify executable was not available locally | Medium | The project includes Graphify-style artifacts, but not output from a verified official Graphify binary. | `reports/graphify_local_run_report.md` documents install attempts and generated architecture graph. Ask lecturer for exact Graphify install command if strict official output is required. |
-| LangGraph wrapper not executed locally | Low to Medium | The repository contains a real LangGraph wrapper, but local verification used deterministic fallback because dependencies were not installed. | `src/agent/langgraph_workflow.py` and README document `--engine langgraph`; tests verify import-safe behavior. |
+| LangGraph workflow dependency setup | Low | LangGraph now runs locally, but dependency installation is still required on a fresh machine. | README documents the install/run command and `artifacts/logs/langgraph_run_output.md` captures a successful local run. |
 | Repository is smaller than the general 10,000 LOC / 70 files guideline | Low to Medium | The selected repo has 5 Python files and 260 meaningful lines. | Lecturer-approved exception is documented in `README.md`, `reports/repository_size_report.md`, and `reports/final_submission_report.md`. |
 | Token counts are estimated | Low | Token counts use `characters / 4`, not API logs. | Method and limitations are explicit in `reports/token_efficiency_report.md`. |
 | Ruff and `uv.lock` unavailable locally | Low | Ruff was configured but not installed; `uv.lock` is absent. | Standard-library verification commands passed and limitations are documented. |
