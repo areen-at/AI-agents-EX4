@@ -21,6 +21,8 @@ Phase 7 finalizes the repository for submission. It turns the README into the pr
 - `reports/final_submission_report.md`
 - `reports/final_submission_checklist.md`
 - `artifacts/logs/phase7_verification.md`
+- `reports/graphify_local_run_report.md`
+- `artifacts/diagrams/mathsquiz_graphify_architecture_graph.md`
 - `docs/TODO.md`
 
 ## Final Verification

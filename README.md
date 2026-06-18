@@ -219,6 +219,8 @@ Generated artifacts:
 - `artifacts/graphify/GRAPH_REPORT.md`
 - `artifacts/graphify/graph_metrics.json`
 - `artifacts/graphify/graph.html`
+- Final architecture graph from graph artifacts: `artifacts/diagrams/mathsquiz_graphify_architecture_graph.md`
+- Graphify local install/run report: `reports/graphify_local_run_report.md`
 
 Graph totals:
 
@@ -264,6 +266,7 @@ Phase 2 artifacts:
 - Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
 - OOP/module interaction diagram: `artifacts/diagrams/oop_diagram.md`
 - Score-state flow diagram: `artifacts/diagrams/score_state_flow_diagram.md`
+- Mathsquiz Graphify-style architecture graph: `artifacts/diagrams/mathsquiz_graphify_architecture_graph.md`
 - Reverse-engineering report: `reports/reverse_engineering_report.md`
 - Phase 2 architecture review: `reports/phase2_architecture_review.md`
 - Phase 1 review gate: `reports/phase1_review.md`
@@ -483,6 +486,7 @@ Local note: Ruff is configured in `pyproject.toml`, but `python -m ruff check .`
 - Phase 6 review: `reports/phase6_review.md`
 - Phase 7 verification: `artifacts/logs/phase7_verification.md`
 - Graphify outputs: `artifacts/graphify/`
+- Graphify local run report: `reports/graphify_local_run_report.md`
 - Diagrams: `artifacts/diagrams/`
 - Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
 - OOP/module interaction diagram: `artifacts/diagrams/oop_diagram.md`
