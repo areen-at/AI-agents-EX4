@@ -100,3 +100,4 @@ Evidence:
 - After evidence: `artifacts/before_after/after.md`
 - Fix summary diff: `artifacts/before_after/fix.diff`
 - Verification report: `reports/fix_verification_report.md`
+- Phase 4 review: `reports/phase4_review.md`

@@ -88,3 +88,7 @@ python -m pytest
 ## Final Verification Conclusion
 
 The selected bug is fixed in the committed importable target modules. The regression tests prove that final-score output now follows `final_score`, not hidden global `score`.
+
+## Phase 4 Review
+
+- `reports/phase4_review.md`

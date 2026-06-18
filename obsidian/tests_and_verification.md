@@ -45,7 +45,7 @@ Phase 1 probe command:
 python tests\reproduction\print_final_scores_probe.py
 ```
 
-Phase 4 should turn this into a repeatable pytest against the fixed implementation.
+Phase 4 converted this into repeatable regression tests against the fixed implementation.
 
 Phase 4 verification command:
 
@@ -54,3 +54,11 @@ python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_
 ```
 
 Result: 6 tests passed.
+
+Additional Phase 4 artifacts:
+
+- `../reports/fix_verification_report.md`
+- `../reports/phase4_review.md`
+- `../artifacts/before_after/before.md`
+- `../artifacts/before_after/after.md`
+- `../artifacts/logs/test_after_fix.md`

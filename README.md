@@ -4,7 +4,7 @@ Reverse Engineering, Debugging, and Token-Efficient Agentic AI with Graphify and
 
 ## Status
 
-Phase 1 graph and initial knowledge-base setup is complete using a local Graphify-style static analyzer. The official investigation target is now locked: the `print_final_scores` global-state bug in the `mathsquiz` subsystem.
+Phases 1-4 are complete for the official `print_final_scores` global-state bug in the `mathsquiz` subsystem. The project has graph artifacts, Obsidian notes, architecture diagrams, an executable graph-guided agent workflow, a verified fix, and before/after evidence.
 
 ## Assignment Goal
 
@@ -250,6 +250,7 @@ Phase 4 artifacts:
 
 - Bug analysis: `reports/bug_analysis_report.md`
 - Fix verification: `reports/fix_verification_report.md`
+- Phase 4 review: `reports/phase4_review.md`
 - Before evidence: `artifacts/before_after/before.md`
 - After evidence: `artifacts/before_after/after.md`
 - Fix diff summary: `artifacts/before_after/fix.diff`
@@ -286,7 +287,7 @@ uv sync --group dev
 uv run pytest
 ```
 
-Current local fallback used during Phase 3:
+Current local fallback used during Phases 3-4:
 
 ```bash
 python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow
@@ -306,6 +307,7 @@ uv run ruff check .
 - Obsidian vault: `obsidian/`
 - Reports: `reports/`
 - Repository size report: `reports/repository_size_report.md`
+- Phase 4 review: `reports/phase4_review.md`
 - Graphify outputs: `artifacts/graphify/`
 - Diagrams: `artifacts/diagrams/`
 - Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
@@ -317,5 +319,6 @@ uv run ruff check .
 - Phase 3 agent log: `artifacts/logs/graph_guided_agent_log.md`
 - Phase 3 verification: `artifacts/logs/phase3_verification.md`
 - Phase 4 after-fix test log: `artifacts/logs/test_after_fix.md`
+- Phase 4 before-fix reproduction: `artifacts/logs/bug_reproduction_before.md`
 - Before/after evidence: `artifacts/before_after/`
 - Token measurements: `artifacts/token_measurements/`
