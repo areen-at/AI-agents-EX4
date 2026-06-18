@@ -94,6 +94,13 @@ Phase 1 probe completed:
 
 Use focused function-level reproduction before and after the fix. The key test condition is `global score != final_score`.
 
+Phase 3 agent workflow completed:
+
+- Command: `python -m src.agent.run_agent`
+- Log: `../artifacts/logs/graph_guided_agent_log.md`
+- Verification: `../artifacts/logs/phase3_verification.md`
+- Result: graph-guided workflow selected 7 `print_final_scores` suspect/risk nodes and proposed the expected modular fix.
+
 ## Links
 
 - [[index]]

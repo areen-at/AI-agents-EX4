@@ -6,6 +6,7 @@
 - Phase 0: selected `mathsquiz` as primary subsystem.
 - Phase 1: generated Graphify-style static graph artifacts for `mathsquiz`.
 - Phase 1: selected the functional score-state coupling bug as the official path.
+- Phase 3: executed graph-guided workflow and selected `print_final_scores` graph/risk nodes as suspects.
 
 ## Hypotheses
 
@@ -19,6 +20,7 @@
 - `GRAPH_REPORT.md` detects unused `final_score` parameter in step2/step3.
 - `GRAPH_REPORT.md` detects reads of global `score` in `print_final_scores`.
 - `phase1_print_final_scores_probe.md` confirms the failure mode: output follows global `score=0` even when `final_score` is non-zero.
+- `graph_guided_agent_log.md` records the Phase 3 agent workflow: Obsidian first, graph artifacts second, ranked `print_final_scores` suspects third.
 
 ## Rejected Hypotheses
 
@@ -29,9 +31,8 @@
 
 `print_final_scores(...)` exposes a parameterized interface but ignores the score parameter in favor of global state. The function therefore violates modular design and can report incorrect results when called outside the exact module-level execution path.
 
-## Phase 1 Handoff
+## Phase 3 Handoff
 
 - Keep `[[hot]]` centered on `print_final_scores`.
-- Build Phase 2 diagrams around `module flow -> score accumulation -> print_final_scores`.
-- In Phase 3, instruct the agent to inspect graph/Obsidian context before reading `mathsquiz-step2.py` and `mathsquiz-step3.py`.
+- Use the graph-guided agent log as the starting point for Phase 4.
 - In Phase 4, convert `tests/reproduction/print_final_scores_probe.py` into an automated regression test against the fixed implementation.

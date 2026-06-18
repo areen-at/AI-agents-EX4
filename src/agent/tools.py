@@ -44,3 +44,76 @@ def select_print_final_scores_suspects(graph: dict[str, Any]) -> list[SuspectNod
     for index, suspect in enumerate(ranked_suspects, start=1):
         suspect["rank"] = index
     return ranked_suspects
+
+
+def format_agent_log(state: dict[str, Any]) -> str:
+    text_units = state.get("text_units_read", [])
+    total_tokens = sum(int(item.get("estimated_tokens", 0)) for item in text_units)
+    suspect_rows = "\n".join(
+        (
+            f"| {item['rank']} | `{item['node_id']}` | "
+            f"`{item.get('source_file') or 'n/a'}` | {item['reason']} |"
+        )
+        for item in state.get("suspect_nodes", [])
+    )
+    text_unit_rows = "\n".join(
+        f"| `{item['path']}` | {item['characters']} | {item['estimated_tokens']} |"
+        for item in text_units
+    )
+    evidence_rows = "\n".join(
+        (
+            f"| {item['claim']} | `{item['source']}` | {item['evidence_type']} | "
+            f"{item['confidence']} | {item['verification_step']} |"
+        )
+        for item in state.get("evidence", [])
+    )
+
+    return f"""# Graph-Guided Agent Log
+
+Status: Phase 3 executed.
+
+## Bug Target
+
+{state['bug_summary']}
+
+## Context Order Used
+
+The workflow read Obsidian context first, then graph artifacts, then selected graph suspects.
+
+## Text Units Read
+
+| Text Unit | Characters | Estimated Tokens |
+|---|---:|---:|
+{text_unit_rows}
+
+Total estimated input tokens: {total_tokens}
+
+## Ranked Suspect Nodes
+
+| Rank | Node | Source File | Reason |
+|---:|---|---|---|
+{suspect_rows}
+
+## Evidence
+
+| Claim | Source | Type | Confidence | Verification Step |
+|---|---|---|---|---|
+{evidence_rows}
+
+## Proposed Fix
+
+{state['proposed_fix']}
+
+## Verification Plan
+
+{state['verification_plan']}
+
+## Run Status
+
+{state['status']}
+"""
+
+
+def write_agent_log(state: dict[str, Any], output_path: Path) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(format_agent_log(state), encoding="utf-8")

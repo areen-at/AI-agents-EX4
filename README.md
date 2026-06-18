@@ -201,16 +201,29 @@ Phase 2 artifacts:
 - Phase 2 architecture review: `reports/phase2_architecture_review.md`
 - Phase 1 review gate: `reports/phase1_review.md`
 
-## Phase 3 Agent Workflow Preparation
+## Phase 3 Agent Workflow
 
-Phase 3 preparation has started. The workflow is designed to read Obsidian and graph artifacts before raw source code.
+Phase 3 is complete. The workflow is designed to read Obsidian and graph artifacts before raw source code, select graph-supported suspects, produce a proposed modular fix, and write a graph-guided investigation log.
 
-Prepared artifacts:
+Run command:
+
+```bash
+python -m src.agent.run_agent
+```
+
+Run with JSON state output:
+
+```bash
+python -m src.agent.run_agent --json
+```
+
+Phase 3 artifacts:
 
 - Agent workflow diagram: `artifacts/diagrams/agent_workflow_diagram.md`
 - Agent workflow report: `reports/agent_workflow_report.md`
-- Graph-guided agent log scaffold: `artifacts/logs/graph_guided_agent_log.md`
-- Agent code scaffold: `src/agent/`
+- Graph-guided agent log: `artifacts/logs/graph_guided_agent_log.md`
+- Phase 3 verification log: `artifacts/logs/phase3_verification.md`
+- Agent implementation: `src/agent/`
 
 ## Planned Workflow
 
@@ -231,10 +244,24 @@ Prepared artifacts:
 uv sync
 ```
 
+If `uv` is not installed:
+
+```bash
+python -m pip install uv
+uv sync --group dev
+```
+
 ## Test
 
 ```bash
 uv run pytest
+```
+
+Current local fallback used during Phase 3:
+
+```bash
+python -m unittest tests.unit.test_agent_workflow
+python -m compileall src tests
 ```
 
 ## Lint
@@ -258,4 +285,6 @@ uv run ruff check .
 - Agent workflow diagram: `artifacts/diagrams/agent_workflow_diagram.md`
 - Logs: `artifacts/logs/`
 - Phase 1 bug probe: `artifacts/logs/phase1_print_final_scores_probe.md`
+- Phase 3 agent log: `artifacts/logs/graph_guided_agent_log.md`
+- Phase 3 verification: `artifacts/logs/phase3_verification.md`
 - Token measurements: `artifacts/token_measurements/`

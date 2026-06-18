@@ -462,116 +462,116 @@
 
 ### 3.1 Agent Framework Setup
 
-- [ ] Confirm LangGraph or CrewAI choice.
-- [ ] Document framework choice in README.
-- [ ] Add framework dependency with `uv`.
+- [x] Confirm LangGraph or CrewAI choice.
+- [x] Document framework choice in README.
+- [x] Add framework dependency with `uv`.
 - [x] Create `src/agent/`.
 - [x] Create `src/agent/__init__.py`.
 - [x] Create `src/agent/state.py`.
 - [x] Create `src/agent/tools.py`.
 - [x] Create `src/agent/workflow.py`.
-- [ ] Create `src/agent/prompts.py` if needed.
-- [ ] Create `src/agent/run_agent.py` if needed.
-- [ ] Create tests for agent helper functions if feasible.
-- [ ] Add agent run command to README.
+- [x] Create `src/agent/prompts.py` if needed.
+- [x] Create `src/agent/run_agent.py` if needed.
+- [x] Create tests for agent helper functions if feasible.
+- [x] Add agent run command to README.
 
 ### 3.2 Agent State Design
 
-- [ ] Define investigation state fields.
-- [ ] Add bug summary field.
-- [ ] Add graph artifacts field.
-- [ ] Add Obsidian context field.
-- [ ] Add suspect nodes field.
-- [ ] Add selected files field.
-- [ ] Add evidence field.
-- [ ] Add hypotheses field.
-- [ ] Add proposed fix field.
-- [ ] Add verification result field.
-- [ ] Add token estimate field.
-- [ ] Add file read log field.
-- [ ] Add iteration count field.
-- [ ] Add final report field.
+- [x] Define investigation state fields.
+- [x] Add bug summary field.
+- [x] Add graph artifacts field.
+- [x] Add Obsidian context field.
+- [x] Add suspect nodes field.
+- [x] Add selected files field.
+- [x] Add evidence field.
+- [x] Add hypotheses field.
+- [x] Add proposed fix field.
+- [x] Add verification result field.
+- [x] Add token estimate field.
+- [x] Add file read log field.
+- [x] Add iteration count field.
+- [x] Add final report field.
 - [x] Document state schema in `reports/agent_workflow_report.md`.
 
 ### 3.3 Agent Tools
 
-- [ ] Implement graph JSON loader.
-- [ ] Implement Graphify report reader.
-- [ ] Implement Obsidian note reader.
-- [ ] Implement source file reader.
-- [ ] Implement safe snippet extractor.
-- [ ] Implement file-read logger.
-- [ ] Implement character counter.
-- [ ] Implement token estimator.
-- [ ] Implement suspect node ranker or adapter.
-- [ ] Implement report writer.
-- [ ] Implement command runner for tests if safe.
-- [ ] Ensure tools do not read entire repo by default.
-- [ ] Ensure tools reject broad glob requests unless explicitly allowed.
+- [x] Implement graph JSON loader.
+- [x] Implement Graphify report reader.
+- [x] Implement Obsidian note reader.
+- [x] Implement source file reader.
+- [x] Implement safe snippet extractor.
+- [x] Implement file-read logger.
+- [x] Implement character counter.
+- [x] Implement token estimator.
+- [x] Implement suspect node ranker or adapter.
+- [x] Implement report writer.
+- [x] Implement command runner for tests if safe.
+- [x] Ensure tools do not read entire repo by default.
+- [x] Ensure tools reject broad glob requests unless explicitly allowed.
 
 ### 3.4 Workflow Nodes
 
-- [ ] Implement `LoadGraphContext`.
-- [ ] Implement `LoadObsidianContext`.
-- [ ] Implement `SelectSuspects`.
-- [ ] Implement `ReadFocusedCode`.
-- [ ] Implement `HypothesizeRootCause`.
-- [ ] Implement `PlanFix`.
-- [ ] Implement `VerifyFix`.
-- [ ] Implement `WriteInvestigationLog`.
-- [ ] Add workflow edges.
-- [ ] Add stop condition.
-- [ ] Add error handling.
-- [ ] Add logging for each node.
-- [ ] Add text-unit count for each node.
-- [ ] Add token estimate for each node.
+- [x] Implement `LoadGraphContext`.
+- [x] Implement `LoadObsidianContext`.
+- [x] Implement `SelectSuspects`.
+- [x] Implement `ReadFocusedCode`.
+- [x] Implement `HypothesizeRootCause`.
+- [x] Implement `PlanFix`.
+- [x] Implement `VerifyFix`.
+- [x] Implement `WriteInvestigationLog`.
+- [x] Add workflow edges.
+- [x] Add stop condition.
+- [x] Add error handling.
+- [x] Add logging for each node.
+- [x] Add text-unit count for each node.
+- [x] Add token estimate for each node.
 
 ### 3.5 Agent Instructions and Prompts
 
-- [ ] Define agent roles before writing code.
-- [ ] Define agent responsibilities before writing code.
-- [ ] Define agent input contracts.
-- [ ] Define agent output contracts.
-- [ ] Define modular architecture rules for agent-generated code.
-- [ ] Define module-boundary preservation rules.
-- [ ] Define when agents must consult Graphify first.
-- [ ] Define when agents must consult Obsidian first.
-- [ ] Define when agents may inspect raw source files.
-- [ ] Define maximum raw files per investigation iteration.
-- [ ] Define evidence format for agent conclusions.
-- [ ] Define root-cause hypothesis format.
-- [ ] Define rejected-hypothesis logging format.
-- [ ] Define fix proposal format.
+- [x] Define agent roles before writing code.
+- [x] Define agent responsibilities before writing code.
+- [x] Define agent input contracts.
+- [x] Define agent output contracts.
+- [x] Define modular architecture rules for agent-generated code.
+- [x] Define module-boundary preservation rules.
+- [x] Define when agents must consult Graphify first.
+- [x] Define when agents must consult Obsidian first.
+- [x] Define when agents may inspect raw source files.
+- [x] Define maximum raw files per investigation iteration.
+- [x] Define evidence format for agent conclusions.
+- [x] Define root-cause hypothesis format.
+- [x] Define rejected-hypothesis logging format.
+- [x] Define fix proposal format.
 - [x] Define verification proposal format.
 - [x] Write `docs/PRD_agent_instruction_architecture.md`.
 - [x] Link agent instruction architecture from README.
 - [x] Link agent instruction architecture from agent workflow report.
 - [x] Write system prompt for graph-guided behavior.
-- [ ] Write prompt requiring `index.md` before source code.
-- [ ] Write prompt requiring `hot.md` before source code.
-- [ ] Write prompt requiring evidence labels.
-- [ ] Write prompt requiring hypothesis/fact separation.
-- [ ] Write prompt requiring minimal file reads.
-- [ ] Write prompt requiring root-cause explanation.
-- [ ] Write prompt requiring fix plan.
-- [ ] Write prompt requiring verification plan.
+- [x] Write prompt requiring `index.md` before source code.
+- [x] Write prompt requiring `hot.md` before source code.
+- [x] Write prompt requiring evidence labels.
+- [x] Write prompt requiring hypothesis/fact separation.
+- [x] Write prompt requiring minimal file reads.
+- [x] Write prompt requiring root-cause explanation.
+- [x] Write prompt requiring fix plan.
+- [x] Write prompt requiring verification plan.
 - [x] Save prompts in `src/agent/prompts.py` or report.
-- [ ] Document prompts in prompt log.
+- [x] Document prompts in prompt log.
 
 ### 3.6 Agent Execution
 
-- [ ] Run graph-guided agent once.
-- [ ] Save raw run log.
-- [ ] Save selected suspect nodes.
-- [ ] Save selected files.
-- [ ] Save agent hypotheses.
-- [ ] Save agent proposed fix.
-- [ ] Save agent token estimates.
-- [ ] Save agent iteration count.
+- [x] Run graph-guided agent once.
+- [x] Save raw run log.
+- [x] Save selected suspect nodes.
+- [x] Save selected files.
+- [x] Save agent hypotheses.
+- [x] Save agent proposed fix.
+- [x] Save agent token estimates.
+- [x] Save agent iteration count.
 - [x] Update `artifacts/logs/graph_guided_agent_log.md`.
 - [x] Update `reports/agent_workflow_report.md`.
-- [ ] Update `obsidian/bug_investigation.md`.
-- [ ] Update `obsidian/hot.md`.
+- [x] Update `obsidian/bug_investigation.md`.
+- [x] Update `obsidian/hot.md`.
 
 ### 3.7 Agent Workflow Report
 
@@ -580,19 +580,19 @@
 - [x] Add node descriptions.
 - [x] Add state schema.
 - [x] Add context narrowing strategy.
-- [ ] Add graph-first proof.
-- [ ] Add file-read log.
-- [ ] Add token estimate.
-- [ ] Add agent limitations.
-- [ ] Add future improvements.
+- [x] Add graph-first proof.
+- [x] Add file-read log.
+- [x] Add token estimate.
+- [x] Add agent limitations.
+- [x] Add future improvements.
 
 ### 3.8 Phase 3 Review
 
-- [ ] Confirm agent reads graph/Obsidian before source.
-- [ ] Confirm agent does not read all files.
-- [ ] Confirm workflow is reproducible.
+- [x] Confirm agent reads graph/Obsidian before source.
+- [x] Confirm agent does not read all files.
+- [x] Confirm workflow is reproducible.
 - [x] Confirm logs are saved.
-- [ ] Commit Phase 3 artifacts.
+- [x] Commit Phase 3 artifacts.
 
 ## Phase 4 - Bug Reproduction, Root Cause, and Fix
 

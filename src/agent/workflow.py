@@ -9,7 +9,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from .state import EvidenceItem, InvestigationState
-from .tools import load_graph_json, read_text_unit, select_print_final_scores_suspects
+from .tools import load_graph_json, read_text_unit, select_print_final_scores_suspects, write_agent_log
 
 
 def build_initial_state() -> InvestigationState:
@@ -22,6 +22,7 @@ def build_initial_state() -> InvestigationState:
         "graph_artifacts": [
             "artifacts/graphify/GRAPH_REPORT.md",
             "artifacts/graphify/graph.json",
+            "artifacts/source_evidence/print_final_scores_source.md",
         ],
         "obsidian_context": [
             "obsidian/index.md",
@@ -54,6 +55,15 @@ def run_preparation_workflow(project_root: Path) -> InvestigationState:
         "verification_step": "Read step2 and step3 source before implementing the fix.",
     }
     state["evidence"].append(evidence)
+    state["evidence"].append(
+        {
+            "claim": "Focused source evidence confirms final_score is ignored in step2 and step3.",
+            "source": "artifacts/source_evidence/print_final_scores_source.md",
+            "evidence_type": "source",
+            "confidence": "high",
+            "verification_step": "Use this evidence to create a Phase 4 regression test before fixing.",
+        }
+    )
 
     state["proposed_fix"] = (
         "Replace reads of global score inside print_final_scores with final_score; "
@@ -64,4 +74,11 @@ def run_preparation_workflow(project_root: Path) -> InvestigationState:
         "final_score."
     )
     state["status"] = "phase3_prepared"
+    return state
+
+
+def run_graph_guided_workflow(project_root: Path) -> InvestigationState:
+    state = run_preparation_workflow(project_root)
+    state["status"] = "phase3_executed"
+    write_agent_log(state, project_root / "artifacts/logs/graph_guided_agent_log.md")
     return state

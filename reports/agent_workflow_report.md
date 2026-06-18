@@ -1,6 +1,6 @@
 # Agent Workflow Report
 
-Status: Phase 3 prepared.
+Status: Phase 3 complete.
 
 ## Purpose
 
@@ -21,14 +21,16 @@ It must start from:
 - `src/agent/state.py`
 - `src/agent/tools.py`
 - `src/agent/workflow.py`
+- `src/agent/prompts.py`
+- `src/agent/run_agent.py`
 
 ## Framework Choice
 
 Recommended framework: LangGraph.
 
-Current status:
+Implementation status:
 
-- Phase 3 preparation uses deterministic Python functions first.
+- Phase 3 uses deterministic Python functions first.
 - These functions can be wrapped as LangGraph nodes after the graph-first logic is verified.
 - This avoids mixing environment setup problems with the architecture investigation.
 
@@ -114,12 +116,50 @@ Do not fix baseline mathsquiz.py or ask_question input validation unless the hum
 Preserve modular boundaries: print_final_scores must use explicit parameters rather than hidden global score.
 ```
 
-## Phase 3 Next Implementation Step
+## Run Command
 
-Run the scaffold, save its state summary, then wrap the deterministic steps as LangGraph nodes if environment setup allows.
+```bash
+python -m src.agent.run_agent
+```
 
-## Preparation Run
+For JSON output:
 
-The deterministic scaffold was executed successfully and saved in:
+```bash
+python -m src.agent.run_agent --json
+```
 
-- `artifacts/logs/phase3_preparation_run.md`
+## Execution Result
+
+The deterministic workflow executed successfully and wrote:
+
+- `artifacts/logs/graph_guided_agent_log.md`
+- `artifacts/logs/phase3_verification.md`
+
+Selected suspects: 7.
+
+Status: `phase3_executed`.
+
+## Token Estimate
+
+The workflow records character counts and estimated input tokens for each text unit it reads.
+
+Current run:
+
+- `obsidian/index.md`: 637 estimated tokens.
+- `obsidian/hot.md`: 1086 estimated tokens.
+- `artifacts/graphify/GRAPH_REPORT.md`: 1157 estimated tokens.
+- `artifacts/graphify/graph.json`: 11896 estimated tokens.
+- `artifacts/source_evidence/print_final_scores_source.md`: 509 estimated tokens.
+- Total estimated input tokens: 15285.
+
+## Limitations
+
+- This Phase 3 workflow is deterministic and graph-guided; it does not yet call a live LLM.
+- The official LangGraph dependency is declared in `pyproject.toml`, but the current local environment has not installed project dependencies.
+- `pytest` is declared in the dev dependency group, but was not available in the current local Python environment during verification.
+
+## Future Improvements
+
+- Wrap each deterministic function as a LangGraph node.
+- Add a source-snippet reader that records exact source-line evidence during Phase 4.
+- Connect Phase 5 token-efficiency comparison directly to `text_units_read`.
