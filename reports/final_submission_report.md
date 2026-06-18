@@ -36,6 +36,7 @@ This is documented in `reports/repository_size_report.md`. The repository remain
 
 - Graph artifacts: `artifacts/graphify/`
 - Graphify local install/run report: `reports/graphify_local_run_report.md`
+- Rubric-mapped checklist: `reports/rubric_submission_checklist.md`
 - Obsidian vault: `obsidian/`
 - Architecture diagrams: `artifacts/diagrams/`
 - Bug analysis: `reports/bug_analysis_report.md`

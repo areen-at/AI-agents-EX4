@@ -52,6 +52,7 @@ Browse the main deliverables:
 - Start here: `obsidian/index.md`
 - Final checklist: `reports/final_submission_checklist.md`
 - Final submission report: `reports/final_submission_report.md`
+- Rubric-mapped checklist: `reports/rubric_submission_checklist.md`
 - Bug analysis: `reports/bug_analysis_report.md`
 - Token efficiency: `reports/token_efficiency_report.md`
 - Original extension: `reports/original_extension_report.md`
@@ -477,6 +478,7 @@ Local note: Ruff is configured in `pyproject.toml`, but `python -m ruff check .`
 - Repository size report: `reports/repository_size_report.md`
 - Final submission report: `reports/final_submission_report.md`
 - Final submission checklist: `reports/final_submission_checklist.md`
+- Rubric-mapped checklist: `reports/rubric_submission_checklist.md`
 - Final Phase 7 review: `reports/phase7_review.md`
 - Phase 4 review: `reports/phase4_review.md`
 - Phase 5 token efficiency report: `reports/token_efficiency_report.md`
