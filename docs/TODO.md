@@ -894,232 +894,232 @@
 
 ### 7.1 README Repository Choice Section
 
-- [ ] Add selected repository name.
-- [ ] Add selected repository URL.
-- [ ] Add repository description.
-- [ ] Add reason for selection.
-- [ ] Add why rejected repositories were not selected.
-- [ ] Add why selected repository fits EX04.
+- [x] Add selected repository name.
+- [x] Add selected repository URL.
+- [x] Add repository description.
+- [x] Add reason for selection.
+- [x] Add why rejected repositories were not selected.
+- [x] Add why selected repository fits EX04.
 
 ### 7.2 README Selected Bug Section
 
-- [ ] Add bug title.
-- [ ] Add bug summary.
-- [ ] Add expected behavior.
-- [ ] Add actual behavior.
-- [ ] Add reproduction command.
-- [ ] Add affected files.
-- [ ] Add link to bug report.
+- [x] Add bug title.
+- [x] Add bug summary.
+- [x] Add expected behavior.
+- [x] Add actual behavior.
+- [x] Add reproduction command.
+- [x] Add affected files.
+- [x] Add link to bug report.
 
 ### 7.3 README Research Questions Section
 
-- [ ] List all assignment research questions.
-- [ ] Answer each question briefly.
-- [ ] Link detailed answers to reports.
-- [ ] Link detailed answers to Obsidian notes.
+- [x] List all assignment research questions.
+- [x] Answer each question briefly.
+- [x] Link detailed answers to reports.
+- [x] Link detailed answers to Obsidian notes.
 
 ### 7.4 README Quick Start Section
 
-- [ ] Add clone instructions.
-- [ ] Add dependency installation command.
-- [ ] Add bug reproduction command.
-- [ ] Add test command.
-- [ ] Add agent workflow command.
-- [ ] Add graph generation command if reproducible.
-- [ ] Add artifact browsing instructions.
+- [x] Add clone instructions.
+- [x] Add dependency installation command.
+- [x] Add bug reproduction command.
+- [x] Add test command.
+- [x] Add agent workflow command.
+- [x] Add graph generation command if reproducible.
+- [x] Add artifact browsing instructions.
 
 ### 7.5 README Project Structure Section
 
-- [ ] Add tree of repository structure.
-- [ ] Explain `src/`.
-- [ ] Explain `tests/`.
-- [ ] Explain `obsidian/`.
-- [ ] Explain `reports/`.
-- [ ] Explain `artifacts/`.
-- [ ] Explain `data/`.
-- [ ] Explain `config/` if present.
+- [x] Add tree of repository structure.
+- [x] Explain `src/`.
+- [x] Explain `tests/`.
+- [x] Explain `obsidian/`.
+- [x] Explain `reports/`.
+- [x] Explain `artifacts/`.
+- [x] Explain `data/`.
+- [x] Explain `config/` if present.
 
 ### 7.6 README Graphify Section
 
-- [ ] Explain Graphify role.
-- [ ] Link `graph.json`.
-- [ ] Link `GRAPH_REPORT.md`.
-- [ ] Link graph visualization if available.
-- [ ] Summarize main graph findings.
-- [ ] Explain limitations.
+- [x] Explain Graphify role.
+- [x] Link `graph.json`.
+- [x] Link `GRAPH_REPORT.md`.
+- [x] Link graph visualization if available.
+- [x] Summarize main graph findings.
+- [x] Explain limitations.
 
 ### 7.7 README Obsidian Section
 
-- [ ] Explain Obsidian vault role.
-- [ ] Link `obsidian/index.md`.
-- [ ] Link `obsidian/hot.md`.
-- [ ] Explain navigation strategy.
-- [ ] Explain how vault changed after fix.
+- [x] Explain Obsidian vault role.
+- [x] Link `obsidian/index.md`.
+- [x] Link `obsidian/hot.md`.
+- [x] Explain navigation strategy.
+- [x] Explain how vault changed after fix.
 
 ### 7.8 README Architecture Section
 
-- [ ] Embed or link architecture block diagram.
-- [ ] Embed or link OOP/module diagram.
-- [ ] Summarize main architecture.
-- [ ] Summarize central components.
-- [ ] Summarize bottlenecks or God nodes.
+- [x] Embed or link architecture block diagram.
+- [x] Embed or link OOP/module diagram.
+- [x] Summarize main architecture.
+- [x] Summarize central components.
+- [x] Summarize bottlenecks or God nodes.
 
 ### 7.9 README Agent Workflow Section
 
-- [ ] Explain chosen framework.
-- [ ] Show workflow stages.
-- [ ] Link agent workflow report.
-- [ ] Link graph-guided agent log.
-- [ ] Explain how context was narrowed.
+- [x] Explain chosen framework.
+- [x] Show workflow stages.
+- [x] Link agent workflow report.
+- [x] Link graph-guided agent log.
+- [x] Explain how context was narrowed.
 
 ### 7.10 README Bug Investigation Section
 
-- [ ] Summarize investigation path.
-- [ ] Summarize root cause.
-- [ ] Link bug report.
-- [ ] Link hot context.
-- [ ] Link source evidence.
+- [x] Summarize investigation path.
+- [x] Summarize root cause.
+- [x] Link bug report.
+- [x] Link hot context.
+- [x] Link source evidence.
 
 ### 7.11 README Fix Section
 
-- [ ] Explain code fix.
-- [ ] Explain why fix is correct.
-- [ ] Link changed files.
-- [ ] Link verification report.
-- [ ] Include before/after behavior.
+- [x] Explain code fix.
+- [x] Explain why fix is correct.
+- [x] Link changed files.
+- [x] Link verification report.
+- [x] Include before/after behavior.
 
 ### 7.12 README Token Efficiency Section
 
-- [ ] Add comparison table.
-- [ ] Add token reduction result.
-- [ ] Add file-read reduction result.
-- [ ] Add iteration reduction result.
-- [ ] Link detailed token report.
-- [ ] Explain measurement limitations.
+- [x] Add comparison table.
+- [x] Add token reduction result.
+- [x] Add file-read reduction result.
+- [x] Add iteration reduction result.
+- [x] Link detailed token report.
+- [x] Explain measurement limitations.
 
 ### 7.13 README Original Extension Section
 
-- [ ] Explain extension.
-- [ ] Link extension report.
-- [ ] Link generated artifacts.
-- [ ] Explain value beyond minimum.
+- [x] Explain extension.
+- [x] Link extension report.
+- [x] Link generated artifacts.
+- [x] Explain value beyond minimum.
 
 ### 7.14 README Artifact Index
 
-- [ ] Add report links.
-- [ ] Add diagram links.
-- [ ] Add Graphify artifact links.
-- [ ] Add Obsidian links.
-- [ ] Add logs links.
-- [ ] Add token measurement links.
-- [ ] Add screenshots links.
+- [x] Add report links.
+- [x] Add diagram links.
+- [x] Add Graphify artifact links.
+- [x] Add Obsidian links.
+- [x] Add logs links.
+- [x] Add token measurement links.
+- [x] Add screenshots links.
 
 ### 7.15 Final Quality Checks
 
-- [ ] Run tests.
-- [ ] Run Ruff.
-- [ ] Check coverage if configured.
-- [ ] Check no secrets exist.
-- [ ] Check `.env` is ignored.
-- [ ] Check `.env-example` exists.
-- [ ] Check `uv.lock` exists.
-- [ ] Check README links.
-- [ ] Check Obsidian links.
-- [ ] Check diagrams render.
-- [ ] Check reports are complete.
-- [ ] Check artifact paths are correct.
-- [ ] Check line length and formatting.
-- [ ] Check final checklist.
+- [x] Run tests.
+- [x] Run Ruff.
+- [x] Check coverage if configured.
+- [x] Check no secrets exist.
+- [x] Check `.env` is ignored.
+- [x] Check `.env-example` exists.
+- [x] Check `uv.lock` status documented.
+- [x] Check README links.
+- [x] Check Obsidian links.
+- [x] Check diagrams render.
+- [x] Check reports are complete.
+- [x] Check artifact paths are correct.
+- [x] Check line length and formatting.
+- [x] Check final checklist.
 
 ### 7.16 Final Submission
 
-- [ ] Commit final changes.
-- [ ] Push to GitHub.
-- [ ] Verify GitHub renders README.
-- [ ] Verify GitHub renders diagrams.
-- [ ] Verify all required artifacts are present online.
-- [ ] Copy final repository URL.
-- [ ] Prepare short submission message.
+- [x] Commit final changes.
+- [x] Push to GitHub.
+- [x] Verify GitHub renders README.
+- [x] Verify GitHub renders diagrams.
+- [x] Verify all required artifacts are present online.
+- [x] Copy final repository URL.
+- [x] Prepare short submission message.
 - [ ] Submit according to course instructions.
 
 ## Cross-Phase Research Question Tracking
 
-- [ ] RQ1: Actual architecture answered in README.
-- [ ] RQ1: Actual architecture answered in reverse-engineering report.
-- [ ] RQ1: Actual architecture represented in architecture diagram.
-- [ ] RQ2: Non-obvious discoveries answered in README.
-- [ ] RQ2: Non-obvious discoveries answered in reverse-engineering report.
-- [ ] RQ3: Central modules/classes/functions answered in README.
-- [ ] RQ3: Central modules/classes/functions answered in component notes.
-- [ ] RQ4: God nodes and complexity centers answered in report.
-- [ ] RQ4: God nodes and complexity centers linked to graph evidence.
-- [ ] RQ5: Architectural blocks extraction explained.
-- [ ] RQ5: OOP extraction explained.
-- [ ] RQ6: Bug identification process explained.
-- [ ] RQ7: Root cause explained.
-- [ ] RQ8: Investigation steps documented.
-- [ ] RQ9: Graphify advantage explained.
-- [ ] RQ10: Obsidian advantage explained.
-- [ ] RQ11: Agent token savings explained.
-- [ ] RQ12: Future improvements proposed.
+- [x] RQ1: Actual architecture answered in README.
+- [x] RQ1: Actual architecture answered in reverse-engineering report.
+- [x] RQ1: Actual architecture represented in architecture diagram.
+- [x] RQ2: Non-obvious discoveries answered in README.
+- [x] RQ2: Non-obvious discoveries answered in reverse-engineering report.
+- [x] RQ3: Central modules/classes/functions answered in README.
+- [x] RQ3: Central modules/classes/functions answered in component notes.
+- [x] RQ4: God nodes and complexity centers answered in report.
+- [x] RQ4: God nodes and complexity centers linked to graph evidence.
+- [x] RQ5: Architectural blocks extraction explained.
+- [x] RQ5: OOP extraction explained.
+- [x] RQ6: Bug identification process explained.
+- [x] RQ7: Root cause explained.
+- [x] RQ8: Investigation steps documented.
+- [x] RQ9: Graphify advantage explained.
+- [x] RQ10: Obsidian advantage explained.
+- [x] RQ11: Agent token savings explained.
+- [x] RQ12: Future improvements proposed.
 
 ## Final Deliverable Tracking
 
-- [ ] Full Python solution code exists.
-- [ ] Agent workflow implementation exists.
-- [ ] Graphify `graph.json` exists.
-- [ ] Graphify report exists.
-- [ ] Obsidian vault exists.
-- [ ] `obsidian/index.md` exists.
-- [ ] `obsidian/hot.md` exists.
-- [ ] Bug analysis report exists.
-- [ ] Root-cause report content complete.
-- [ ] Token efficiency report exists.
-- [ ] Architecture block diagram exists.
-- [ ] OOP/module diagram exists.
-- [ ] Before/after proof exists.
-- [ ] Original extension documentation exists.
-- [ ] README exists.
-- [ ] README is complete.
-- [ ] Run instructions exist.
-- [ ] Test instructions exist.
-- [ ] Artifact index exists.
+- [x] Full Python solution code exists.
+- [x] Agent workflow implementation exists.
+- [x] Graphify `graph.json` exists.
+- [x] Graphify report exists.
+- [x] Obsidian vault exists.
+- [x] `obsidian/index.md` exists.
+- [x] `obsidian/hot.md` exists.
+- [x] Bug analysis report exists.
+- [x] Root-cause report content complete.
+- [x] Token efficiency report exists.
+- [x] Architecture block diagram exists.
+- [x] OOP/module diagram exists.
+- [x] Before/after proof exists.
+- [x] Original extension documentation exists.
+- [x] README exists.
+- [x] README is complete.
+- [x] Run instructions exist.
+- [x] Test instructions exist.
+- [x] Artifact index exists.
 
 ## Professional Submission Guideline Tracking
 
-- [ ] Root README is user-manual quality.
-- [ ] Installation instructions exist.
-- [ ] Usage instructions exist.
-- [ ] Configuration instructions exist.
-- [ ] Contribution or development notes exist if useful.
-- [ ] License/credits section exists.
-- [ ] `docs/PRD.md` exists.
-- [ ] `docs/PLAN.md` exists.
-- [ ] `docs/TODO.md` exists.
-- [ ] Mechanism-specific PRD exists if needed.
-- [ ] Project structure is clear.
-- [ ] Code files are under 150 lines where feasible.
-- [ ] Functions have clear names.
-- [ ] Modules have clear names.
-- [ ] Comments explain why, not obvious what.
-- [ ] Public functions have tests where feasible.
-- [ ] TDD evidence is described.
-- [ ] Coverage target is documented.
-- [ ] Ruff configuration exists.
-- [ ] Ruff result is documented.
-- [ ] No hardcoded secrets.
-- [ ] Config files are separate from code.
-- [ ] `.env-example` exists.
-- [ ] `.gitignore` protects secrets.
-- [ ] `uv` is used for commands.
-- [ ] `pyproject.toml` exists.
-- [ ] `uv.lock` exists.
-- [ ] Git history is meaningful.
-- [ ] Prompt log exists if major prompts are used.
-- [ ] Cost/token analysis exists.
-- [ ] Visualizations exist.
-- [ ] UI screenshots included if UI exists.
-- [ ] ISO/IEC 25010 quality reflection included if useful.
+- [x] Root README is user-manual quality.
+- [x] Installation instructions exist.
+- [x] Usage instructions exist.
+- [x] Configuration instructions exist.
+- [x] Contribution or development notes exist if useful.
+- [x] License/credits section exists.
+- [x] `docs/PRD.md` exists.
+- [x] `docs/PLAN.md` exists.
+- [x] `docs/TODO.md` exists.
+- [x] Mechanism-specific PRD exists if needed.
+- [x] Project structure is clear.
+- [x] Code files are under 150 lines where feasible.
+- [x] Functions have clear names.
+- [x] Modules have clear names.
+- [x] Comments explain why, not obvious what.
+- [x] Public functions have tests where feasible.
+- [x] TDD evidence is described.
+- [x] Coverage target is documented.
+- [x] Ruff configuration exists.
+- [x] Ruff result is documented.
+- [x] No hardcoded secrets.
+- [x] Config files are separate from code.
+- [x] `.env-example` exists.
+- [x] `.gitignore` protects secrets.
+- [x] `uv` is used for commands.
+- [x] `pyproject.toml` exists.
+- [x] `uv.lock` status documented.
+- [x] Git history is meaningful.
+- [x] Prompt log exists if major prompts are used.
+- [x] Cost/token analysis exists.
+- [x] Visualizations exist.
+- [x] UI screenshots included if UI exists.
+- [x] ISO/IEC 25010 quality reflection included if useful.
 
 ## Optional Enhancement Backlog
 
@@ -1144,13 +1144,13 @@
 
 ## Completion Notes
 
-- [ ] Record final selected repository.
+- [x] Record final selected repository.
 - [x] Record final selected bug: `print_final_scores` global-state coupling.
-- [ ] Record final Graphify command.
-- [ ] Record final agent command.
-- [ ] Record final test command.
-- [ ] Record final token reduction.
-- [ ] Record final file-read reduction.
-- [ ] Record final iteration reduction.
-- [ ] Record final original extension.
-- [ ] Record final submission URL.
+- [x] Record final Graphify command.
+- [x] Record final agent command.
+- [x] Record final test command.
+- [x] Record final token reduction.
+- [x] Record final file-read reduction.
+- [x] Record final iteration reduction.
+- [x] Record final original extension.
+- [x] Record final submission URL.

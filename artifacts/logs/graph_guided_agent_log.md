@@ -1,6 +1,6 @@
 # Graph-Guided Agent Log
 
-Status: Phase 3 workflow re-run during Phase 5 polish.
+Status: Phase 3 workflow re-run during Phase 7 final verification.
 
 ## Bug Target
 
@@ -14,13 +14,13 @@ The workflow read Obsidian context first, then graph artifacts, then selected gr
 
 | Text Unit | Characters | Estimated Tokens |
 |---|---:|---:|
-| `obsidian\index.md` | 3334 | 833 |
+| `obsidian\index.md` | 4038 | 1009 |
 | `obsidian\hot.md` | 4817 | 1204 |
 | `artifacts\graphify\GRAPH_REPORT.md` | 4628 | 1157 |
 | `artifacts\graphify\graph.json` | 47584 | 11896 |
 | `artifacts\source_evidence\print_final_scores_source.md` | 2038 | 509 |
 
-Total estimated input tokens: 15599
+Total estimated input tokens: 15775
 
 ## Ranked Suspect Nodes
 
@@ -53,6 +53,6 @@ Use a regression test where global score differs from final_score and assert out
 
 phase3_executed
 
-## Phase 5 Note
+## Phase 7 Note
 
-This log represents the full audit workflow. It is intentionally heavier than the recommended hot-context workflow because it loads the complete `graph.json` for traceability.
+This log represents the full audit workflow after final README and Obsidian packaging. It is intentionally heavier than the recommended hot-context workflow because it loads the complete `graph.json` for traceability.

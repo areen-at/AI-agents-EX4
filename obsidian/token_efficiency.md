@@ -26,7 +26,7 @@ Operational hot-context mode:
 Full audit mode:
 
 - Reads Obsidian context, Graphify report, full `graph.json`, and focused evidence.
-- Estimated input tokens: 15599.
+- Estimated input tokens: 15775.
 - Useful for traceability but not token-cheaper in this tiny repository.
 
 ## Comparison

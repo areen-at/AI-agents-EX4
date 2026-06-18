@@ -39,9 +39,9 @@ The full graph-guided audit workflow is intentionally heavier because it include
 
 Fresh audit re-run:
 
-- Full audit characters: 62401.
-- Full audit estimated input tokens: 15599.
-- Reason for increase from the prior Phase 5 commit: `obsidian/index.md` gained Phase 5 links, and the agent log was re-run after that documentation polish.
+- Full audit characters: 63105.
+- Full audit estimated input tokens: 15775.
+- Reason for increase from the prior Phase 5 commit: `obsidian/index.md` gained final packaging links, and the agent log was re-run during Phase 7 verification.
 
 ## Decision
 

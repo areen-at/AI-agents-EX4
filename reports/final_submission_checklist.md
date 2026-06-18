@@ -1,17 +1,17 @@
 # Final Submission Checklist
 
-- [ ] Repository selected and justified.
+- [x] Repository selected and justified.
 - [x] Primary subsystem selected: `mathsquiz`.
 - [x] Exact `mathsquiz` bug selected: `print_final_scores` global-state coupling.
-- [ ] Repository size verified: approximately 10,000+ source lines.
-- [ ] Repository size verified: at least 70 source-code files.
-- [ ] Repository size report completed.
-- [ ] Agent instruction architecture completed.
+- [x] Repository size exception documented: below 10,000+ source lines, lecturer-approved repository.
+- [x] Repository size exception documented: below 70 source-code files, lecturer-approved repository.
+- [x] Repository size report completed.
+- [x] Agent instruction architecture completed.
 - [x] Bug selected.
 - [x] Bug reproduced with Phase 1 probe.
 - [x] Graphify artifacts generated.
 - [x] Phase 1 Graphify-style artifacts generated.
-- [ ] Obsidian vault completed.
+- [x] Obsidian vault completed.
 - [x] Initial Obsidian graph-guided notes updated.
 - [x] Architecture diagram completed.
 - [x] OOP/module diagram completed.
@@ -23,4 +23,4 @@
 - [x] Phase 4 review completed.
 - [x] Token efficiency report completed.
 - [x] Original extension completed.
-- [ ] README completed.
+- [x] README completed.

@@ -4,7 +4,51 @@ Reverse Engineering, Debugging, and Token-Efficient Agentic AI with Graphify and
 
 ## Status
 
-Phases 1-6 are complete for the official `print_final_scores` global-state bug in the `mathsquiz` subsystem. The project has graph artifacts, Obsidian notes, architecture diagrams, an executable graph-guided agent workflow, a verified fix, before/after evidence, token-efficiency measurements, and an original graph-analysis extension.
+Phases 1-7 are complete for the official `print_final_scores` global-state bug in the `mathsquiz` subsystem. The project has graph artifacts, Obsidian notes, architecture diagrams, an executable graph-guided agent workflow, a verified fix, before/after evidence, token-efficiency measurements, an original graph-analysis extension, and final submission packaging.
+
+## Quick Start
+
+Clone and enter the repository:
+
+```bash
+git clone https://github.com/areen-at/AI-agents-EX4.git
+cd AI-agents-EX4
+```
+
+Install dependencies if `uv` is available:
+
+```bash
+uv sync --group dev
+```
+
+Local fallback commands used for verification:
+
+```bash
+python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow tests.unit.test_phase6_analysis
+python -m compileall src tests
+```
+
+Run the graph-guided agent workflow:
+
+```bash
+python -m src.agent.run_agent --json
+```
+
+Run the Phase 6 original extension:
+
+```bash
+python -m src.analysis.suspicious_nodes --graph artifacts/graphify/graph.json --output reports/suspicious_nodes.md
+python -m src.analysis.hot_md_generator --graph artifacts/graphify/graph.json --output obsidian/hot.generated.md
+```
+
+Browse the main deliverables:
+
+- Start here: `obsidian/index.md`
+- Final checklist: `reports/final_submission_checklist.md`
+- Final submission report: `reports/final_submission_report.md`
+- Bug analysis: `reports/bug_analysis_report.md`
+- Token efficiency: `reports/token_efficiency_report.md`
+- Original extension: `reports/original_extension_report.md`
 
 ## Assignment Goal
 
@@ -92,6 +136,23 @@ The chosen `mathsquiz` bug must support:
 10. What advantage did Obsidian provide as a navigation layer?
 11. How did the AI agent save tokens or avoid unnecessary code reads?
 12. What future improvements or agent mechanisms would be useful?
+
+## Research Question Answers
+
+| Question | Short Answer | Detailed Evidence |
+|---|---|---|
+| RQ1 architecture | Procedural quiz scripts with module-level execution and function extraction in step2/step3. | `reports/reverse_engineering_report.md`, `artifacts/diagrams/architecture_block_diagram.md` |
+| RQ2 non-obvious discovery | `print_final_scores(...)` looks parameterized but secretly reads global `score`. | `obsidian/bug_investigation.md`, `reports/bug_analysis_report.md` |
+| RQ3 central components | `ask_question(...)`, `print_final_scores(...)`, score state, and module-level quiz flow. | `obsidian/components.md`, `artifacts/graphify/GRAPH_REPORT.md` |
+| RQ4 complexity centers | Score state is the main coupling point; `mathsquiz-step1.py` is a noisy procedural baseline. | `reports/reverse_engineering_report.md`, `reports/suspicious_nodes.md` |
+| RQ5 architecture extraction | Static graph analysis plus Mermaid diagrams were used because the subsystem has no classes. | `artifacts/diagrams/oop_diagram.md`, `obsidian/architecture.md` |
+| RQ6 bug identification | Graph risk nodes identified `global_score_instead_of_param` and `unused_arg:final_score`. | `reports/suspicious_nodes.md`, `artifacts/logs/graph_guided_agent_log.md` |
+| RQ7 root cause | Final-score reporting depends on hidden global state instead of explicit parameters. | `reports/bug_analysis_report.md` |
+| RQ8 investigation steps | Graphify-style scan, Obsidian hot context, focused source evidence, reproduction, fix, verification. | `obsidian/hot.md`, `reports/fix_verification_report.md` |
+| RQ9 Graphify advantage | It surfaced risk nodes and narrowed attention to two functions and two files. | `artifacts/graphify/GRAPH_REPORT.md` |
+| RQ10 Obsidian advantage | It provided a navigable human-readable investigation layer and hot context. | `obsidian/index.md`, `obsidian/hot.generated.md` |
+| RQ11 token savings | Hot-context workflow reduced estimated input tokens by 17.4%, text units by 50%, and iterations by 50%. | `reports/token_efficiency_report.md` |
+| RQ12 future work | Add traceback-aware ranking, graph diffing, prompt registry, and test-to-component traceability. | `reports/original_extension_report.md` |
 
 ## Project Structure
 
@@ -267,7 +328,7 @@ Best operational comparison:
 
 Important limitation:
 
-- The full graph-guided audit workflow uses 15599 estimated input tokens because it includes the complete `graph.json`.
+- The full graph-guided audit workflow uses 15775 estimated input tokens because it includes the complete `graph.json`.
 - This full audit mode is useful for traceability, but it is not token-cheaper for the tiny instructor-approved `broken-python` exception repository.
 - The token-efficient pattern is to distill Graphify output into `obsidian/hot.md` plus focused source evidence before sending context to an LLM.
 
@@ -313,7 +374,7 @@ Phase 6 artifacts:
 - Extension code: `src/analysis/`
 - Extension tests: `tests/unit/test_phase6_analysis.py`
 
-## Planned Workflow
+## Completed Workflow
 
 1. Select repository and bug.
 2. Generate Graphify artifacts.
@@ -325,6 +386,16 @@ Phase 6 artifacts:
 8. Compare naive vs graph-guided token efficiency.
 9. Add an original extension.
 10. Package the final submission.
+
+## Phase 7 Final Packaging
+
+Phase 7 is complete. Final packaging added a grader-oriented README flow, final checklist updates, final submission report, and verification logs.
+
+Phase 7 artifacts:
+
+- Final submission report: `reports/final_submission_report.md`
+- Final submission checklist: `reports/final_submission_checklist.md`
+- Final verification log: `artifacts/logs/phase7_verification.md`
 
 ## Setup
 
@@ -345,12 +416,14 @@ uv sync --group dev
 uv run pytest
 ```
 
-Current local fallback used during Phases 3-4:
+Current local fallback verification:
 
 ```bash
 python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow tests.unit.test_phase6_analysis
 python -m compileall src tests
 ```
+
+Note: `uv.lock` is not present in this submitted workspace. The reproducible fallback verification path uses the Python standard library `unittest` and `compileall` commands above.
 
 ## Lint
 
@@ -365,12 +438,15 @@ uv run ruff check .
 - Obsidian vault: `obsidian/`
 - Reports: `reports/`
 - Repository size report: `reports/repository_size_report.md`
+- Final submission report: `reports/final_submission_report.md`
+- Final submission checklist: `reports/final_submission_checklist.md`
 - Phase 4 review: `reports/phase4_review.md`
 - Phase 5 token efficiency report: `reports/token_efficiency_report.md`
 - Phase 5 review: `reports/phase5_review.md`
 - Phase 6 original extension report: `reports/original_extension_report.md`
 - Phase 6 suspicious-node report: `reports/suspicious_nodes.md`
 - Phase 6 review: `reports/phase6_review.md`
+- Phase 7 verification: `artifacts/logs/phase7_verification.md`
 - Graphify outputs: `artifacts/graphify/`
 - Diagrams: `artifacts/diagrams/`
 - Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`

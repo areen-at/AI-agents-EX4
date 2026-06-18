@@ -1,4 +1,4 @@
 Mode,FilesOrTextUnitsRead,Characters,ApproxInputTokens,ApproxOutputTokens,Iterations,RootCauseReached,FixReached,QualityRating,Notes
 Naive raw-code baseline,4,8303,2074,N/A,4,Yes,Yes,3,"Reads every mathsquiz source file without graph or Obsidian guidance; cheap only because repository is tiny."
 Graph-guided hot-context workflow,2,6855,1713,N/A,2,Yes,Yes,5,"Uses Obsidian hot context plus focused source evidence generated from graph-guided investigation."
-Graph-guided full audit workflow,5,62401,15599,N/A,2,Yes,Yes,5,"Includes full graph.json audit context; useful for traceability but not token-cheaper for this tiny approved-exception repo."
+Graph-guided full audit workflow,5,63105,15775,N/A,2,Yes,Yes,5,"Includes full graph.json audit context; useful for traceability but not token-cheaper for this tiny approved-exception repo."

@@ -517,7 +517,7 @@ Best operational comparison:
 
 Full graph audit note:
 
-- Full graph-guided audit mode used 15599 estimated input tokens because it included complete `graph.json`.
+- Full graph-guided audit mode used 15775 estimated input tokens because it included complete `graph.json`.
 - This mode is useful for traceability, but the token-efficient workflow is the distilled `hot.md` plus focused source evidence.
 
 ## 10. Phase 6 - Original Extension
