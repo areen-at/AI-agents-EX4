@@ -25,7 +25,17 @@ Focused reproduction checks:
 
 ## After Fix
 
-The same checks should pass because all final-score output and percentage calculations use `final_score`.
+The same checks now pass because all final-score output and percentage calculations use `final_score`.
+
+Phase 4 regression tests:
+
+- `../tests/unit/test_print_final_scores_fix.py`
+
+Verified behavior:
+
+- Step2 reports `final_score=2` even when global `score=0`.
+- Step2 feedback branches use `final_score`.
+- Step3 reports `final_score=10` and perfect-score feedback even when global `score=0`.
 
 ## Test Commands
 
@@ -36,3 +46,11 @@ python tests\reproduction\print_final_scores_probe.py
 ```
 
 Phase 4 should turn this into a repeatable pytest against the fixed implementation.
+
+Phase 4 verification command:
+
+```powershell
+python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow
+```
+
+Result: 6 tests passed.

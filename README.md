@@ -225,6 +225,35 @@ Phase 3 artifacts:
 - Phase 3 verification log: `artifacts/logs/phase3_verification.md`
 - Agent implementation: `src/agent/`
 
+## Phase 4 Root Cause and Fix
+
+Phase 4 is complete for the selected `print_final_scores` bug.
+
+Root cause:
+
+`print_final_scores(...)` accepted score values through parameters but read global `score` internally. This made the output depend on hidden module state instead of the explicit function interface.
+
+Fixed files:
+
+- `src/target_project/mathsquiz/mathsquiz_step2.py`
+- `src/target_project/mathsquiz/mathsquiz_step3.py`
+
+Verification command:
+
+```bash
+python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow
+```
+
+Result: 6 tests passed.
+
+Phase 4 artifacts:
+
+- Bug analysis: `reports/bug_analysis_report.md`
+- Fix verification: `reports/fix_verification_report.md`
+- Before evidence: `artifacts/before_after/before.md`
+- After evidence: `artifacts/before_after/after.md`
+- Fix diff summary: `artifacts/before_after/fix.diff`
+
 ## Planned Workflow
 
 1. Select repository and bug.
@@ -260,7 +289,7 @@ uv run pytest
 Current local fallback used during Phase 3:
 
 ```bash
-python -m unittest tests.unit.test_agent_workflow
+python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow
 python -m compileall src tests
 ```
 
@@ -287,4 +316,6 @@ uv run ruff check .
 - Phase 1 bug probe: `artifacts/logs/phase1_print_final_scores_probe.md`
 - Phase 3 agent log: `artifacts/logs/graph_guided_agent_log.md`
 - Phase 3 verification: `artifacts/logs/phase3_verification.md`
+- Phase 4 after-fix test log: `artifacts/logs/test_after_fix.md`
+- Before/after evidence: `artifacts/before_after/`
 - Token measurements: `artifacts/token_measurements/`

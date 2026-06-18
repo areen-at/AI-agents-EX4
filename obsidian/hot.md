@@ -82,7 +82,15 @@ Initial source evidence from Phase 1 static analysis:
 
 ## Fix Summary
 
-Replace internal `score` reads with `final_score`; in step3, compute percentage from `final_score / max_possible_score`.
+Phase 4 fixed the importable target modules:
+
+- `../src/target_project/mathsquiz/mathsquiz_step2.py`
+- `../src/target_project/mathsquiz/mathsquiz_step3.py`
+
+Fix:
+
+- Replace internal `score` reads with `final_score`.
+- In step3, compute percentage from `final_score / max_possible_score`.
 
 ## Verification
 
@@ -100,6 +108,13 @@ Phase 3 agent workflow completed:
 - Log: `../artifacts/logs/graph_guided_agent_log.md`
 - Verification: `../artifacts/logs/phase3_verification.md`
 - Result: graph-guided workflow selected 7 `print_final_scores` suspect/risk nodes and proposed the expected modular fix.
+
+Phase 4 verification completed:
+
+- Command: `python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow`
+- Result: 6 tests passed.
+- Report: `../reports/fix_verification_report.md`
+- Before/after: `../artifacts/before_after/`
 
 ## Links
 

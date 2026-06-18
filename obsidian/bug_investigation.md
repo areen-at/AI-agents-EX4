@@ -7,6 +7,7 @@
 - Phase 1: generated Graphify-style static graph artifacts for `mathsquiz`.
 - Phase 1: selected the functional score-state coupling bug as the official path.
 - Phase 3: executed graph-guided workflow and selected `print_final_scores` graph/risk nodes as suspects.
+- Phase 4: fixed `print_final_scores` in importable target modules and verified with regression tests.
 
 ## Hypotheses
 
@@ -31,8 +32,13 @@
 
 `print_final_scores(...)` exposes a parameterized interface but ignores the score parameter in favor of global state. The function therefore violates modular design and can report incorrect results when called outside the exact module-level execution path.
 
-## Phase 3 Handoff
+## Phase 4 Fix
 
-- Keep `[[hot]]` centered on `print_final_scores`.
-- Use the graph-guided agent log as the starting point for Phase 4.
-- In Phase 4, convert `tests/reproduction/print_final_scores_probe.py` into an automated regression test against the fixed implementation.
+- Fixed files:
+  - `../src/target_project/mathsquiz/mathsquiz_step2.py`
+  - `../src/target_project/mathsquiz/mathsquiz_step3.py`
+- Regression tests:
+  - `../tests/unit/test_print_final_scores_fix.py`
+- Verification:
+  - `python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow`
+  - Result: 6 tests passed.

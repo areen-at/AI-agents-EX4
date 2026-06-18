@@ -1,0 +1,58 @@
+# Phase 4 Fix Diff Summary
+
+This project adds fixed importable target modules under:
+
+- `src/target_project/mathsquiz/mathsquiz_step2.py`
+- `src/target_project/mathsquiz/mathsquiz_step3.py`
+
+## Step2 Logical Change
+
+Before:
+
+```python
+def print_final_scores(final_score):
+    print("You scored", score, "points out of a possible 10.")
+    if score < 5:
+        ...
+```
+
+After:
+
+```python
+def print_final_scores(final_score: int) -> None:
+    print("You scored", final_score, "points out of a possible 10.")
+    if final_score < 5:
+        ...
+```
+
+## Step3 Logical Change
+
+Before:
+
+```python
+def print_final_scores(final_score, max_possible_score):
+    print("You scored", score, "points out of a possible", max_possible_score)
+    percentage = (score/max_possible_score)*100
+```
+
+After:
+
+```python
+def print_final_scores(final_score: int, max_possible_score: int) -> None:
+    print("You scored", final_score, "points out of a possible", max_possible_score)
+    percentage = (final_score / max_possible_score) * 100
+```
+
+## Boundary Change
+
+Removed hidden dependency:
+
+```text
+print_final_scores -> global score
+```
+
+Kept explicit dependency:
+
+```text
+caller score -> final_score parameter -> output and feedback
+```

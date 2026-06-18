@@ -1,6 +1,6 @@
 # Bug Analysis Report
 
-Status: Phase 1 preparation updated with official bug path.
+Status: Phase 4 complete.
 
 ## Selected Subsystem
 
@@ -36,6 +36,39 @@ In `mathsquiz-step3.py`, `print_final_scores(final_score, max_possible_score)` s
 - Preserve the existing public behavior when the function is called from the current script.
 - Add a focused regression test or reproduction script that proves `final_score` controls the output even when global `score` has a different value.
 
+## Phase 4 Root Cause
+
+Root cause:
+
+`print_final_scores(...)` exposes a parameterized interface but ignores the score parameter internally. The function therefore depends on ambient module state, which breaks isolated use and testing.
+
+Bug-critical source evidence:
+
+- `mathsquiz-step2.py`: `print_final_scores(final_score)` printed and branched on global `score`.
+- `mathsquiz-step3.py`: `print_final_scores(final_score, max_possible_score)` printed global `score` and calculated percentage from global `score`.
+
+## Phase 4 Fix
+
+Fixed importable target modules:
+
+- `src/target_project/mathsquiz/mathsquiz_step2.py`
+- `src/target_project/mathsquiz/mathsquiz_step3.py`
+
+Fix summary:
+
+- Step2 now prints `final_score` and branches on `final_score`.
+- Step3 now prints `final_score` and calculates percentage from `final_score / max_possible_score`.
+- The fix does not change `ask_question(...)` or the unrelated broken baseline file.
+
+Regression test:
+
+- `tests/unit/test_print_final_scores_fix.py`
+
+Verification:
+
+- `python -m unittest tests.unit.test_print_final_scores_fix tests.unit.test_agent_workflow`
+- Result: 6 tests passed.
+
 ## Files and Functions Involved
 
 | File | Function | Role |
@@ -61,11 +94,9 @@ Evidence:
 - `mathsquiz.py` baseline syntax/logic failure: valid bug cluster, but less useful for modular design analysis.
 - `ask_question(...)` unguarded numeric conversion: valid robustness concern, but less central to architecture than hidden score-state coupling.
 
-## Exact Next Steps for Phase 1
+## Phase 4 Completion Evidence
 
-1. Update `obsidian/hot.md` so the focused context names `print_final_scores` as the active bug.
-2. Record the graph evidence linking the bug-risk nodes to `mathsquiz-step2.py` and `mathsquiz-step3.py`.
-3. Inspect the source lines for both `print_final_scores(...)` implementations. Done for Phase 1.
-4. Define a direct reproduction where `final_score` and global `score` intentionally differ. Done through the Phase 1 probe.
-5. Add the reproduction plan to `obsidian/tests_and_verification.md`. Done.
-6. Carry this focused context into Phase 2 architecture diagrams and Phase 3 agent workflow prompts. Next.
+- Before evidence: `artifacts/before_after/before.md`
+- After evidence: `artifacts/before_after/after.md`
+- Fix summary diff: `artifacts/before_after/fix.diff`
+- Verification report: `reports/fix_verification_report.md`

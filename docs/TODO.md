@@ -598,129 +598,129 @@
 
 ### 4.1 Bug Reproduction
 
-- [ ] Write exact reproduction steps.
-- [ ] Identify required input.
-- [ ] Identify command to trigger bug.
-- [ ] Run command before fix.
-- [ ] Capture failure output.
-- [ ] Save failure output to `artifacts/logs/bug_reproduction_before.md`.
-- [ ] Identify expected output.
-- [ ] Identify actual output.
-- [ ] Add reproduction to README.
-- [ ] Add reproduction to `reports/bug_analysis_report.md`.
-- [ ] Add reproduction to `obsidian/hot.md`.
+- [x] Write exact reproduction steps.
+- [x] Identify required input.
+- [x] Identify command to trigger bug.
+- [x] Run command before fix.
+- [x] Capture failure output.
+- [x] Save failure output to `artifacts/logs/bug_reproduction_before.md`.
+- [x] Identify expected output.
+- [x] Identify actual output.
+- [x] Add reproduction to README.
+- [x] Add reproduction to `reports/bug_analysis_report.md`.
+- [x] Add reproduction to `obsidian/hot.md`.
 
 ### 4.2 Root-Cause Investigation
 
-- [ ] Start from Graphify suspect list.
-- [ ] Start from `obsidian/hot.md`.
-- [ ] Inspect first suspected file.
-- [ ] Inspect second suspected file if needed.
-- [ ] Inspect tests related to bug.
-- [ ] Inspect call path to bug.
-- [ ] Inspect data path to bug.
-- [ ] Inspect configuration path if relevant.
-- [ ] Identify failing condition.
-- [ ] Identify incorrect assumption.
-- [ ] Identify missing validation if relevant.
-- [ ] Identify wrong branch or loop if relevant.
-- [ ] Identify wrong type handling if relevant.
-- [ ] Identify wrong API usage if relevant.
-- [ ] Identify root-cause line or function.
-- [ ] Verify root cause with source evidence.
-- [ ] Verify root cause with failing behavior.
-- [ ] Reject incorrect hypotheses.
-- [ ] Document rejected hypotheses.
-- [ ] Document final root cause.
+- [x] Start from Graphify suspect list.
+- [x] Start from `obsidian/hot.md`.
+- [x] Inspect first suspected file.
+- [x] Inspect second suspected file if needed.
+- [x] Inspect tests related to bug.
+- [x] Inspect call path to bug.
+- [x] Inspect data path to bug.
+- [x] Inspect configuration path if relevant.
+- [x] Identify failing condition.
+- [x] Identify incorrect assumption.
+- [x] Identify missing validation if relevant.
+- [x] Identify wrong branch or loop if relevant.
+- [x] Identify wrong type handling if relevant.
+- [x] Identify wrong API usage if relevant.
+- [x] Identify root-cause line or function.
+- [x] Verify root cause with source evidence.
+- [x] Verify root cause with failing behavior.
+- [x] Reject incorrect hypotheses.
+- [x] Document rejected hypotheses.
+- [x] Document final root cause.
 
 ### 4.3 Fix Planning
 
-- [ ] Define minimal code change.
-- [ ] Define expected behavior after fix.
-- [ ] Define test that proves fix.
-- [ ] Identify risk of regression.
-- [ ] Identify affected files.
-- [ ] Identify affected components.
-- [ ] Identify whether architecture diagram changes.
-- [ ] Identify whether Obsidian notes change.
-- [ ] Write fix plan in `reports/bug_analysis_report.md`.
-- [ ] Write fix plan in `obsidian/hot.md`.
+- [x] Define minimal code change.
+- [x] Define expected behavior after fix.
+- [x] Define test that proves fix.
+- [x] Identify risk of regression.
+- [x] Identify affected files.
+- [x] Identify affected components.
+- [x] Identify whether architecture diagram changes.
+- [x] Identify whether Obsidian notes change.
+- [x] Write fix plan in `reports/bug_analysis_report.md`.
+- [x] Write fix plan in `obsidian/hot.md`.
 
 ### 4.4 Code Fix
 
-- [ ] Modify source code.
-- [ ] Keep fix minimal.
-- [ ] Avoid unrelated refactoring.
-- [ ] Add clear variable names.
-- [ ] Add comments only if needed.
-- [ ] Avoid hardcoded config values.
-- [ ] Keep file size under 150 lines where feasible.
+- [x] Modify source code.
+- [x] Keep fix minimal.
+- [x] Avoid unrelated refactoring.
+- [x] Add clear variable names.
+- [x] Add comments only if needed.
+- [x] Avoid hardcoded config values.
+- [x] Keep file size under 150 lines where feasible.
 - [ ] Run formatting if configured.
 - [ ] Run Ruff.
 - [ ] Fix Ruff violations introduced by this change.
 
 ### 4.5 Test Fix
 
-- [ ] Add failing test before fix if feasible.
-- [ ] Add regression test for bug.
-- [ ] Add normal path test if missing.
-- [ ] Add edge case test if relevant.
-- [ ] Keep test file under 150 lines where feasible.
-- [ ] Use fixtures if helpful.
-- [ ] Avoid external services in tests.
-- [ ] Run focused test.
-- [ ] Run full test suite if feasible.
-- [ ] Save test output after fix.
-- [ ] Save output to `artifacts/logs/test_after_fix.md`.
+- [x] Add failing test before fix if feasible.
+- [x] Add regression test for bug.
+- [x] Add normal path test if missing.
+- [x] Add edge case test if relevant.
+- [x] Keep test file under 150 lines where feasible.
+- [x] Use fixtures if helpful.
+- [x] Avoid external services in tests.
+- [x] Run focused test.
+- [x] Run full test suite if feasible.
+- [x] Save test output after fix.
+- [x] Save output to `artifacts/logs/test_after_fix.md`.
 
 ### 4.6 Before/After Evidence
 
-- [ ] Capture before behavior.
-- [ ] Capture after behavior.
-- [ ] Capture before graph understanding.
-- [ ] Capture after graph understanding.
-- [ ] Update `obsidian/hot.md` with final root cause.
-- [ ] Update `obsidian/tests_and_verification.md`.
-- [ ] Update architecture diagram if structure changed.
-- [ ] Update OOP/module diagram if structure changed.
-- [ ] Save `artifacts/before_after/before.md`.
-- [ ] Save `artifacts/before_after/after.md`.
-- [ ] Add before/after section to README.
+- [x] Capture before behavior.
+- [x] Capture after behavior.
+- [x] Capture before graph understanding.
+- [x] Capture after graph understanding.
+- [x] Update `obsidian/hot.md` with final root cause.
+- [x] Update `obsidian/tests_and_verification.md`.
+- [x] Update architecture diagram if structure changed.
+- [x] Update OOP/module diagram if structure changed.
+- [x] Save `artifacts/before_after/before.md`.
+- [x] Save `artifacts/before_after/after.md`.
+- [x] Add before/after section to README.
 
 ### 4.7 Bug Analysis Report
 
-- [ ] Add bug title.
-- [ ] Add expected behavior.
-- [ ] Add actual behavior.
-- [ ] Add reproduction steps.
-- [ ] Add failing output.
-- [ ] Add graph evidence.
-- [ ] Add Obsidian navigation path.
-- [ ] Add source evidence.
-- [ ] Add root cause.
-- [ ] Add fix explanation.
-- [ ] Add verification summary.
-- [ ] Add remaining risks.
+- [x] Add bug title.
+- [x] Add expected behavior.
+- [x] Add actual behavior.
+- [x] Add reproduction steps.
+- [x] Add failing output.
+- [x] Add graph evidence.
+- [x] Add Obsidian navigation path.
+- [x] Add source evidence.
+- [x] Add root cause.
+- [x] Add fix explanation.
+- [x] Add verification summary.
+- [x] Add remaining risks.
 
 ### 4.8 Fix Verification Report
 
-- [ ] Add verification command.
-- [ ] Add before status.
-- [ ] Add after status.
-- [ ] Add tests added.
-- [ ] Add test output summary.
-- [ ] Add coverage summary if available.
-- [ ] Add limitations if full test suite cannot run.
-- [ ] Add final verification conclusion.
+- [x] Add verification command.
+- [x] Add before status.
+- [x] Add after status.
+- [x] Add tests added.
+- [x] Add test output summary.
+- [x] Add coverage summary if available.
+- [x] Add limitations if full test suite cannot run.
+- [x] Add final verification conclusion.
 
 ### 4.9 Phase 4 Review
 
-- [ ] Confirm bug is reproduced.
-- [ ] Confirm root cause is verified.
-- [ ] Confirm fix is implemented.
-- [ ] Confirm tests or checks pass.
-- [ ] Confirm before/after evidence is documented.
-- [ ] Commit Phase 4 fix and reports.
+- [x] Confirm bug is reproduced.
+- [x] Confirm root cause is verified.
+- [x] Confirm fix is implemented.
+- [x] Confirm tests or checks pass.
+- [x] Confirm before/after evidence is documented.
+- [x] Commit Phase 4 fix and reports.
 
 ## Phase 5 - Token Efficiency Measurement
 
