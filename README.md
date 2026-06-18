@@ -431,6 +431,22 @@ Note: `uv.lock` is not present in this submitted workspace. The reproducible fal
 uv run ruff check .
 ```
 
+Local note: Ruff is configured in `pyproject.toml`, but `python -m ruff check .` was not available in the final local environment because Ruff was not installed there. This limitation is recorded in `artifacts/logs/phase7_verification.md`.
+
+## Final Limitations
+
+- The selected source repository is much smaller than the general 10,000+ LOC / 70+ file guideline, but it is documented as a lecturer-approved exception.
+- Graphify itself was not available locally, so the project generated Graphify-style artifacts with Python AST/static analysis and documented that method.
+- Token counts are estimates based on `characters / 4`; no API billing logs were available.
+- `uv.lock` is absent in this workspace, so the final verification path uses standard-library commands that do not require dependency installation.
+- The project has no UI, so screenshots are not required; visual evidence is represented through Mermaid diagrams and `artifacts/graphify/graph.html`.
+
+## Credits
+
+- Assignment context: EX04 gaphify-obcidian reverse-engineering task and Lecture 07 concepts.
+- Selected source repository: `martinpeck/broken-python`.
+- Investigation path: `mathsquiz` `print_final_scores` global-state bug.
+
 ## Artifact Index
 
 - Planning docs: `docs/`
@@ -440,6 +456,7 @@ uv run ruff check .
 - Repository size report: `reports/repository_size_report.md`
 - Final submission report: `reports/final_submission_report.md`
 - Final submission checklist: `reports/final_submission_checklist.md`
+- Final Phase 7 review: `reports/phase7_review.md`
 - Phase 4 review: `reports/phase4_review.md`
 - Phase 5 token efficiency report: `reports/token_efficiency_report.md`
 - Phase 5 review: `reports/phase5_review.md`

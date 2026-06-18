@@ -63,6 +63,13 @@ python -m compileall src tests
 - Ruff: configured in `pyproject.toml`, but not installed in this local Python environment.
 - `uv.lock`: absent; fallback verification commands are documented in README.
 
+## Final Limitations
+
+- Repository size uses a lecturer-approved exception.
+- Graphify-style artifacts were generated with local static analysis because the Graphify executable was not available.
+- Token counts are estimates, not API-metered values.
+- Ruff could not be run in the final local environment because the package was not installed.
+
 ## Submission Message
 
 Submitted repository:

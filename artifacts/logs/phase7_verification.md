@@ -2,7 +2,7 @@
 
 Status: passed with one documented tooling limitation.
 
-## Planned Commands
+## Executed Commands
 
 ```bash
 python -m src.agent.run_agent --json
