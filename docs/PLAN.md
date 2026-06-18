@@ -505,6 +505,21 @@ Acceptable method:
 - Comparison table is present.
 - Results show concrete benefit or honestly explain limitations.
 
+### 9.8 Execution Result
+
+Status: complete.
+
+Best operational comparison:
+
+- Naive raw-code baseline: 4 text units, 8303 characters, 2074 estimated input tokens, 4 iterations, quality 3/5.
+- Graph-guided hot-context workflow: 2 text units, 6855 characters, 1713 estimated input tokens, 2 iterations, quality 5/5.
+- Improvement: 17.4% fewer estimated input tokens, 50% fewer text units, and 50% fewer iterations.
+
+Full graph audit note:
+
+- Full graph-guided audit mode used 15403 estimated input tokens because it included complete `graph.json`.
+- This mode is useful for traceability, but the token-efficient workflow is the distilled `hot.md` plus focused source evidence.
+
 ## 10. Phase 6 - Original Extension
 
 ### 10.1 Recommended Extension: Suspicious Node Ranking
@@ -607,7 +622,7 @@ Generate or update `hot.md` from:
 - [ ] Agent workflow code
 - [ ] Bug analysis report
 - [ ] Fix verification report
-- [ ] Token efficiency report
+- [x] Token efficiency report
 - [ ] Original extension report
 - [ ] Before/after evidence
 - [ ] Screenshots or visual artifacts where useful

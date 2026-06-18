@@ -15,12 +15,12 @@ The workflow read Obsidian context first, then graph artifacts, then selected gr
 | Text Unit | Characters | Estimated Tokens |
 |---|---:|---:|
 | `obsidian\index.md` | 2548 | 637 |
-| `obsidian\hot.md` | 4345 | 1086 |
+| `obsidian\hot.md` | 4817 | 1204 |
 | `artifacts\graphify\GRAPH_REPORT.md` | 4628 | 1157 |
 | `artifacts\graphify\graph.json` | 47584 | 11896 |
 | `artifacts\source_evidence\print_final_scores_source.md` | 2038 | 509 |
 
-Total estimated input tokens: 15285
+Total estimated input tokens: 15403
 
 ## Ranked Suspect Nodes
 

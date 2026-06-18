@@ -6,7 +6,7 @@ EX04 - Graph-Guided Reverse Engineering, Debugging, and Token-Efficient Agentic 
 
 ## Current Status
 
-Phase 1 graph and initial knowledge-base setup is complete.
+Phases 1-5 are complete for the official `print_final_scores` investigation path.
 
 Repository choice: `martinpeck/broken-python`
 
@@ -46,6 +46,8 @@ Official investigation target:
 - Score-state flow diagram: `../artifacts/diagrams/score_state_flow_diagram.md`
 - Agent workflow diagram: `../artifacts/diagrams/agent_workflow_diagram.md`
 - Logs: `../artifacts/logs/`
+- Token efficiency report: `../reports/token_efficiency_report.md`
+- Token comparison CSV: `../artifacts/token_measurements/token_comparison.csv`
 
 ## Phase 2 Status
 
@@ -58,3 +60,15 @@ Phase 2 review added the missing bug-focused score-state flow diagram. The archi
 - Resolved: the focused Phase 1 probe proves that non-zero `final_score` is ignored when global `score=0`.
 - Should the Phase 4 fix change both step2 and step3, or use step3 as the main fixed artifact and step2 as comparative evidence?
 - Which graph node references should be embedded in the final architecture diagram?
+
+## Phase 5 Status
+
+Phase 5 measured naive raw-code reading against graph-guided investigation.
+
+Best operational result:
+
+- Naive raw-code baseline: 2074 estimated input tokens, 4 text units, 4 iterations.
+- Graph-guided hot-context workflow: 1713 estimated input tokens, 2 text units, 2 iterations.
+- Reduction: 17.4% fewer estimated input tokens, 50% fewer text units, and 50% fewer iterations.
+
+The full graph-guided audit workflow is documented separately because it includes the complete `graph.json`. It improves traceability, but it is not token-cheaper for this tiny instructor-approved exception repository.

@@ -726,88 +726,88 @@
 
 ### 5.1 Measurement Setup
 
-- [ ] Define text-unit counting rules.
-- [ ] Define token estimation formula.
-- [ ] Define iteration counting rules.
-- [ ] Define quality rating scale.
-- [ ] Create `artifacts/token_measurements/token_comparison.csv`.
-- [ ] Create `artifacts/logs/naive_baseline_log.md`.
+- [x] Define text-unit counting rules.
+- [x] Define token estimation formula.
+- [x] Define iteration counting rules.
+- [x] Define quality rating scale.
+- [x] Create `artifacts/token_measurements/token_comparison.csv`.
+- [x] Create `artifacts/logs/naive_baseline_log.md`.
 - [x] Create `artifacts/logs/graph_guided_agent_log.md`.
-- [ ] Add measurement method to token report.
+- [x] Add measurement method to token report.
 
 ### 5.2 Naive Baseline Workflow
 
-- [ ] Define naive workflow prompt or process.
-- [ ] Do not use Graphify in naive mode.
-- [ ] Do not use Obsidian in naive mode.
-- [ ] Select broad source files manually or by folder.
-- [ ] Record each file read.
-- [ ] Count characters for each file read.
-- [ ] Estimate tokens for each file read.
-- [ ] Record number of investigation iterations.
-- [ ] Record whether root cause was reached.
-- [ ] Record whether fix was reached.
-- [ ] Record time or step count if available.
-- [ ] Record quality of explanation.
-- [ ] Save naive baseline log.
+- [x] Define naive workflow prompt or process.
+- [x] Do not use Graphify in naive mode.
+- [x] Do not use Obsidian in naive mode.
+- [x] Select broad source files manually or by folder.
+- [x] Record each file read.
+- [x] Count characters for each file read.
+- [x] Estimate tokens for each file read.
+- [x] Record number of investigation iterations.
+- [x] Record whether root cause was reached.
+- [x] Record whether fix was reached.
+- [x] Record time or step count if available.
+- [x] Record quality of explanation.
+- [x] Save naive baseline log.
 
 ### 5.3 Graph-Guided Workflow
 
-- [ ] Define graph-guided workflow prompt or process.
-- [ ] Read `graph.json` summary.
-- [ ] Read `GRAPH_REPORT.md`.
-- [ ] Read `obsidian/index.md`.
-- [ ] Read `obsidian/hot.md`.
-- [ ] Read selected source files only.
-- [ ] Record each text unit read.
-- [ ] Count characters for each text unit.
-- [ ] Estimate tokens for each text unit.
-- [ ] Record number of investigation iterations.
-- [ ] Record whether root cause was reached.
-- [ ] Record whether fix was reached.
-- [ ] Record time or step count if available.
-- [ ] Record quality of explanation.
-- [ ] Save graph-guided log.
+- [x] Define graph-guided workflow prompt or process.
+- [x] Read `graph.json` summary.
+- [x] Read `GRAPH_REPORT.md`.
+- [x] Read `obsidian/index.md`.
+- [x] Read `obsidian/hot.md`.
+- [x] Read selected source files only.
+- [x] Record each text unit read.
+- [x] Count characters for each text unit.
+- [x] Estimate tokens for each text unit.
+- [x] Record number of investigation iterations.
+- [x] Record whether root cause was reached.
+- [x] Record whether fix was reached.
+- [x] Record time or step count if available.
+- [x] Record quality of explanation.
+- [x] Save graph-guided log.
 
 ### 5.4 Comparison Table
 
-- [ ] Add baseline row.
-- [ ] Add graph-guided row.
-- [ ] Add files/text units read.
-- [ ] Add input token estimate.
-- [ ] Add output token estimate if available.
-- [ ] Add total token estimate.
-- [ ] Add iterations.
-- [ ] Add root-cause status.
-- [ ] Add fix status.
-- [ ] Add quality rating.
-- [ ] Add notes.
-- [ ] Calculate percentage token reduction.
-- [ ] Calculate file-read reduction.
-- [ ] Calculate iteration reduction.
+- [x] Add baseline row.
+- [x] Add graph-guided row.
+- [x] Add files/text units read.
+- [x] Add input token estimate.
+- [x] Add output token estimate if available.
+- [x] Add total token estimate.
+- [x] Add iterations.
+- [x] Add root-cause status.
+- [x] Add fix status.
+- [x] Add quality rating.
+- [x] Add notes.
+- [x] Calculate percentage token reduction.
+- [x] Calculate file-read reduction.
+- [x] Calculate iteration reduction.
 
 ### 5.5 Token Efficiency Report
 
-- [ ] Add report title.
-- [ ] Add measurement method.
-- [ ] Add baseline description.
-- [ ] Add graph-guided description.
-- [ ] Add comparison table.
-- [ ] Add interpretation.
-- [ ] Add limitations.
-- [ ] Add conclusion.
-- [ ] Link logs.
-- [ ] Link CSV.
-- [ ] Link from README.
-- [ ] Link from Obsidian.
+- [x] Add report title.
+- [x] Add measurement method.
+- [x] Add baseline description.
+- [x] Add graph-guided description.
+- [x] Add comparison table.
+- [x] Add interpretation.
+- [x] Add limitations.
+- [x] Add conclusion.
+- [x] Link logs.
+- [x] Link CSV.
+- [x] Link from README.
+- [x] Link from Obsidian.
 
 ### 5.6 Phase 5 Review
 
-- [ ] Confirm metrics are transparent.
-- [ ] Confirm graph-guided workflow is compared fairly.
-- [ ] Confirm limitations are honest.
-- [ ] Confirm report is linked.
-- [ ] Commit Phase 5 artifacts.
+- [x] Confirm metrics are transparent.
+- [x] Confirm graph-guided workflow is compared fairly.
+- [x] Confirm limitations are honest.
+- [x] Confirm report is linked.
+- [x] Commit Phase 5 artifacts.
 
 ## Phase 6 - Original Extension
 

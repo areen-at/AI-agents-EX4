@@ -4,7 +4,7 @@ Reverse Engineering, Debugging, and Token-Efficient Agentic AI with Graphify and
 
 ## Status
 
-Phases 1-4 are complete for the official `print_final_scores` global-state bug in the `mathsquiz` subsystem. The project has graph artifacts, Obsidian notes, architecture diagrams, an executable graph-guided agent workflow, a verified fix, and before/after evidence.
+Phases 1-5 are complete for the official `print_final_scores` global-state bug in the `mathsquiz` subsystem. The project has graph artifacts, Obsidian notes, architecture diagrams, an executable graph-guided agent workflow, a verified fix, before/after evidence, and token-efficiency measurements.
 
 ## Assignment Goal
 
@@ -255,6 +255,31 @@ Phase 4 artifacts:
 - After evidence: `artifacts/before_after/after.md`
 - Fix diff summary: `artifacts/before_after/fix.diff`
 
+## Phase 5 Token Efficiency
+
+Phase 5 is complete. The project compares a naive raw-code reading workflow with graph-guided workflows for the official `print_final_scores` bug.
+
+Best operational comparison:
+
+- Naive raw-code baseline: 4 text units, 8303 characters, 2074 estimated input tokens, 4 investigation iterations, quality 3/5.
+- Graph-guided hot-context workflow: 2 text units, 6855 characters, 1713 estimated input tokens, 2 investigation iterations, quality 5/5.
+- Reduction from the best operational workflow: 17.4% fewer estimated input tokens, 50% fewer text units, and 50% fewer investigation iterations.
+
+Important limitation:
+
+- The full graph-guided audit workflow uses 15403 estimated input tokens because it includes the complete `graph.json`.
+- This full audit mode is useful for traceability, but it is not token-cheaper for the tiny instructor-approved `broken-python` exception repository.
+- The token-efficient pattern is to distill Graphify output into `obsidian/hot.md` plus focused source evidence before sending context to an LLM.
+
+Phase 5 artifacts:
+
+- Token efficiency report: `reports/token_efficiency_report.md`
+- Token comparison CSV: `artifacts/token_measurements/token_comparison.csv`
+- Naive baseline log: `artifacts/logs/naive_baseline_log.md`
+- Graph-guided agent log: `artifacts/logs/graph_guided_agent_log.md`
+- Phase 5 verification log: `artifacts/logs/phase5_verification.md`
+- Phase 5 review: `reports/phase5_review.md`
+
 ## Planned Workflow
 
 1. Select repository and bug.
@@ -308,6 +333,8 @@ uv run ruff check .
 - Reports: `reports/`
 - Repository size report: `reports/repository_size_report.md`
 - Phase 4 review: `reports/phase4_review.md`
+- Phase 5 token efficiency report: `reports/token_efficiency_report.md`
+- Phase 5 review: `reports/phase5_review.md`
 - Graphify outputs: `artifacts/graphify/`
 - Diagrams: `artifacts/diagrams/`
 - Architecture block diagram: `artifacts/diagrams/architecture_block_diagram.md`
@@ -320,5 +347,8 @@ uv run ruff check .
 - Phase 3 verification: `artifacts/logs/phase3_verification.md`
 - Phase 4 after-fix test log: `artifacts/logs/test_after_fix.md`
 - Phase 4 before-fix reproduction: `artifacts/logs/bug_reproduction_before.md`
+- Phase 5 naive baseline log: `artifacts/logs/naive_baseline_log.md`
+- Phase 5 verification: `artifacts/logs/phase5_verification.md`
 - Before/after evidence: `artifacts/before_after/`
 - Token measurements: `artifacts/token_measurements/`
+- Token comparison CSV: `artifacts/token_measurements/token_comparison.csv`
